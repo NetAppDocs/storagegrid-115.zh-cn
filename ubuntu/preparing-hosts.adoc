@@ -1,0 +1,17 @@
+---
+permalink: ubuntu/preparing-hosts.html 
+sidebar: sidebar 
+keywords:  
+summary: 您必须完成以下步骤、为StorageGRID 准备物理或虚拟主机。请注意、您可以使用Ansible、Puppet或Chef等标准服务器配置框架自动执行许多或所有这些步骤。 
+---
+= 准备主机
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须完成以下步骤、为StorageGRID 准备物理或虚拟主机。请注意、您可以使用Ansible、Puppet或Chef等标准服务器配置框架自动执行许多或所有这些步骤。
+
+.相关信息
+link:automating-installation-and-configuration-of-storagegrid-host-service.html["自动安装和配置StorageGRID 主机服务"]

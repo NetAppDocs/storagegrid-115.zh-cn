@@ -1,0 +1,105 @@
+---
+permalink: audit/changing-audit-message-levels.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, log, message level, message levels, increase messages, decrease messages, message category 
+summary: 您可以调整审核级别、以增加或减少每个审核消息类别的审核日志中记录的审核消息数量。 
+---
+= 更改审核消息级别
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以调整审核级别、以增加或减少每个审核消息类别的审核日志中记录的审核消息数量。
+
+.您需要的内容
+* 您必须使用支持的浏览器登录到网格管理器。
+* 您必须具有特定的访问权限。
+
+
+.关于此任务
+审核日志中记录的审核消息将根据*配置*>*监控*>*审核*页面上的设置进行筛选。
+
+您可以为以下每种消息设置不同的审核级别：
+
+* *系统*：默认情况下、此级别设置为正常。
+* *存储*：默认情况下、此级别设置为错误。
+* *管理*：默认情况下、此级别设置为正常。
+* *客户端读取*：默认情况下、此级别设置为正常。
+* *客户端写入*：默认情况下、此级别设置为正常。
+
+
+
+NOTE: 如果您最初使用 10.3 或更高版本安装 StorageGRID ，则这些默认设置适用。如果您已从早期版本的 StorageGRID 升级，则所有类别的默认值均设置为正常。
+
+
+NOTE: 升级期间，审核级别配置不会立即生效。
+
+.步骤
+. 选择*配置*>*监控*>*审核*。
++
+image::../media/default_audit_settings.gif[配置>审核的屏幕截图]
+
+. 对于每个审核消息类别，从下拉列表中选择一个审核级别：
++
+[cols="20,80"]
+|===
+| 审核级别 | Description 
+
+
+ a| 
+关闭
+ a| 
+不会记录此类别中的任何审核消息。
+
+
+
+ a| 
+error
+ a| 
+仅会记录错误消息—审核结果代码不是 " 成功 " （ SUC ）的消息。
+
+
+
+ a| 
+正常
+ a| 
+系统会记录标准事务处理消息，即这些说明中针对此类别列出的消息。
+
+
+
+ a| 
+调试
+ a| 
+已弃用。此级别的行为与正常审核级别相同。
+
+|===
++
+对于任何特定级别，包含的消息都包括那些将在较高级别记录的消息。例如，正常级别包括所有错误消息。
+
+. 在*审核协议标头*下、输入要包含在客户端读取和客户端写入审核消息中的HTTP请求标头的名称。使用星号(\*)作为通配符、或者使用转义序列(\*)作为文字星号。单击加号可创建标题名称字段列表。
++
+
+NOTE: 审核协议标头仅适用于 S3 和 Swift 请求。
+
++
+如果在请求中发现此类HTTP标头、则这些标头将包含在审核消息的HTRH字段下。
+
++
+
+NOTE: 只有当 * 客户端读取 * 或 * 客户端写入 * 的审核级别不是 * 关闭 * 时，才会记录审核协议请求标头。
+
+. 单击 * 保存 * 。
+
+
+.相关信息
+link:system-audit-messages.html["系统审核消息"]
+
+link:object-storage-audit-messages.html["对象存储审核消息"]
+
+link:management-audit-message.html["管理审核消息"]
+
+link:client-read-audit-messages.html["客户端读取审核消息"]
+
+link:../admin/index.html["管理 StorageGRID"]

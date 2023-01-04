@@ -1,0 +1,19 @@
+---
+permalink: admin/using-single-sign-on.html 
+sidebar: sidebar 
+keywords:  
+summary: 'StorageGRID 系统支持使用安全断言标记语言2.0 (SAML 2.0\)标准的单点登录\(SSO\)。启用 SSO 后，所有用户都必须经过外部身份提供程序的身份验证，然后才能访问网格管理器，租户管理器，网格管理 API 或租户管理 API 。本地用户无法登录到 StorageGRID 。' 
+---
+= 对StorageGRID 使用单点登录(SSO)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+StorageGRID 系统支持使用安全断言标记语言 2.0 （ SAML 2.0 ）标准的单点登录（ SSO ）。启用 SSO 后，所有用户都必须经过外部身份提供程序的身份验证，然后才能访问网格管理器，租户管理器，网格管理 API 或租户管理 API 。本地用户无法登录到 StorageGRID 。
+
+* link:how-sso-works.html["单点登录的工作原理"]
+* link:requirements-for-sso.html["使用单点登录的要求"]
+* link:configuring-sso.html["配置单点登录"]
+

@@ -1,0 +1,23 @@
+---
+permalink: sg100-1000/configuring-storagegrid-connections-sg100-and-sg1000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, storagegrid connections, connections, configure, setup, set up 
+summary: 在将服务设备部署为 StorageGRID 系统中的节点之前，您必须配置设备与计划使用的网络之间的连接。您可以通过浏览到服务设备上预安装的 StorageGRID 设备安装程序来配置网络连接。 
+---
+= 配置StorageGRID 连接
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在将服务设备部署为 StorageGRID 系统中的节点之前，您必须配置设备与计划使用的网络之间的连接。您可以通过浏览到服务设备上预安装的 StorageGRID 设备安装程序来配置网络连接。
+
+.步骤
+* link:accessing-storagegrid-appliance-installer-sg100-and-sg1000.html["访问StorageGRID 设备安装程序"]
+* link:verifying-and-upgrading-storagegrid-appliance-installer-version.html["验证和升级StorageGRID 设备安装程序版本"]
+* link:configuring-network-links-sg100-and-sg1000.html["配置网络链路(SG100和SG1000)"]
+* link:configuring-storagegrid-ip-addresses-sg100-and-sg1000.html["配置StorageGRID IP地址"]
+* link:verifying-network-connections.html["验证网络连接"]
+* link:verifying-port-level-network-connections.html["验证端口级别的网络连接"]
+

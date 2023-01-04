@@ -1,0 +1,19 @@
+---
+permalink: tenant/managing-system-access-for-tenant-users.html 
+sidebar: sidebar 
+keywords:  
+summary: '您可以通过从联合身份源导入组并分配管理权限来授予用户对租户帐户的访问权限。您还可以创建本地租户组和用户、除非对整个StorageGRID 系统使用单点登录\(SSO)。' 
+---
+= 管理租户用户的系统访问
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以通过从联合身份源导入组并分配管理权限来授予用户对租户帐户的访问权限。您还可以创建本地租户组和用户、除非对整个StorageGRID 系统实施单点登录(Single Sign-On、SSO)。
+
+* link:using-identity-federation.html["使用身份联合"]
+* link:managing-groups.html["管理组"]
+* link:managing-local-users.html["管理本地用户"]
+

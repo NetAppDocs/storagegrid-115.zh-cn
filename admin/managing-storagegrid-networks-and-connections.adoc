@@ -1,0 +1,27 @@
+---
+permalink: admin/managing-storagegrid-networks-and-connections.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用网格管理器配置和管理 StorageGRID 网络和连接。 
+---
+= 管理StorageGRID 网络和连接
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用网格管理器配置和管理 StorageGRID 网络和连接。
+
+请参见 link:configuring-client-connections.html["配置S3和Swift客户端连接"] 了解如何连接 S3 或 Swift 客户端。
+
+* link:guidelines-for-storagegrid-networks.html["StorageGRID 网络准则"]
+* link:viewing-ip-addresses.html["查看IP地址"]
+* link:supported-ciphers-for-outgoing-tls-connections.html["支持传出 TLS 连接的密码"]
+* link:changing-network-transfer-encryption.html["更改网络传输加密"]
+* link:configuring-server-certificates.html["配置服务器证书"]
+* link:configuring-storage-proxy-settings.html["配置存储代理设置"]
+* link:configuring-admin-proxy-settings.html["配置管理员代理设置"]
+* link:managing-traffic-classification-policies.html["管理流量分类策略"]
+* link:what-link-costs-are.html["链路成本是多少"]
+

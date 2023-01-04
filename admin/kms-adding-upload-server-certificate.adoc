@@ -1,0 +1,36 @@
+---
+permalink: admin/kms-adding-upload-server-certificate.html 
+sidebar: sidebar 
+keywords:  
+summary: '在"添加密钥管理服务器"向导的第2步\(上传服务器证书\)中、您上传了KMS的服务器证书\(或证书包\)。通过服务器证书，外部 KMS 可以向 StorageGRID 进行身份验证。' 
+---
+= 第 2 步：上传服务器证书
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在添加密钥管理服务器向导的第 2 步（上传服务器证书）中，您可以上传 KMS 的服务器证书（或证书包）。通过服务器证书，外部 KMS 可以向 StorageGRID 进行身份验证。
+
+.步骤
+. 从 * 步骤 2 （上传服务器证书） * 中，浏览到保存的服务器证书或证书包的位置。
++
+image::../media/kms_step_2_upload_server_certificate.png[Kms 步骤 2 上传服务器证书]
+
+. 上传证书文件。
++
+此时将显示服务器证书元数据。
+
++
+image::../media/kms_step_2_server_certificate_metadata.png[kms 步骤 2 服务器证书元数据]
+
++
+
+NOTE: 如果您上传的是证书捆绑包，则每个证书的元数据将显示在其自己的选项卡上。
+
+. 选择 * 下一步 * 。
++
+此时将显示添加密钥管理服务器向导的第3步(上传客户端证书)。
+
+

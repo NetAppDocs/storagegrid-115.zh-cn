@@ -1,0 +1,14 @@
+---
+permalink: audit/audit-messages-list.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, messages, message 
+summary: 发生系统事件时、StorageGRID 系统会生成审核消息并将其记录在审核日志中。 
+---
+= 审核消息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+发生系统事件时、StorageGRID 系统会生成审核消息并将其记录在审核日志中。

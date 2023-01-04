@@ -1,0 +1,85 @@
+---
+permalink: ilm/enabling-s3-object-lock-globally.html 
+sidebar: sidebar 
+keywords: S3 Object Lock 
+summary: 如果 S3 租户帐户在保存对象数据时需要遵守法规要求，则必须为整个 StorageGRID 系统启用 S3 对象锁定。启用全局 S3 对象锁定设置后，任何 S3 租户用户都可以使用 S3 对象锁定创建和管理存储分段和对象。 
+---
+= 全局启用S3对象锁定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果 S3 租户帐户在保存对象数据时需要遵守法规要求，则必须为整个 StorageGRID 系统启用 S3 对象锁定。启用全局 S3 对象锁定设置后，任何 S3 租户用户都可以使用 S3 对象锁定创建和管理存储分段和对象。
+
+.您需要的内容
+* 您必须具有 root 访问权限。
+* 您必须使用支持的浏览器登录到网格管理器。
+* 您必须已查看S3对象锁定工作流、并且必须了解注意事项。
+* 活动ILM策略中的默认规则必须合规。
++
+link:creating-default-ilm-rule.html["创建默认ILM规则"]
+
++
+link:creating-ilm-policy.html["创建ILM策略"]
+
+
+
+.关于此任务
+网格管理员必须启用全局 S3 对象锁定设置，以允许租户用户创建启用了 S3 对象锁定的新分段。启用此设置后，便无法将其禁用。
+
+[NOTE]
+====
+如果您使用先前版本的StorageGRID 启用了全局合规性设置、则在升级到StorageGRID 11.5版时、新的S3对象锁定设置将自动启用。您可以继续使用StorageGRID 管理现有合规存储分段的设置；但是、您无法再创建新的合规存储分段。
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/StorageGRID/How_to_manage_legacy_Compliant_buckets_in_StorageGRID_11.5["NetApp 知识库：如何在 StorageGRID 11.5 中管理原有的合规存储分段"^]
+
+====
+.步骤
+. 选择*配置*>*系统设置*>* S3对象锁定*。
++
+此时将显示 "S3 Object Lock Settings" 页面。
+
++
+image::../media/s3_object_lock_global_setting.png[S3 对象锁定全局设置]
+
++
+如果您已使用先前版本的 StorageGRID 启用了全局合规性设置，则此页面将包含以下注意事项：
+
++
+image::../media/s3_object_lock_global_setting_compliant_note.png[S3 对象锁定全局设置合规注]
+
+. 选择 * 启用 S3 对象锁定 * 。
+. 选择 * 应用 * 。
++
+此时将显示一个确认对话框，提醒您在启用 S3 对象锁定后无法禁用它。
+
++
+image::../media/s3_object_lock_global_setting_confirm.png[S3 对象锁定全局设置确认]
+
+. 如果确实要为整个系统永久启用 S3 对象锁定，请选择 * 确定 * 。
++
+选择 * 确定 * 时：
+
++
+** 如果活动 ILM 策略中的默认规则合规，则现在将为整个网格启用 S3 对象锁定，并且无法禁用。
+** 如果默认规则不符合要求，则会显示一个错误，指示您必须创建并激活一个新的 ILM 策略，其中包含一个合规规则作为其默认规则。选择 * 确定 * ，然后创建新的建议策略，对其进行模拟并激活。
++
+image::../media/s3_object_lock_global_setting_error.gif[S3 对象锁定全局设置错误]
+
+
+
+
+
+.完成后
+启用全局S3对象锁定设置后、您可能需要创建新的ILM策略。启用此设置后， ILM 策略可以选择同时包含合规的默认规则和不合规的默认规则。例如，您可能希望使用一个不合规规则，该规则不会筛选未启用 S3 对象锁定的分段中的对象。
+
+.相关信息
+link:creating-ilm-policy-after-s3-object-lock-is-enabled.html["在启用S3对象锁定后创建ILM策略"]
+
+link:creating-ilm-rule.html["创建ILM规则"]
+
+link:creating-ilm-policy.html["创建ILM策略"]
+
+link:comparing-s3-object-lock-to-legacy-compliance.html["比较 S3 对象锁定与原有合规性"]

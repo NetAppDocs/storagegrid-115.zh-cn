@@ -1,0 +1,142 @@
+---
+permalink: expand/rebalancing-erasure-coded-data-after-adding-storage-nodes.html 
+sidebar: sidebar 
+keywords: erasure coding, EC, rebalancing, site rebalance procedure 
+summary: 在某些情况下，您可能需要在添加新存储节点后重新平衡经过纠删编码的数据。 
+---
+= 添加存储节点后重新平衡经过纠删编码的数据
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在某些情况下，您可能需要在添加新存储节点后重新平衡经过纠删编码的数据。
+
+.您需要的内容
+* 要添加新的存储节点、您必须已完成扩展步骤。
+* 您必须已查看重新平衡纠删编码数据的注意事项。
++
+link:considerations-for-rebalancing-erasure-coded-data.html["重新平衡经过纠删编码的数据的注意事项"]
+
++
+
+IMPORTANT: 只有在为站点上的一个或多个存储节点触发了 * 对象存储空间不足 * 警报且您无法添加建议数量的新存储节点时，才能执行此操作步骤 。
+
+* 您必须具有 `Passwords.txt` 文件
+
+
+.关于此任务
+当 EC 重新平衡操作步骤 运行时， ILM 操作以及 S3 和 Swift 客户端操作的性能可能会受到影响。因此，您只能在有限情况下执行此操作步骤 。
+
+
+NOTE: EC 重新平衡操作步骤 会临时预留大量存储。可能会触发存储警报，但会在重新平衡完成后解决。如果没有足够的存储空间用于预留， EC 重新平衡操作步骤 将失败。无论操作步骤 出现故障还是成功， EC 重新平衡操作步骤 完成后都会释放存储预留。
+
+[NOTE]
+====
+如果需要超过 24 小时才能完成 EC 重新平衡操作步骤 期间用于上传对象（或对象部件）的 S3 和 Swift API 操作可能会失败。如果适用的 ILM 规则在载入时使用严格或平衡的放置方式，则长时间的 PUT 操作将失败。此时将报告以下错误：
+
+`500 Internal Server Error`
+
+====
+.步骤
+. 【 Review object_storage]] 查看计划重新平衡的站点的当前对象存储详细信息。
++
+.. 选择*节点*。
+.. 选择站点上的第一个存储节点。
+.. 选择 * 存储 * 选项卡。
+.. 将光标悬停在 " 已用存储 - 对象数据 " 图表上，可查看存储节点上当前复制的数据量以及经过纠删编码的数据。
+.. 重复上述步骤以查看站点上的其他存储节点。
+
+
+. 登录到主管理节点：
++
+.. 输入以下命令： `ssh admin@_primary_Admin_Node_IP_`
+.. 输入中列出的密码 `Passwords.txt` 文件
+.. 输入以下命令切换到root： `su -`
+.. 输入中列出的密码 `Passwords.txt` 文件
++
+以root用户身份登录后、提示符将从变为 `$` to `#`。
+
+
+
+. 输入以下命令：
++
+`rebalance-data start --site "_site-name_"`
+
++
+适用于 `"_site-name_"`下、指定添加新存储节点的第一个站点。封闭 `site-name` 在报价中。
+
++
+此时将启动 EC 重新平衡操作步骤 ，并返回作业 ID 。
+
+. 复制作业 ID 。
+. 监控 EC 重新平衡操作步骤 的状态。
++
+** 要查看单个 EC 重新平衡操作步骤 的状态，请执行以下操作：
++
+`rebalance-data status --job-id _job-id_`
+
++
+适用于 `_job-id_`下、指定启动操作步骤 时返回的ID。
+
+** 要查看当前 EC 重新平衡操作步骤 的状态以及先前完成的任何过程：
++
+`rebalance-data status`
+
++
+[NOTE]
+====
+要获取有关 rebalance-data 命令的帮助，请执行以下操作：
+
+`rebalance-data --help`
+
+====
+
+
+. 根据返回的状态执行其他步骤：
++
+** 状态为 `In progress`、EC重新平衡操作仍在运行。您应定期监控操作步骤 ，直到其完成。
+** 状态为 `Failure`、执行 <<rebalance_fail,失败步骤>>。
+** 状态为 `Success`、执行 <<rebalance_succeed,成功步骤>>。
+
+
+. 如果 EC 重新平衡操作步骤 生成的负载过多（例如，载入操作受到影响），请暂停操作步骤 。
++
+`rebalance-data pause --job-id _job-id_`
+
+. 如果您需要终止 EC 重新平衡操作步骤 （例如，以便执行 StorageGRID 软件升级），请输入以下内容：
++
+`rebalance-data abort --job-id _job-id_`
+
++
+
+NOTE: 终止 EC 重新平衡操作步骤 后，已移动的所有数据片段都将保留在新位置。数据不会移回原始位置。
+
+. 如果EC重新平衡操作步骤 的状态为、则为 `Failure`、请按照以下步骤操作：
++
+.. 确认站点上的所有存储节点均已连接到网格。
+.. 检查并解决可能影响这些存储节点的任何警报。
++
+有关特定警报的信息，请参见监控和故障排除说明。
+
+.. 重新启动EC重新平衡操作步骤 ：+
+`rebalance-data start –-job-id _job-id_`
+.. 如果EC重新平衡操作步骤 的状态仍为 `Failure`、请联系技术支持。
+
+
+. 如果EC重新平衡操作步骤 的状态为、则为 `Success`(可选) <<review_object_storage,查看对象存储>> 以查看此站点的更新详细信息。
++
+现在，经过纠删编码的数据应在站点的存储节点之间更加平衡。
+
++
+
+NOTE: EC重新平衡操作步骤 不会移动复制的对象数据。
+
+. 如果要在多个站点上使用纠删编码，请对所有其他受影响站点运行此操作步骤 。
+
+
+.相关信息
+link:considerations-for-rebalancing-erasure-coded-data.html["重新平衡经过纠删编码的数据的注意事项"]
+
+link:../monitor/index.html["监控和放大；故障排除"]

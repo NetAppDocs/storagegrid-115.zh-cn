@@ -1,0 +1,28 @@
+---
+permalink: sg5600/maintaining-sg5600-appliance.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, maintain, maintaining, hardware, procedures, tasks 
+summary: 您可能需要升级 E2700 控制器上的 SANtricity 操作系统软件，更换 E2700 控制器或 E5600SG 控制器或更换特定组件。本节中的过程假定设备已部署为 StorageGRID 系统中的存储节点。 
+---
+= 维护SG5600设备
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可能需要升级 E2700 控制器上的 SANtricity 操作系统软件，更换 E2700 控制器或 E5600SG 控制器或更换特定组件。本节中的过程假定设备已部署为 StorageGRID 系统中的存储节点。
+
+.步骤
+* link:placing-appliance-into-maintenance-mode.html["将设备置于维护模式"]
+* link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5600.html["使用网格管理器升级存储控制器上的SANtricity 操作系统"]
+* link:upgrading-santricity-os-on-e2700-controller-using-maintenance-mode.html["使用维护模式升级E2700控制器上的SANtricity 操作系统"]
+* link:upgrading-drive-firmware-using-santricity-storage-manager.html["使用SANtricity 存储管理器升级驱动器固件"]
+* link:replacing-e2700-controller.html["更换E2700控制器"]
+* link:replacing-e5600sg-controller.html["更换E5600SG控制器"]
+* link:replacing-other-hardware-components-sg5600.html["更换其他硬件组件"]
+* link:changing-link-configuration-of-e5600sg-controller.html["更改E5600SG控制器的链路配置"]
+* link:changing-mtu-setting.html["更改MTU设置"]
+* link:checking-dns-server-configuration.html["正在检查DNS服务器配置"]
+* link:monitoring-node-encryption-in-maintenance-mode.html["在维护模式下监控节点加密"]
+

@@ -1,0 +1,40 @@
+---
+permalink: admin/issuing-api-requests.html 
+sidebar: sidebar 
+keywords:  
+summary: Swagger 用户界面提供了每个 API 操作的完整详细信息和文档。 
+---
+= 发出API请求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Swagger 用户界面提供了每个 API 操作的完整详细信息和文档。
+
+.您需要的内容
+* 您必须使用支持的浏览器登录到网格管理器。
+* 您必须具有特定的访问权限。
+
+
+
+IMPORTANT: 使用 API 文档网页执行的任何 API 操作均为实时操作。请注意，不要错误地创建，更新或删除配置数据或其他数据。
+
+.步骤
+. 从网格管理器标题中选择*帮助*>* API文档*。
+. 选择所需的操作。
++
+展开 API 操作时，您可以看到可用的 HTTP 操作，例如 GET ， PUT ， UPDATE 和 DELETE 。
+
+. 选择 HTTP 操作可查看请求详细信息，包括端点 URL ，任何必需或可选参数的列表，请求正文示例（如果需要）以及可能的响应。
++
+image::../media/swagger_example.png[Swagger UI 示例]
+
+. 确定此请求是否需要其他参数，例如组或用户 ID 。然后，获取这些值。您可能需要先对其他 API 请求进行问题描述 处理，以获取所需的信息。
+. 确定是否需要修改示例请求正文。如果是、您可以单击*型号*来了解每个字段的要求。
+. 单击 * 试用 * 。
+. 提供所需的任何参数，或根据需要修改请求正文。
+. 单击 * 执行 * 。
+. 查看响应代码以确定请求是否成功。
+

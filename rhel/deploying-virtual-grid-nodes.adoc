@@ -1,0 +1,28 @@
+---
+permalink: rhel/deploying-virtual-grid-nodes.html 
+sidebar: sidebar 
+keywords: storagegrid, deploying grid nodes, deploy grid nodes, rhel, redhat, redhat linux, centos 
+summary: 要在Red Hat Enterprise Linux或CentOS主机上部署虚拟网格节点、您需要为所有节点创建节点配置文件、验证这些文件并启动StorageGRID 主机服务、该服务将启动节点。如果您需要部署任何StorageGRID 设备存储节点、请在部署所有虚拟节点后参见该设备的安装和维护说明。 
+---
+= 部署虚拟网格节点
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要在Red Hat Enterprise Linux或CentOS主机上部署虚拟网格节点、您需要为所有节点创建节点配置文件、验证这些文件并启动StorageGRID 主机服务、该服务将启动节点。如果您需要部署任何StorageGRID 设备存储节点、请在部署所有虚拟节点后参见该设备的安装和维护说明。
+
+* link:creating-node-configuration-files.html["正在创建节点配置文件"]
+* link:validating-storagegrid-configuration.html["正在验证StorageGRID 配置"]
+* link:starting-storagegrid-host-service.html["启动 StorageGRID 主机服务"]
+
+
+.相关信息
+link:../sg100-1000/index.html["SG100和AMP；SG1000服务设备"]
+
+link:../sg5600/index.html["SG5600 存储设备"]
+
+link:../sg5700/index.html["SG5700 存储设备"]
+
+link:../sg6000/index.html["SG6000 存储设备"]

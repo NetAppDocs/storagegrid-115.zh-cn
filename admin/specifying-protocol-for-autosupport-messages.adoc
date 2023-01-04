@@ -1,0 +1,60 @@
+---
+permalink: admin/specifying-protocol-for-autosupport-messages.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用以下三种协议之一发送AutoSupport 消息。 
+---
+= 指定AutoSupport 消息的协议
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用以下三种协议之一发送AutoSupport 消息。
+
+.您需要的内容
+* 您必须使用支持的浏览器登录到网格管理器。
+* 您必须具有 " 根访问 " 或 " 其他网格配置 " 权限。
+* 如果要使用HTTPS或HTTP协议发送AutoSupport 消息、则必须已直接或使用代理服务器提供对主管理节点的出站Internet访问(不需要入站连接)。
+* 如果要使用HTTPS或HTTP协议、并且要使用代理服务器、则必须已配置管理员代理服务器。
+* 如果要使用SMTP作为AutoSupport 消息的协议、则必须已配置SMTP邮件服务器。警报电子邮件通知使用相同的邮件服务器配置（旧系统）。
+
+
+.关于此任务
+可以使用以下任一协议发送AutoSupport 消息：
+
+* * HTTPS ：这是新安装的默认和建议设置。HTTPS 协议使用端口 443 。如果要启用 AutoSupport On Demand 功能，则必须使用 HTTPS 协议。
+* * HTTP * ：此协议不安全，除非在可信环境中使用，在该环境中，代理服务器在通过 Internet 发送数据时会转换为 HTTPS 。HTTP 协议使用端口 80 。
+* * SMTP ：如果要通过电子邮件发送 AutoSupport 消息，请使用此选项。如果使用SMTP作为AutoSupport 消息的协议、则必须在"旧电子邮件设置"页面(*支持***警报(旧版)**旧版电子邮件设置*)上配置SMTP邮件服务器。
++
+
+NOTE: 在 StorageGRID 11.2 版本之前， SMTP 是唯一可用于 AutoSupport 消息的协议。如果您最初安装的是早期版本的 StorageGRID ，则可能选择了 SMTP 协议。
+
+
+
+您设置的协议用于发送所有类型的 AutoSupport 消息。
+
+.步骤
+. 选择*支持*>*工具*>* AutoSupport *。
++
+此时将显示 AutoSupport 页面，并选择 * 设置 * 选项卡。
+
+. 选择要用于发送 AutoSupport 消息的协议。
++
+image::../media/autosupport_protocol.png[AutoSupport 协议]
+
+. 选择"* NetApp支持证书验证"*。
++
+** 使用NetApp支持证书(默认)：证书验证可确保AutoSupport 消息的传输安全。NetApp 支持证书已随 StorageGRID 软件一起安装。
+** Do not verify certificate：仅当您有充分理由不使用证书验证时、例如证书出现临时问题时、才选择此选项。
+
+
+. 选择 * 保存 * 。
++
+所有每周消息，用户触发的消息和事件触发的消息均使用选定协议发送。
+
+
+
+.相关信息
+link:configuring-admin-proxy-settings.html["配置管理员代理设置"]

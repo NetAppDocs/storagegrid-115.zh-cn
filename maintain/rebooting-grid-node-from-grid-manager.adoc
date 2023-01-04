@@ -1,0 +1,48 @@
+---
+permalink: maintain/rebooting-grid-node-from-grid-manager.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, reboot node, grid manager 
+summary: '从网格管理器重新启动网格节点会发出 `reboot` 命令。' 
+---
+= 从网格管理器重新启动网格节点
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+从网格管理器重新启动网格节点会发出 `reboot` 命令。
+
+.您需要的内容
+* 您必须使用支持的浏览器登录到网格管理器。
+* 您必须具有维护或根访问权限。
+* 您必须具有配置密码短语。
+
+
+.步骤
+. 选择*节点*。
+. 选择要重新启动的网格节点。
+. 选择 * 任务 * 选项卡。
++
+image::../media/nodes_tasks_reboot.gif[节点 > 任务 > 重新启动按钮]
+
+. 单击*重新启动*。
++
+此时将显示确认对话框。
+
++
+image::../media/reboot_node_confirmation.gif[重新启动网格节点的确认对话框]
+
++
+
+NOTE: 如果要重新启动主管理节点，则确认对话框会提醒您，服务停止后，浏览器与网格管理器的连接将暂时断开。
+
+. 输入配置密码短语，然后单击 * 确定 * 。
+. 等待节点重新启动。
++
+关闭服务可能需要一些时间。
+
++
+节点重新启动时、节点页面左侧会显示灰色图标(管理员关闭)。当所有服务重新启动后、图标将恢复为其原始颜色。
+
+

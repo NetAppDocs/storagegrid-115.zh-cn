@@ -1,0 +1,227 @@
+---
+permalink: upgrade/removed-or-deprecated-features.html 
+sidebar: sidebar 
+keywords: features, removed, deprecated, weak consistency, compliance 
+summary: 在StorageGRID 11.5中、某些功能已删除或弃用。您必须查看这些项目、了解在升级之前是需要更新客户端应用程序还是修改配置。 
+---
+= 已删除或已弃用的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在StorageGRID 11.5中、某些功能已删除或弃用。您必须查看这些项目、了解在升级之前是需要更新客户端应用程序还是修改配置。
+
+
+
+== 删除了弱一致性控制
+
+删除了StorageGRID 11.5的弱一致性控制。升级后、以下行为将适用：
+
+* 为S3存储分段或Swift容器设置较弱一致性的请求将成功、但一致性级别实际上会设置为"可用"。
+* 使用弱一致性的现有分段和容器将以静默方式更新、以使用可用的一致性。
+* 如果适用、一致性控制标头较弱的请求实际上将使用可用的一致性。
+
+
+可用的一致性控制与`read-after-new-write`一致性级别相同、但仅为机头操作提供最终一致性。如果存储节点不可用、则可用的一致性控制可为机头操作提供比"`read-after-new-write`"更高的可用性。
+
+
+
+== 已弃用网格运行状况警报
+
+。 `/grid/health/topology` API用于检查节点上是否存在活动的_alarms_is已弃用。取代了一个全新的 `/grid/node-health` 已添加端点。此API通过检查节点上是否存在ACTIVE _alerts_来返回每个节点的当前状态。
+
+
+
+== 已弃用合规性功能
+
+StorageGRID 11.5中的S3对象锁定功能取代了先前StorageGRID 版本中提供的合规性功能。由于新的S3对象锁定功能符合Amazon S3要求、因此它会弃用专有的StorageGRID 合规性功能、现在称为"`原有合规性"。`
+
+如果先前启用了全局合规性设置、则在升级到StorageGRID 11.5时、新的全局S3对象锁定设置将自动启用。租户用户将无法再在StorageGRID 中启用合规性的情况下创建新的分段；但是、租户用户可以根据需要继续使用和管理任何现有的旧合规分段。
+
+在租户管理器中、显示一个屏蔽图标 image:../media/icon_shield.png["屏蔽图标"] 表示旧版合规存储分段。旧版合规存储分段可能还具有保留标志 image:../media/hold_badge.png["持有证卡"] 表示存储分段处于合法保留状态。
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/StorageGRID/How_to_manage_legacy_Compliant_buckets_in_StorageGRID_11.5["知识库文章：How to manage legacy Compliant bac桶in StorageGRID 11.5"^]
+
+link:../ilm/index.html["使用 ILM 管理对象"]
+
+
+
+== 已删除"`s 3多部件部件太小`"警报
+
+已删除* S3多部件太小*警报。以前、如果S3客户端尝试使用不符合Amazon S3大小限制的部件完成多部分上传、则会触发此警报。升级到StorageGRID 11.5后、任何不满足以下大小限制的多部分上传请求都将失败：
+
+* 多部分上传中的每个部分必须介于 5 MiB （ 5 ， 242 ， 880 字节）和 5 GiB （ 5 ， 368 ， 709 ， 120 字节）之间。
+* 最后一部分可以小于 5 MiB （ 5 ， 242 ， 880 字节）。
+* 通常，部件大小应尽可能大。例如，对于 100 GiB 对象，请使用部件大小 5 GiB 。由于每个部件都被视为唯一对象，因此使用较大的部件大小可降低 StorageGRID 元数据开销。
+* 对于小于 5 GiB 的对象，请考虑使用非多部分上传。
+
+
+
+
+== 已删除"网格网络上的设备链路关闭"警报
+
+已删除以下警报。如果网格网络已关闭、则无法访问触发这些警报的指标：
+
+* 网格网络上的服务设备链路已关闭
+* 网格网络上的存储设备链路已关闭
+
+
+
+
+== 支持从SNMP配置中删除完全限定域名
+
+在基板管理控制器(BMC)中为SG6000、SG100或SG1000配置SNMP服务器时、您现在必须指定IP地址、而不是完全限定域名。如果先前配置了完全限定域名、请在升级到StorageGRID 11.5之前将其更改为IP地址。
+
+
+
+== 已删除旧属性
+
+已删除以下旧属性。根据情况、Prometheus指标会提供等效信息：
+
+[cols="1a,2a"]
+|===
+| 原有属性 | 等效的Prometheus指标 
+
+
+ a| 
+BREC
+ a| 
+storaggrid_service_network_received_bytes
+
+
+
+ a| 
+BTRA
+ a| 
+storaggrid_service_network_transmated_bytes
+
+
+
+ a| 
+CQST
+ a| 
+storaggrid_metadata_queries_average ； latency ；毫秒
+
+
+
+ a| 
+哈
+ a| 
+storagegRid_http_sessions_incoming_attempted
+
+
+
+ a| 
+HCCS
+ a| 
+storaggrid_http_sessions_incoming_currently 已建立
+
+
+
+ a| 
+SI
+ a| 
+storagegRid_http_sessions_incoming_failed
+
+
+
+ a| 
+HISC
+ a| 
+storagegRid_http_sessions_incoming_successful
+
+
+
+ a| 
+LHAC
+ a| 
+无 _
+
+
+
+ a| 
+NREC
+ a| 
+无 _
+
+
+
+ a| 
+NTSO (选定时间源偏移)
+ a| 
+storaggrid_ntp_chosed_time_source_offset_mms
+
+
+
+ a| 
+Ntra
+ a| 
+无 _
+
+
+
+ a| 
+SLOD
+ a| 
+storaggrid_service_load
+
+
+
+ a| 
+SMEM
+ a| 
+storagegrid_service_memory_usage_bytes
+
+
+
+ a| 
+SUTM
+ a| 
+storaggrid_service_cpu_seconds
+
+
+
+ a| 
+SVUT
+ a| 
+storaggrid_service_uptime_seconds
+
+
+
+ a| 
+TRBS (每秒接收的总位数)
+ a| 
+无 _
+
+
+
+ a| 
+TRXB
+ a| 
+storaggrid_network_received_bytes
+
+
+
+ a| 
+TTBS (每秒传输的总位数)
+ a| 
+无 _
+
+
+
+ a| 
+TTXB
+ a| 
+storaggrid_network_transmated_bytes
+
+|===
+此外、还进行了以下相关更改：
+
+* 。 `network_received_bytes` 和 `network_transmitted_bytes` Prometheus指标从量表更改为计数器、因为这些指标的值只会增加。如果您当前正在Prometheus查询中使用这些指标、则应开始使用 `increase()` 在查询中起作用。
+* 已从StorageGRID 服务的"Resources"选项卡中删除"Network Resources"表。(选择*支持*>*工具*>*网格拓扑*。然后选择*节点_*>*服务_*>*资源*。)
+* 已删除存储节点的HTTP会话页面。以前、您可以通过选择*支持*>*工具*>*网格拓扑*、然后选择*存储节点_*>* LDR*>* http *来访问此页面。
+* 已删除HCCS (当前已建立的传入会话)警报。
+* 已删除NTSO (选定时间源偏移)警报。
+

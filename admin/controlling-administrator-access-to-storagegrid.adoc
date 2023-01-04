@@ -1,0 +1,22 @@
+---
+permalink: admin/controlling-administrator-access-to-storagegrid.html 
+sidebar: sidebar 
+keywords:  
+summary: '您可以通过以下方式控制管理员对StorageGRID 系统的访问：打开或关闭防火墙端口、管理管理组和用户、配置单点登录\(SSO\)以及提供客户端证书以允许对StorageGRID 指标进行安全外部访问。' 
+---
+= 控制管理员对StorageGRID 的访问
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以通过以下方式控制管理员对StorageGRID 系统的访问：打开或关闭防火墙端口、管理管理组和用户、配置单点登录(Single Sign-On、SSO)以及提供客户端证书以允许对StorageGRID 指标进行安全外部访问。
+
+* link:controlling-access-through-firewalls.html["通过防火墙控制访问"]
+* link:using-identity-federation.html["使用身份联合"]
+* link:managing-admin-groups.html["管理管理组"]
+* link:managing-local-users.html["管理本地用户"]
+* link:using-single-sign-on.html["对StorageGRID 使用单点登录(SSO)"]
+* link:configuring-administrator-client-certificates.html["配置管理员客户端证书"]
+

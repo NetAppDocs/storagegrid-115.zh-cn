@@ -1,0 +1,34 @@
+---
+permalink: monitor/logs-files-reference.html 
+sidebar: sidebar 
+keywords: log, logs, log files 
+summary: 以下各节列出了用于捕获事件、诊断消息和错误情况的日志。系统可能会要求您收集日志文件并将其转发给技术支持以协助进行故障排除。 
+---
+= 日志文件参考
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+以下各节列出了用于捕获事件、诊断消息和错误情况的日志。系统可能会要求您收集日志文件并将其转发给技术支持以协助进行故障排除。
+
+* link:storagegrid-software-logs.html["StorageGRID 软件日志"]
+* link:deployment-and-maintenance-logs.html["部署和维护日志"]
+* link:logs-for-third-party-software.html["第三方软件的日志"]
+* link:about-bycast-log.html["关于 bycast.log"]
+
+
+
+IMPORTANT: 本节中的表仅供参考。这些日志可供技术支持进行高级故障排除。本指南不会介绍有关使用审核日志和应用程序日志文件重建问题历史记录的高级技术。
+
+要访问这些日志、您可以收集日志文件和系统数据(*支持*>*工具*>*日志*)。或者、如果主管理节点不可用或无法访问特定节点、您可以按如下所示访问每个网格节点的日志：
+
+. 输入以下命令： `ssh admin@grid_node_IP`
+. 输入中列出的密码 `Passwords.txt` 文件
+. 输入以下命令切换到root： `su -`
+. 输入中列出的密码 `Passwords.txt` 文件
+
+
+.相关信息
+link:collecting-log-files-and-system-data.html["收集日志文件和系统数据"]

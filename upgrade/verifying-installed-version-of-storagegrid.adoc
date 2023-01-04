@@ -1,0 +1,67 @@
+---
+permalink: upgrade/verifying-installed-version-of-storagegrid.html 
+sidebar: sidebar 
+keywords: storagegrid, version, current version, previous version 
+summary: 在开始升级之前，您必须确认先前版本的 StorageGRID 当前已安装应用了最新可用的修补程序。 
+---
+= 验证已安装的StorageGRID 版本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在开始升级之前，您必须确认先前版本的 StorageGRID 当前已安装应用了最新可用的修补程序。
+
+.步骤
+. 使用支持的浏览器登录到网格管理器。
+. 选择*帮助*>*关于*。
+. 验证*版本*是否为11.4._x.y_。
++
+在StorageGRID 11.4._x.y_版本号中：
+
++
+** 主要版本的_x_值为0 (11.5.0)。
+** 次要版本的_x_值不是0 (例如11.5.1)(如果可用)。
+** 修补程序(如果有)具有_y_值(例如11.4.0.1)。
+
+
++
+
+IMPORTANT: 如果您使用的是早期版本的StorageGRID 、则必须先升级到任何11.4版、然后再升级到StorageGRID 11.5。升级到StorageGRID 11.5无需使用最高的11.4次要版本。
+
+. 如果您使用的不是StorageGRID 11.4版、则必须按照每个版本的说明一次升级到一个版本的11.4。
++
+在升级到下一级别之前、您还必须对每个StorageGRID 版本应用最新的修补程序。
+
++
+示例中显示了一个可能的升级路径。
+
+. 访问StorageGRID 11.4后、转到StorageGRID 的"NetApp下载"页面、查看是否有适用于您的StorageGRID 11.4_x_版本的修补程序。
++
+https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["NetApp 下载： StorageGRID"^]
+
+. 验证您的StorageGRID 11.4_x_版本是否已应用最新的修补程序。
+. 如有必要、请下载并应用适用于您的StorageGRID 11.4._x_版本的最新StorageGRID 11.4._x.y_修补程序。
++
+有关应用修补程序的信息、请参见恢复和维护说明。
+
+
+
+
+
+== 示例：准备从11.3.0.8版升级到StorageGRID 11.5
+
+以下示例显示了准备从StorageGRID 11.3.0.8版升级到11.5版的升级步骤。在升级到StorageGRID 11.5之前、您的系统必须安装具有最新修补程序的StorageGRID 11.4版。
+
+按以下顺序下载并安装软件，以便为您的系统做好升级准备：
+
+. 应用最新的 StorageGRID 11.3.0._y_ 修补程序。
+. 升级到 StorageGRID 11.4.0 主要版本。(您不需要安装任何11.4_x_次要版本。)
+. 应用最新的 StorageGRID 11.4.0._y_ 修补程序。
+
+
+.相关信息
+link:../admin/index.html["管理 StorageGRID"]
+
+link:../maintain/index.html["保持并恢复()"]

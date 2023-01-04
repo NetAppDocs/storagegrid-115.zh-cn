@@ -1,0 +1,20 @@
+---
+permalink: tenant/index.html 
+sidebar: sidebar 
+keywords:  
+summary: 了解如何使用StorageGRID 租户帐户。 
+---
+= 使用租户帐户
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解如何使用StorageGRID 租户帐户。
+
+* link:using-tenant-manager.html["使用租户管理器"]
+* link:managing-system-access-for-tenant-users.html["管理租户用户的系统访问"]
+* link:managing-s3-tenant-accounts.html["管理S3租户帐户"]
+* link:managing-s3-platform-services.html["管理S3平台服务"]
+

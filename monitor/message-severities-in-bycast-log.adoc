@@ -1,0 +1,22 @@
+---
+permalink: monitor/message-severities-in-bycast-log.html 
+sidebar: sidebar 
+keywords: bycast, log, severities 
+summary: bycast.log中的消息会被分配严重性级别。 
+---
+= bycast.log 中的消息严重性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+中的消息 `bycast.log` 已分配严重性级别。
+
+例如：
+
+* * 通知 * —发生了应记录的事件。大多数日志消息都处于此级别。
+* * 警告 * - 发生意外情况。
+* * 错误 * —发生了一个会影响操作的重大错误。
+* * 严重 * —发生异常情况，导致正常操作停止。您应立即解决基本情况。网格管理器中也会显示严重消息。选择*支持*>*工具*>*网格拓扑*。然后选择 * 站点 * > * 节点 * > * SSM* > * 事件 * 。
+

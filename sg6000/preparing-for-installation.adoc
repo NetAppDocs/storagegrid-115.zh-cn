@@ -1,0 +1,23 @@
+---
+permalink: sg6000/preparing-for-installation.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, install, installation, preparation, get ready, prepare 
+summary: 准备安装 StorageGRID 设备需要准备站点并获取所有必需的硬件，缆线和工具。您还应收集 IP 地址和网络信息。 
+---
+= 准备安装
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+准备安装 StorageGRID 设备需要准备站点并获取所有必需的硬件，缆线和工具。您还应收集 IP 地址和网络信息。
+
+.步骤
+* link:preparing-site-sg6000.html["准备站点(SG6000)"]
+* link:unpacking-boxes-sg6000.html["打开包装箱的包装(SG6000)"]
+* link:obtaining-additional-equipment-and-tools-sg6000.html["获取其他设备和工具(SG6000)"]
+* link:web-browser-requirements.html["Web 浏览器要求"]
+* link:reviewing-appliance-network-connections-sg6000.html["查看设备网络连接"]
+* link:gathering-installation-information-sg6000.html["收集安装信息(SG6000)"]
+

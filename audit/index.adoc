@@ -1,0 +1,20 @@
+---
+permalink: audit/index.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, logs, messages, log, message 
+summary: 了解StorageGRID 系统审核日志并查看所有审核消息的列表。 
+---
+= 查看审核日志
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解StorageGRID 系统审核日志并查看所有审核消息的列表。
+
+* link:audit-message-overview.html["审核消息概述"]
+* link:audit-file-and-message-formats.html["审核日志文件和消息格式"]
+* link:audit-messages-and-object-lifecycle.html["审核消息和对象生命周期"]
+* link:audit-messages-main.html["审核消息"]
+

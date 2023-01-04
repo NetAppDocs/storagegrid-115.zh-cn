@@ -1,0 +1,19 @@
+---
+permalink: admin/configuring-global-settings-for-stored-objects.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用网格选项为存储在 StorageGRID 系统中的所有对象配置设置，包括存储的对象压缩和存储的对象加密。和存储的对象哈希。 
+---
+= 为已存储对象配置全局设置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用网格选项为存储在 StorageGRID 系统中的所有对象配置设置，包括存储的对象压缩和存储的对象加密。和存储的对象哈希。
+
+* link:configuring-stored-object-compression.html["配置存储的对象压缩"]
+* link:configuring-stored-object-encryption.html["配置存储的对象加密"]
+* link:configuring-stored-object-hashing.html["配置存储的对象哈希"]
+

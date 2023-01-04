@@ -1,0 +1,20 @@
+---
+permalink: upgrade/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= 升级软件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解如何将StorageGRID 系统升级到新版本。
+
+* link:about-this-release.html["关于StorageGRID 11.5"]
+* link:upgrade-planning-and-preparation.html["升级规划和准备"]
+* link:performing-upgrade.html["正在执行升级"]
+* link:troubleshooting-upgrade-issues.html["对升级问题进行故障排除"]
+

@@ -1,0 +1,34 @@
+---
+permalink: admin/creating-custom-notifications-for-migration-alarms.html 
+sidebar: sidebar 
+keywords:  
+summary: '如果某些值超过建议的阈值、您可能希望StorageGRID 向负责监控迁移的系统管理员发送警报通知或警报\(原有系统\)通知。' 
+---
+= 为迁移警报创建自定义通知
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果某些值超过建议的阈值、您可能希望StorageGRID 向负责监控迁移的系统管理员发送警报通知或警报(传统系统)通知。
+
+.您需要的内容
+* 您必须使用支持的浏览器登录到网格管理器。
+* 您必须具有特定的访问权限。
+* 您必须已为警报(或警报)通知配置电子邮件设置。
+
+
+.步骤
+. 为要在数据迁移期间监控的每个Prometheus指标或StorageGRID 属性创建自定义警报规则或全局自定义警报。
++
+警报将根据Prometheus指标值触发。根据属性值触发警报。有关详细信息、请参见StorageGRID 监控和故障排除说明。
+
+. 数据迁移完成后、禁用自定义警报规则或全局自定义警报。
++
+请注意、全局自定义警报会覆盖默认警报。
+
+
+
+.相关信息
+link:../monitor/index.html["监控和放大；故障排除"]

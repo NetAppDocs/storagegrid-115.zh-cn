@@ -1,0 +1,22 @@
+---
+permalink: ubuntu/example-1-1-to-1-mapping-to-physical-or-virtual-nics.html 
+sidebar: sidebar 
+keywords:  
+summary: 示例 1 介绍了一个简单的物理接口映射，该映射只需要很少的主机端配置或根本不需要主机端配置。 
+---
+= 示例 1 ：映射到物理或虚拟 NIC 的一对一映射
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+示例 1 介绍了一个简单的物理接口映射，该映射只需要很少的主机端配置或根本不需要主机端配置。
+
+image::../media/rhel_install_vlan_diag_1.gif[此图通过周围的文本进行了说明。]
+
+Linux 操作系统会在安装或启动期间或热添加接口时自动创建 ensXYZ 接口。除了确保接口设置为在启动后自动启动之外，无需进行任何配置。您必须确定哪个 ensXYZ 与哪个 StorageGRID 网络（网格，管理员或客户端）相对应，以便稍后在配置过程中提供正确的映射。
+
+请注意，此图显示了多个 StorageGRID 节点；但是，通常情况下，您会对单节点 VM 使用此配置。
+
+如果交换机 1 是物理交换机，则应将连接到接口 10G~1~ 到 10G~3~ 的端口配置为访问模式，并将其放置在相应的 VLAN 上。

@@ -1,0 +1,78 @@
+---
+permalink: vmware/automating-grid-node-deployment-in-vmware-vsphere.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以在VMware vSphere中自动部署StorageGRID 网格节点。 
+---
+= 在VMware vSphere中自动部署网格节点
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在VMware vSphere中自动部署StorageGRID 网格节点。
+
+.您需要的内容
+* 您可以访问使用 Bash 3.2 或更高版本的 Linux/Unix 系统。
+* 您已安装并正确配置 VMware OVF Tool 4.1 。
+* 您知道使用 OVF 工具访问 VMware vSphere 所需的用户名和密码。
+* 您知道 vSphere 中要部署 StorageGRID 虚拟机的位置的虚拟基础架构（ VI ） URL 。此 URL 通常为 vApp 或资源池。例如： `vi://vcenter.example.com/vi/sgws`
++
+
+NOTE: 您可以使用VMware `ovftool` 用于确定此值的实用程序(请参见 `ovftool` 文档以了解详细信息)。
+
++
+
+NOTE: 如果要部署到 vApp ，虚拟机不会首次自动启动，您必须手动启动它们。
+
+* 您已收集此配置文件所需的所有信息。请参见 link:collecting-information-about-your-deployment-environment.html["收集有关部署环境的信息"] 以了解相关信息。
+* 您可以从适用于 StorageGRID 的 VMware 安装归档文件访问以下文件：
+
+
+[cols="1a,1a"]
+|===
+| 文件名 | Description 
+
+
+| netapp-sg-version-sha.vmdk  a| 
+用作创建网格节点虚拟机的模板的虚拟机磁盘文件。
+
+*注：*此文件必须与位于同一文件夹中 `.ovf` 和 `.mf` 文件。
+
+
+
+| vsphere-primary-admin.OVF vsphere-primary-admin.mf  a| 
+开放式虚拟化格式模板文件 (`.ovf`)和清单文件 (`.mf`)以部署主管理节点。
+
+
+
+| vsphere-non-primary-admin.OVF vsphere-non-primary-admin.mf  a| 
+模板文件 (`.ovf`)和清单文件 (`.mf`)以部署非主管理节点。
+
+
+
+| vsphere-archive.OVF vsphere-archive.mf  a| 
+模板文件 (`.ovf`)和清单文件 (`.mf`)以部署归档节点。
+
+
+
+| vsphere-gateway.OVF vsphere-gateway.mf  a| 
+模板文件 (`.ovf`)和清单文件 (`.mf`)以部署网关节点。
+
+
+
+| vsphere-storage.OVF vsphere-storage.mf  a| 
+模板文件 (`.ovf`)和清单文件 (`.mf`)以部署基于虚拟机的存储节点。
+
+
+
+| deploy-vsphere-ovftool.sh  a| 
+Bash shell 脚本，用于自动部署虚拟网格节点。
+
+
+
+| deploy-vsphere-ovftool-sample.ini  a| 
+用于的示例配置文件 `deploy-vsphere-ovftool.sh` 脚本。
+
+|===

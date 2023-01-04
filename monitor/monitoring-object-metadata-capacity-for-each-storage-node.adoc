@@ -1,0 +1,92 @@
+---
+permalink: monitor/monitoring-object-metadata-capacity-for-each-storage-node.html 
+sidebar: sidebar 
+keywords: object, metadata, monitoring, monitoring object metadata, metadata, metadata capacity 
+summary: '您必须监控每个存储节点的元数据使用情况、以确保为基本数据库操作保留足够的可用空间。在对象元数据超过允许的元数据空间的 100% 之前，您必须在每个站点添加新的存储节点。' 
+---
+= 监控每个存储节点的对象元数据容量
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须监控每个存储节点的元数据使用情况、以确保为基本数据库操作保留足够的可用空间。在对象元数据超过允许的元数据空间的 100% 之前，您必须在每个站点添加新的存储节点。
+
+.您需要的内容
+* 您必须使用支持的浏览器登录到网格管理器。
+
+
+.关于此任务
+StorageGRID 在每个站点维护三个对象元数据副本，以提供冗余并防止对象元数据丢失。这三个副本会使用每个存储节点的存储卷 0 上为元数据预留的空间均匀分布在每个站点的所有存储节点上。
+
+在某些情况下，网格的对象元数据容量消耗速度可能比其对象存储容量更快。例如，如果您通常要载入大量小对象，则可能需要添加存储节点以增加元数据容量，即使仍有足够的对象存储容量。
+
+可能增加元数据使用量的一些因素包括用户元数据和标记的大小和数量，多部分上传中的部件总数以及 ILM 存储位置的更改频率。
+
+.步骤
+. 选择*节点*>*存储节点_*>*存储*。
+. 将光标悬停在"已用存储-对象元数据"图上可查看特定时间的值。
++
+image::../media/storage_used_object_metadata.png[已用存储—对象元数据]
+
++
+|===
+| 价值 | Description | Prometheus 指标 
+
+
+ a| 
+已用（ % ）
+ a| 
+此存储节点上已使用的允许元数据空间的百分比。
+ a| 
+`storagegrid_storage_utilization_metadata_bytes/ storagegrid_storage_utilization_metadata_allowed_bytes`
+
+
+
+ a| 
+已用
+ a| 
+此存储节点上已使用的允许元数据空间的字节数。
+ a| 
+`storagegrid_storage_utilization_metadata_bytes`
+
+
+
+ a| 
+允许
+ a| 
+此存储节点上的对象元数据允许的空间。要了解如何为每个存储节点确定此值、请参见有关管理StorageGRID 的说明。
+ a| 
+`storagegrid_storage_utilization_metadata_allowed_bytes`
+
+
+
+ a| 
+实际预留
+ a| 
+为此存储节点上的元数据预留的实际空间。包括基本元数据操作所需的允许空间和空间。要了解如何为每个存储节点计算此值、请参见有关管理StorageGRID 的说明。
+ a| 
+`storagegrid_storage_utilization_metadata_reserved_bytes`
+
+|===
++
+
+NOTE: 站点或网格的总值不包括至少在五分钟内未报告指标的节点，例如脱机节点。
+
+. 如果 * 已用（ % ） * 值为 70% 或更高，请通过向每个站点添加存储节点来扩展 StorageGRID 系统。
++
+
+IMPORTANT: 当 * 已用（ % ） * 值达到特定阈值时，将触发 * 元数据存储不足 * 警报。如果对象元数据使用的空间超过允许的 100% ，则可能会出现不希望出现的结果。
+
++
+添加新节点时，系统会自动在站点内的所有存储节点之间重新平衡对象元数据。请参见有关扩展 StorageGRID 系统的说明。
+
+
+
+.相关信息
+link:../troubleshoot/troubleshooting-storagegrid-system.html["对低元数据存储警报进行故障排除"]
+
+link:../admin/index.html["管理 StorageGRID"]
+
+link:../expand/index.html["扩展网格"]

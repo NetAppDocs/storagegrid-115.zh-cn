@@ -1,0 +1,26 @@
+---
+permalink: network/deployment-specific-networking-requirements.html 
+sidebar: sidebar 
+keywords:  
+summary: 根据您使用的部署平台、您可能还需要考虑StorageGRID 网络设计的其他注意事项。 
+---
+= 部署特定的网络注意事项
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+根据您使用的部署平台、您可能还需要考虑StorageGRID 网络设计的其他注意事项。
+
+网格节点可部署为：
+
+* 在VMware vSphere Web Client中部署为虚拟机的基于软件的网格节点
+* 基于软件的网格节点、部署在Linux主机上的Docker容器中
+* 基于设备的节点
+
+
+有关网格节点的追加信息 、请参见_Grid primer_。
+
+.相关信息
+link:../primer/index.html["网格入门"]

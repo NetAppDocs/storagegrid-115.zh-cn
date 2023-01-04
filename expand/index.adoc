@@ -1,0 +1,23 @@
+---
+permalink: expand/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= 扩展网格
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解如何在不中断系统操作的情况下扩展StorageGRID 系统。
+
+* link:planning-expansion.html["规划StorageGRID 扩展"]
+* link:preparing-for-expansion.html["准备扩展"]
+* link:overview-of-expansion-procedure.html["扩展操作步骤 概述"]
+* link:adding-storage-volumes-to-storage-nodes.html["将存储卷添加到存储节点"]
+* link:adding-grid-nodes-to-existing-site-or-adding-new-site.html["向现有站点添加网格节点或添加新站点"]
+* link:configuring-expanded-storagegrid-system.html["配置扩展的StorageGRID 系统"]
+* link:contacting-technical-support.html["联系技术支持"]
+

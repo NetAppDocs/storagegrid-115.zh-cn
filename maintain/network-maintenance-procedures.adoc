@@ -1,0 +1,22 @@
+---
+permalink: maintain/network-maintenance-procedures.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以在网格网络上配置子网列表、也可以更新StorageGRID 系统的IP地址、DNS服务器或NTP服务器。 
+---
+= 网络维护过程
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在网格网络上配置子网列表、也可以更新StorageGRID 系统的IP地址、DNS服务器或NTP服务器。
+
+.选项
+* link:updating-subnets-for-grid-network.html["更新网格网络的子网"]
+* link:configuring-ip-addresses.html["配置IP地址"]
+* link:configuring-dns-servers.html["配置DNS服务器"]
+* link:configuring-ntp-servers.html["配置NTP服务器"]
+* link:restoring-network-connectivity-for-isolated-nodes.html["还原隔离节点的网络连接"]
+

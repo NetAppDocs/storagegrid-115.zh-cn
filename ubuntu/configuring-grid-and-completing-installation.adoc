@@ -1,0 +1,26 @@
+---
+permalink: ubuntu/configuring-grid-and-completing-installation.html 
+sidebar: sidebar 
+keywords: storagegrid, ubuntu, debian, completing installation, configuring grid 
+summary: 您可以通过主管理节点上的网格管理器配置StorageGRID 系统来完成安装。 
+---
+= 配置网格并完成安装
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以通过主管理节点上的网格管理器配置StorageGRID 系统来完成安装。
+
+* link:navigating-to-grid-manager.html["导航到网格管理器"]
+* link:specifying-storagegrid-license-information.html["指定StorageGRID 许可证信息"]
+* link:adding-sites.html["正在添加站点"]
+* link:specifying-grid-network-subnets.html["指定网格网络子网"]
+* link:approving-pending-grid-nodes.html["批准待定网格节点"]
+* link:specifying-network-time-protocol-server-information.html["指定网络时间协议服务器信息"]
+* link:specifying-domain-name-system-server-information.html["指定域名系统服务器信息"]
+* link:specifying-storagegrid-system-passwords.html["指定StorageGRID 系统密码"]
+* link:reviewing-your-configuration-and-completing-installation.html["查看配置并完成安装"]
+* link:post-installation-guidelines.html["安装后准则"]
+

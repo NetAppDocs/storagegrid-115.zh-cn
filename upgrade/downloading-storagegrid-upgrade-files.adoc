@@ -1,0 +1,76 @@
+---
+permalink: upgrade/downloading-storagegrid-upgrade-files.html 
+sidebar: sidebar 
+keywords: download, upgrade files 
+summary: 在升级StorageGRID 系统之前、您必须将所需文件下载到服务笔记本电脑。 
+---
+= 下载StorageGRID 升级文件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在升级StorageGRID 系统之前、您必须将所需文件下载到服务笔记本电脑。
+
+.您需要的内容
+您必须已为要升级的StorageGRID 软件版本安装所有必需的修补程序。请参见恢复和维护说明中的热修补程序操作步骤。
+
+.关于此任务
+您必须下载 `.upgrade` 适用于任何平台的归档。如果在Linux主机上部署了任何节点、则还必须下载RPM或Deb归档文件、此文件将在开始升级之前安装。
+
+.步骤
+. 转到 StorageGRID 的 "NetApp 下载 " 页面。
++
+https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["NetApp 下载： StorageGRID"^]
+
+. 选择用于下载最新版本的按钮，或者从下拉菜单中选择其他版本并选择 * 执行 * 。
++
+StorageGRID 软件版本采用以下格式： 11._x.y_ 。StorageGRID 修补程序采用以下格式： 11._x.y.z_ 。
+
+. 使用您的 NetApp 帐户的用户名和密码登录。
+. 如果显示 Caution/MustRead 语句，请阅读该语句并选中复选框。
++
+如果此版本需要修补程序，则会显示此语句。
+
+. 阅读最终用户许可协议，选中复选框，然后选择 * 接受并继续 * 。
++
+此时将显示选定版本的下载页面。此页面包含三列：
+
++
+** 安装 StorageGRID
+** 升级 StorageGRID
+** StorageGRID 设备的支持文件
+
+
+. 在*升级StorageGRID *列中、选择并下载 `.upgrade` 归档。
++
+每个平台都需要 `.upgrade` 归档。
+
+. 如果在Linux主机上部署了任何节点、也可以在其中下载RPM或Deb归档文件 `.tgz` 或 `.zip` 格式。
++
+开始升级之前、必须在所有Linux节点上安装RPM或Deb归档。
+
++
+
+NOTE: SG100 或 SG1000 不需要其他文件。
+
++
+
+NOTE: 选择 `.zip` 如果您在服务笔记本电脑上运行Windows、则将文件保存。
+
++
+** Red Hat Enterprise Linux或CentOS +
+`StorageGRID-Webscale-_version_-RPM-_uniqueID_.zip` +
+`StorageGRID-Webscale-_version_-RPM-_uniqueID_.tgz`
+** Ubuntu或Debian +
+`StorageGRID-Webscale-_version_-DEB-_uniqueID_.zip` +
+`StorageGRID-Webscale-_version_-DEB-_uniqueID_.tgz`
+
+
+
+
+.相关信息
+link:linux-installing-rpm-or-deb-package-on-all-hosts.html["Linux：在所有主机上安装RPM或Deb软件包"]
+
+link:../maintain/index.html["保持并恢复()"]

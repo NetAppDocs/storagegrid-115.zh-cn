@@ -1,0 +1,26 @@
+---
+permalink: network/linux-deployments.html 
+sidebar: sidebar 
+keywords:  
+summary: 为了提高效率、可靠性和安全性、StorageGRID 系统在Linux上作为一组Docker容器运行。StorageGRID 系统不需要配置与Docker相关的网络。 
+---
+= Linux 部署
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+为了提高效率、可靠性和安全性、StorageGRID 系统在Linux上作为一组Docker容器运行。StorageGRID 系统不需要配置与Docker相关的网络。
+
+使用非绑定设备作为容器网络接口，例如 VLAN 或虚拟以太网（ Veth ）对。在节点配置文件中指定此设备作为网络接口。
+
+
+IMPORTANT: 请勿直接使用绑定或网桥设备作为容器网络接口。这样做可能会由于内核问题描述 在容器命名空间中对绑定和网桥设备使用 macvlan 而阻止节点启动。
+
+请参见Red Hat Enterprise Linux/CentOS或Ubuntu或Debian部署的安装说明。
+
+.相关信息
+link:../rhel/index.html["安装 Red Hat Enterprise Linux 或 CentOS"]
+
+link:../ubuntu/index.html["安装 Ubuntu 或 Debian"]

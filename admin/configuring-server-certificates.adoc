@@ -1,0 +1,43 @@
+---
+permalink: admin/configuring-server-certificates.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以自定义StorageGRID 系统使用的服务器证书。 
+---
+= 配置服务器证书
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以自定义StorageGRID 系统使用的服务器证书。
+
+StorageGRID 系统将安全证书用于多种不同的用途：
+
+* 管理接口服务器证书：用于保护对网格管理器、租户管理器、网格管理API和租户管理API的访问。
+* 存储API服务器证书：用于保护对存储节点和网关节点的访问、API客户端应用程序使用这些节点上传和下载对象数据。
+
+
+您可以使用在安装期间创建的默认证书、也可以将其中一种或两种默认类型的证书替换为您自己的自定义证书。
+
+
+
+== 支持的自定义服务器证书类型
+
+StorageGRID 系统支持使用RSA或ECDSA (椭圆曲线数字签名算法)加密的自定义服务器证书。
+
+有关StorageGRID 如何为REST API保护客户端连接的详细信息、请参见S3或Swift实施指南。
+
+
+
+== 负载平衡器端点的证书
+
+StorageGRID 单独管理用于负载平衡器端点的证书。要配置负载平衡器证书、请参见有关配置负载平衡器端点的说明。
+
+.相关信息
+link:../s3/index.html["使用 S3"]
+
+link:../swift/index.html["使用 Swift"]
+
+link:configuring-load-balancer-endpoints.html["配置负载平衡器端点"]

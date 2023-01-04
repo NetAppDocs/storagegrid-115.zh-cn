@@ -1,0 +1,105 @@
+---
+permalink: upgrade/obtaining-required-materials-for-software-upgrade.html 
+sidebar: sidebar 
+keywords: upgrade, requirements, rhel, red hat, linux, centOS, ubuntu, debian 
+summary: 在开始软件升级之前，您必须获取所有必需的材料，才能成功完成升级。 
+---
+= 获取软件升级所需的材料
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在开始软件升级之前，您必须获取所有必需的材料，才能成功完成升级。
+
+[cols="1a,3a"]
+|===
+| 项目 | 注释： 
+
+
+ a| 
+StorageGRID 升级文件
+ a| 
+您必须将所需文件下载到您的服务笔记本电脑：
+
+* *所有平台*： `.upgrade` 文件
+* * Red Hat Enterprise Linux或CentOS*上的任何节点： `.upgrade` 文件和RPM文件 (`.zip` 或 `.tgz`）
+* * Ubuntu或Debian上的任何节点*： `.upgrade` 文件和Deb文件 (`.zip` 或 `.tgz`）
+
+
+
+
+ a| 
+服务笔记本电脑
+ a| 
+服务笔记本电脑必须具有：
+
+* 网络端口
+* SSH 客户端（例如 PuTTY ）
+
+
+
+
+ a| 
+支持的 Web 浏览器
+ a| 
+您必须确认服务笔记本电脑上的Web浏览器支持与StorageGRID 11.5结合使用。
+
+link:web-browser-requirements.html["Web 浏览器要求"]
+
+*注：* StorageGRID 11.5的浏览器支持已更改。确认您使用的是受支持的版本。
+
+
+
+ a| 
+恢复软件包 (`.zip`)文件
+ a| 
+在升级之前、如果升级期间发生任何问题、您应下载最新的恢复软件包文件。
+
+升级主管理节点后、必须下载恢复软件包文件的新副本并将其保存在安全位置。更新后的恢复包文件可用于在发生故障时还原系统。
+
+link:downloading-recovery-package.html["正在下载恢复包"]
+
+
+
+ a| 
+`Passwords.txt` 文件
+ a| 
+此文件包含在所述软件包中、该软件包是恢复软件包的一部分 `.zip` 文件您必须获取最新版本的恢复软件包。
+
+
+
+ a| 
+配置密码短语
+ a| 
+首次安装 StorageGRID 系统时，系统会创建并记录密码短语。配置密码短语未在中列出 `Passwords.txt` 文件
+
+
+
+ a| 
+相关文档
+ a| 
+* StorageGRID 11.5发行说明。在开始升级之前，请务必仔细阅读这些内容。
+* 有关管理 StorageGRID 的说明
+* 如果要升级Linux部署、请阅读适用于您的Linux平台的StorageGRID 安装说明。
+* 根据需要提供其他 StorageGRID 文档。
+
+
+|===
+.相关信息
+link:web-browser-requirements.html["Web 浏览器要求"]
+
+link:../admin/index.html["管理 StorageGRID"]
+
+link:../rhel/index.html["安装 Red Hat Enterprise Linux 或 CentOS"]
+
+link:../ubuntu/index.html["安装 Ubuntu 或 Debian"]
+
+link:../vmware/index.html["安装 VMware"]
+
+link:downloading-storagegrid-upgrade-files.html["下载StorageGRID 升级文件"]
+
+link:downloading-recovery-package.html["正在下载恢复包"]
+
+link:../release-notes/index.html["发行说明"]

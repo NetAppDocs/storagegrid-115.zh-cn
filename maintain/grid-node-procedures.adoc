@@ -1,0 +1,43 @@
+---
+permalink: maintain/grid-node-procedures.html 
+sidebar: sidebar 
+keywords: storagegrid, grid node procedure 
+summary: 您可能需要在特定网格节点上执行相关过程。虽然您可以从网格管理器执行其中几个过程，但大多数过程都要求您从节点的命令行访问 Server Manager 。 
+---
+= 网格节点过程
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可能需要在特定网格节点上执行相关过程。虽然您可以从网格管理器执行其中几个过程，但大多数过程都要求您从节点的命令行访问 Server Manager 。
+
+服务器管理器在每个网格节点上运行，用于监控服务的启动和停止，并确保服务正常加入和退出 StorageGRID 系统。Server Manager 还会监控每个网格节点上的服务，并自动尝试重新启动报告故障的任何服务。
+
+
+IMPORTANT: 只有在技术支持指示您访问 Server Manager 时，才应访问此服务器管理器。
+
+
+NOTE: 使用完 Server Manager 后，您必须关闭当前命令 Shell 会话并注销。输入 ... `exit`
+
+.选项
+* link:viewing-server-manager-status-and-version.html["查看Server Manager状态和版本"]
+* link:viewing-current-status-of-all-services.html["查看所有服务的当前状态"]
+* link:starting-server-manager-and-all-services.html["正在启动Server Manager和所有服务"]
+* link:restarting-server-manager-and-all-services.html["正在重新启动Server Manager和所有服务"]
+* link:stopping-server-manager-and-all-services.html["正在停止Server Manager和所有服务"]
+* link:viewing-current-status-of-service.html["查看服务的当前状态"]
+* link:stopping-service.html["停止服务"]
+* link:placing-appliance-into-maintenance-mode.html["将设备置于维护模式"]
+* link:forcing-service-to-terminate.html["强制终止服务"]
+* link:starting-or-restarting-service.html["启动或重新启动服务"]
+* link:removing-port-remaps.html["正在删除端口重新映射"]
+* link:removing-port-remaps-on-bare-metal-hosts.html["删除裸机主机上的端口重新映射"]
+* link:rebooting-grid-node.html["重新启动网格节点"]
+* link:shutting-down-grid-node.html["关闭网格节点"]
+* link:powering-down-host.html["关闭主机"]
+* link:powering-off-and-on-all-nodes-in-grid.html["关闭和打开网格中的所有节点"]
+* link:using-donotstart-file.html["使用DoNotStart文件"]
+* link:troubleshooting-server-manager.html["对Server Manager进行故障排除"]
+

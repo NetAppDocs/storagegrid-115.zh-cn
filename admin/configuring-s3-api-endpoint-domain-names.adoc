@@ -1,0 +1,89 @@
+---
+permalink: admin/configuring-s3-api-endpoint-domain-names.html 
+sidebar: sidebar 
+keywords:  
+summary: 要支持 S3 虚拟托管模式请求，您必须使用网格管理器配置 S3 客户端连接到的端点域名列表。 
+---
+= 配置S3 API端点域名
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要支持 S3 虚拟托管模式请求，您必须使用网格管理器配置 S3 客户端连接到的端点域名列表。
+
+.您需要的内容
+* 您必须使用支持的浏览器登录到网格管理器。
+* 您必须具有特定的访问权限。
+* 您必须已确认网格升级未在进行中。
++
+
+CAUTION: 在进行网格升级时，请勿对域名配置进行任何更改。
+
+
+
+.关于此任务
+要使客户端能够使用S3端点域名、您必须执行以下所有任务：
+
+* 使用网格管理器将 S3 端点域名添加到 StorageGRID 系统。
+* 确保客户端用于与 StorageGRID 的 HTTPS 连接的证书已针对客户端所需的所有域名进行签名。
++
+例如、如果端点为 `s3.company.com`、您必须确保用于HTTPS连接的证书包括 `s3.company.com` 端点和端点的通配符使用者备用名称(SAN)： `*.s3.company.com`。
+
+* 配置客户端使用的 DNS 服务器。为客户端用于建立连接的 IP 地址提供 DNS 记录，并确保这些记录引用所有必需的端点域名，包括任何通配符名称。
++
+
+NOTE: 客户端可以使用网关节点，管理节点或存储节点的 IP 地址或连接到高可用性组的虚拟 IP 地址连接到 StorageGRID 。您应了解客户端应用程序如何连接到网格，以便在 DNS 记录中包含正确的 IP 地址。
+
+
+
+客户端用于HTTPS连接的证书取决于客户端如何连接到网格：
+
+* 如果客户端使用负载平衡器服务进行连接、则会对特定负载平衡器端点使用证书。
++
+
+NOTE: 每个负载平衡器端点都有自己的证书，并且可以对每个端点进行配置以识别不同的端点域名。
+
+* 如果客户端连接到存储节点或网关节点上的CLB服务、则客户端将使用网格自定义服务器证书、该证书已更新、以包含所有必需的端点域名。
++
+
+NOTE: CLB 服务已弃用。
+
+
+
+.步骤
+. 选择*配置*>*网络设置*>*域名*。
++
+此时将显示 Endpoint Domain Names 页面。
+
++
+image::../media/configure_endpoint_domain_names.png[端点域名对话框的屏幕截图]
+
+. 使用(+)图标添加其他字段、在*端点*字段中输入S3 API端点域名列表。
++
+如果此列表为空，则会禁用对 S3 虚拟托管模式请求的支持。
+
+. 单击 * 保存 * 。
+. 确保客户端使用的服务器证书与所需的端点域名匹配。
++
+** 对于使用负载平衡器服务的客户端、更新与该客户端连接的负载平衡器端点关联的证书。
+** 对于直接连接到存储节点或在网关节点上使用CLB服务的客户端、请更新网格的自定义服务器证书。
+
+
+. 添加所需的 DNS 记录，以确保可以解决端点域名请求。
+
+
+.结果
+现在、当客户端使用端点时 `bucket.s3.company.com`、DNS服务器解析到正确的端点、证书将按预期对端点进行身份验证。
+
+.相关信息
+link:../s3/index.html["使用 S3"]
+
+link:viewing-ip-addresses.html["查看IP地址"]
+
+link:creating-high-availability-group.html["创建高可用性组"]
+
+link:configuring-custom-server-certificate-for-storage-node-or-clb.html["配置自定义服务器证书以连接到存储节点或CLB服务"]
+
+link:configuring-load-balancer-endpoints.html["配置负载平衡器端点"]

@@ -1,0 +1,21 @@
+---
+permalink: admin/changing-ip-address-of-nfs-audit-client.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= 更改NFS审核客户端的IP地址
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+. 向现有 NFS 审核共享添加新 IP 地址。
+. 删除原始 IP 地址。
+
+
+.相关信息
+link:adding-nfs-audit-client-to-audit-share.html["将NFS审核客户端添加到审核共享"]
+
+link:removing-nfs-audit-client-from-audit-share.html["从审核共享中删除NFS审核客户端"]

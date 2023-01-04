@@ -1,0 +1,20 @@
+---
+permalink: primer/monitoring-storagegrid-operations.html 
+sidebar: sidebar 
+keywords:  
+summary: 网格管理器可提供有关监控StorageGRID 系统日常活动的信息、包括其运行状况。 
+---
+= 监控StorageGRID 操作
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+网格管理器可提供有关监控StorageGRID 系统日常活动的信息、包括其运行状况。
+
+* link:viewing-nodes-page.html["查看节点页面"]
+* link:monitoring-and-managing-alerts.html["监控和管理警报"]
+* link:using-snmp-monitoring.html["使用SNMP监控"]
+* link:reviewing-audit-messages.html["查看审核消息"]
+

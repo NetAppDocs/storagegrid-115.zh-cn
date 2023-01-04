@@ -1,0 +1,24 @@
+---
+permalink: ilm/configuring-storage-pools.html 
+sidebar: sidebar 
+keywords:  
+summary: 定义ILM规则时、您可以使用存储池指定对象的存储位置。在创建存储池之前、您必须查看存储池准则。 
+---
+= 配置存储池
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+定义ILM规则时、您可以使用存储池指定对象的存储位置。在创建存储池之前、您必须查看存储池准则。
+
+* link:what-storage-pool-is.html["什么是存储池"]
+* link:guidelines-for-creating-storage-pools.html["创建存储池的准则"]
+* link:using-multiple-storage-pools-for-cross-site-replication.html["使用多个存储池进行跨站点复制"]
+* link:using-storage-pool-as-temporary-location-deprecated.html["使用存储池作为临时位置(已弃用)"]
+* link:creating-storage-pool.html["创建存储池"]
+* link:viewing-storage-pool-details.html["查看存储池详细信息"]
+* link:editing-storage-pool.html["编辑存储池"]
+* link:removing-storage-pool.html["删除存储池"]
+

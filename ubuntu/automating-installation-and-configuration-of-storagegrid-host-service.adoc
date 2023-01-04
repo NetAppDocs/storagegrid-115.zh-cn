@@ -1,0 +1,35 @@
+---
+permalink: ubuntu/automating-installation-and-configuration-of-storagegrid-host-service.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用 Ansible ， Puppet ， Chef ， Fabric 或 SaltStack 等标准业务流程框架自动安装 StorageGRID 主机服务。 
+---
+= 自动安装和配置StorageGRID 主机服务
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Ansible ， Puppet ， Chef ， Fabric 或 SaltStack 等标准业务流程框架自动安装 StorageGRID 主机服务。
+
+StorageGRID 主机服务打包在 DEB 中，并由配置文件驱动，这些配置文件可以提前准备（或以编程方式）以启用自动安装。如果您已经使用标准业务流程框架来安装和配置 Ubuntu 或 Debian ，则在攻略手册或秘诀中添加 StorageGRID 应该非常简单。
+
+您可以自动执行以下任务：
+
+. 安装 Linux
+. 配置 Linux
+. 配置主机网络接口以满足 StorageGRID 要求
+. 配置主机存储以满足 StorageGRID 要求
+. 安装 Docker
+. 安装 StorageGRID 主机服务
+. 在中创建StorageGRID 节点配置文件 `/etc/storagegrid/nodes`
+. 正在验证 StorageGRID 节点配置文件
+. 启动 StorageGRID 主机服务
+
+
+
+
+== Ansible 角色和攻略手册示例
+
+安装归档在 /Extras 文件夹中提供了示例 Ansible 角色和攻略手册。Ansible攻略手册介绍了如何 `storagegrid` 角色准备主机并将StorageGRID 安装到目标服务器上。您可以根据需要自定义角色或攻略手册。

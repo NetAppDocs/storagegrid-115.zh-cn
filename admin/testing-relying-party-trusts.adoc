@@ -1,0 +1,55 @@
+---
+permalink: admin/testing-relying-party-trusts.html 
+sidebar: sidebar 
+keywords:  
+summary: '在对StorageGRID 强制使用单点登录(SSO)之前、请确认已正确配置单点登录和单点注销(SLO)。如果您为每个管理节点创建了依赖方信任、请确认您可以对每个管理节点使用SSO和SLO。' 
+---
+= 测试依赖方信任
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在对StorageGRID 强制使用单点登录(SSO)之前、请确认已正确配置单点登录和单点注销(SLO)。如果您为每个管理节点创建了依赖方信任、请确认您可以对每个管理节点使用SSO和SLO。
+
+.您需要的内容
+* 您必须使用支持的浏览器登录到网格管理器。
+* 您必须具有特定的访问权限。
+* 您已在AD FS中配置一个或多个依赖方信任。
+
+
+.步骤
+. 选择*配置**访问控制**单点登录*。
++
+此时将显示Single Sign-On页面、并选择了*沙盒模式*选项。
+
+. 在沙盒模式说明中、找到指向身份提供程序登录页面的链接。
++
+此URL是从您在*联合服务名称*字段中输入的值派生的。
+
++
+image::../media/sso_sandbox_mode_url.gif[身份提供程序登录页面的 URL]
+
+. 单击此链接、或者将此URL复制并粘贴到浏览器中、以访问身份提供程序的登录页面。
+. 要确认您可以使用SSO登录到StorageGRID 、请选择*登录到以下站点之一*、选择主管理节点的依赖方标识符、然后单击*登录*。
++
+image::../media/sso_sandbox_mode_testing.gif[在SSO沙盒模式下测试依赖方信任]
+
++
+系统将提示您输入用户名和密码。
+
+. 输入您的联合用户名和密码。
++
+** 如果 SSO 登录和注销操作成功，则会显示一条成功消息。
++
+image::../media/sso_sandbox_mode_sign_in_success.gif[SSO 身份验证和注销测试成功消息]
+
+** 如果 SSO 操作失败，则会显示一条错误消息。修复问题描述 ，清除浏览器的 Cookie 并重试。
+
+
+. 重复上述步骤以确认您可以登录到任何其他管理节点。
++
+如果所有SSO登录和注销操作均成功、则可以启用SSO。
+
+

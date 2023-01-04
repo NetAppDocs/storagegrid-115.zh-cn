@@ -1,0 +1,40 @@
+---
+permalink: fabricpool/creating-ha-group-for-fabricpool.html 
+sidebar: sidebar 
+keywords: fabricPool, high availability group, HA group, create, creating, virtual IP, VIP, preferred master, backup interface 
+summary: 在配置 StorageGRID 以与 FabricPool 结合使用时，您可以选择创建一个或多个高可用性组（ HA\ ）。HA 组由管理节点，网关节点或这两者上的一个或多个网络接口组成。 
+---
+= 为FabricPool 创建高可用性(HA)组
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在配置 StorageGRID 以与 FabricPool 结合使用时，您可以选择创建一个或多个高可用性（ HA ）组。HA 组由管理节点，网关节点或这两者上的一个或多个网络接口组成。
+
+.您需要的内容
+* 您必须使用支持的浏览器登录到网格管理器。
+* 您必须具有 root 访问权限。
+
+
+.关于此任务
+每个 HA 组都使用虚拟 IP 地址（ VIP ）来提供对关联节点上共享服务的高可用性访问。
+
+有关此任务的详细信息。请参见 link:../admin/managing-high-availability-groups.html["管理高可用性组"]。
+
+.步骤
+. 选择*配置*>*网络设置*>*高可用性组*。
+. 选择一个或多个网络接口。网络接口必须属于网格网络(eth0)或客户端网络(eth2)上的同一子网。
+. 将一个节点分配为首选主节点。
++
+首选主接口是活动接口、除非发生故障、导致VIP地址重新分配给备份接口。
+
+. 为HA组最多输入十个IPv4地址。
++
+这些地址必须位于所有成员接口共享的IPv4子网中。
+
++
+image::../media/create_ha_group_for_fabricpool.png[为FabricPool 创建HA组]
+
+

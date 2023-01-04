@@ -1,0 +1,55 @@
+---
+permalink: admin/requirements-for-sso.html 
+sidebar: sidebar 
+keywords:  
+summary: 在为 StorageGRID 系统启用单点登录之前，请查看本节中的要求。 
+---
+= 使用单点登录的要求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在为 StorageGRID 系统启用单点登录（ SSO ）之前，请查看本节中的要求。
+
+
+IMPORTANT: 受限网格管理器或租户管理器端口上不提供单点登录（ SSO ）。如果您希望用户通过单点登录进行身份验证，则必须使用默认 HTTPS 端口（ 443 ）。
+
+
+
+== 身份提供程序要求
+
+用于SSO的身份提供程序(IdP)必须满足以下要求：
+
+* 以下任一版本的Active Directory联合身份验证服务(AD FS)：
++
+** AD FS 4.0、随Windows Server 2016提供
++
+
+NOTE: Windows Server 2016 应使用 https://support.microsoft.com/en-us/help/3201845/cumulative-update-for-windows-10-version-1607-and-windows-server-2016["KB3201845 更新"^]或更高版本。
+
+** AD FS 3.0 ，随 Windows Server 2012 R2 更新或更高版本提供。
+
+
+* 传输层安全（ Transport Layer Security ， TLS ） 1.2 或 1.3
+* Microsoft .NET Framework 3.5.1 或更高版本
+
+
+
+
+== 服务器证书要求
+
+StorageGRID 在每个管理节点上使用管理接口服务器证书来保护对网格管理器、租户管理器、网格管理API和租户管理API的访问。在AD FS中为StorageGRID 配置SSO依赖方信任时、您可以使用服务器证书作为向AD FS发出StorageGRID 请求的签名证书。
+
+如果尚未为管理接口安装自定义服务器证书、应立即安装。安装自定义服务器证书时、该证书将用于所有管理节点、您可以在所有StorageGRID 依赖方信任关系中使用该证书。
+
+
+NOTE: 建议不要在AD FS依赖方信任关系中使用管理节点的默认服务器证书。如果节点发生故障而您恢复了该节点，则会生成一个新的默认服务器证书。在登录到已恢复的节点之前、您必须使用新证书更新AD FS中的依赖方信任。
+
+您可以通过登录到管理节点的命令Shell并转到来访问管理节点的服务器证书 `/var/local/mgmt-api` 目录。自定义服务器证书名为 `custom-server.crt`。节点的默认服务器证书名为 `server.crt`。
+
+.相关信息
+link:controlling-access-through-firewalls.html["通过防火墙控制访问"]
+
+link:configuring-custom-server-certificate-for-grid-manager-tenant-manager.html["为网格管理器和租户管理器配置自定义服务器证书"]

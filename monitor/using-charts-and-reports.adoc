@@ -1,0 +1,14 @@
+---
+permalink: monitor/using-charts-and-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: '您可以使用图表和报告监控 StorageGRID 系统的状态并对问题进行故障排除。网格管理器中提供的图表和报告类型包括饼图(仅限信息板上)、图形和文本报告。' 
+---
+= 使用图表和报告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用图表和报告监控 StorageGRID 系统的状态并对问题进行故障排除。网格管理器中提供的图表和报告类型包括饼图(仅在信息板上)、图形和文本报告。

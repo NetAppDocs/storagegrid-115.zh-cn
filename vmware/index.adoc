@@ -1,0 +1,24 @@
+---
+permalink: vmware/index.html 
+sidebar: sidebar 
+keywords:  
+summary: 了解如何在VMware部署中安装StorageGRID。 
+---
+= 安装 VMware
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解如何在VMware部署中安装StorageGRID。
+
+* link:installation-overview.html["安装概述"]
+* link:planning-and-preparation.html["规划和准备"]
+* link:deploying-virtual-machine-grid-nodes-in-vmware-vsphere-web-client.html["在VMware vSphere Web Client中部署虚拟机网格节点"]
+* link:configuring-grid-and-completing-installation.html["配置网格并完成安装"]
+* link:automating-installation.html["自动化安装"]
+* link:overview-of-installation-rest-api.html["安装 REST API 概述"]
+* link:where-to-go-next.html["下一步行动"]
+* link:troubleshooting-installation-issues.html["对安装问题进行故障排除"]
+

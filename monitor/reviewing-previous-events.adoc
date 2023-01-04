@@ -1,0 +1,31 @@
+---
+permalink: monitor/reviewing-previous-events.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以生成先前事件消息的列表、以帮助隔离过去发生的问题。 
+---
+= 查看以前的事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以生成先前事件消息的列表、以帮助隔离过去发生的问题。
+
+. 选择*支持*>*工具*>*网格拓扑*。
+. 选择 * 站点 _* > * 网格节点 _* > * SSM* > * 事件 * > * 报告 * 。
+. 选择 * 文本 * 。
++
+"图表"视图中不显示*最后一个事件*属性。
+
+. 将 * 属性 * 更改为 * 最后一个事件 * 。
+. 也可以选择 * 快速查询 * 的时间段。
+. 单击 * 更新 * 。
++
+image::../media/events_report.gif[事件页面]
+
+
+
+.相关信息
+link:using-charts-and-reports.html["使用图表和报告"]

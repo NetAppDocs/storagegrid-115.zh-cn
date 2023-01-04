@@ -1,0 +1,33 @@
+---
+permalink: maintain/recovering-from-system-drive-failure.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, system drive failure 
+summary: 如果基于软件的存储节点上的系统驱动器发生故障，则此存储节点不可用于 StorageGRID 系统。您必须完成一组特定任务才能从系统驱动器故障中恢复。 
+---
+= 从系统驱动器故障中恢复
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果基于软件的存储节点上的系统驱动器发生故障，则此存储节点不可用于 StorageGRID 系统。您必须完成一组特定任务才能从系统驱动器故障中恢复。
+
+.关于此任务
+使用此操作步骤 从基于软件的存储节点上的系统驱动器故障中恢复。此操作步骤 包括在任何存储卷同样出现故障或无法重新挂载时应遵循的步骤。
+
+
+NOTE: 仅限此基于 操作步骤 适用场景 软件的存储节点。要恢复设备存储节点，您必须遵循其他操作步骤 。
+
+link:recovering-storagegrid-appliance-storage-node.html["恢复StorageGRID 设备存储节点"]
+
+image::../media/storage_node_recovery_system_drive.gif[基于软件的存储节点上发生故障的系统驱动器的恢复步骤]
+
+.步骤
+* link:reviewing-warnings-for-system-drive-recovery.html["查看有关存储节点系统驱动器恢复的警告"]
+* link:replacing-storage-node.html["更换存储节点"]
+* link:selecting-start-recovery-to-configure-storage-node.html["选择启动恢复以配置存储节点"]
+* link:remounting-and-reformatting-storage-volumes-manual-steps.html["`M和重新格式化存储卷("手动步骤`")"]
+* link:restoring-object-data-to-storage-volume-if-required.html["根据需要将对象数据还原到存储卷"]
+* link:checking-storage-state-after-recovering-storage-node-system-drive.html["恢复存储节点系统驱动器后检查存储状态"]
+

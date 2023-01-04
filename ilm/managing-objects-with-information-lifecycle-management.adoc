@@ -1,0 +1,25 @@
+---
+permalink: ilm/managing-objects-with-information-lifecycle-management.html 
+sidebar: sidebar 
+keywords:  
+summary: '您可以通过配置信息生命周期管理\(ILM)规则和策略来管理StorageGRID 系统中的对象。ILM 规则和策略指示 StorageGRID 如何创建和分发对象数据的副本，以及如何随着时间的推移管理这些副本。' 
+---
+= 通过信息生命周期管理管理对象
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以通过配置信息生命周期管理（ ILM ）规则和策略来管理 StorageGRID 系统中的对象。ILM 规则和策略指示 StorageGRID 如何创建和分发对象数据的副本，以及如何随着时间的推移管理这些副本。
+
+设计和实施 ILM 规则和 ILM 策略需要仔细规划。您必须了解操作要求， StorageGRID 系统的拓扑结构，对象保护需求以及可用存储类型。然后，您必须确定希望如何复制，分发和存储不同类型的对象。
+
+* link:how-ilm-operates-throughout-objects-life.html["ILM 如何在对象的整个生命周期内运行"]
+* link:what-ilm-policy-is.html["什么是 ILM 策略"]
+* link:what-ilm-rule-is.html["什么是 ILM 规则"]
+* link:creating-storage-grades-storage-pools-ec-profiles-regions.html["创建存储级别、存储池、EC配置文件和区域"]
+* link:creating-ilm-rule.html["创建ILM规则"]
+* link:creating-ilm-policy.html["创建ILM策略"]
+* link:working-with-ilm-rules-and-ilm-policies.html["使用ILM规则和ILM策略"]
+

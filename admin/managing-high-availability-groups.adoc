@@ -1,0 +1,22 @@
+---
+permalink: admin/managing-high-availability-groups.html 
+sidebar: sidebar 
+keywords:  
+summary: 高可用性组可用于为S3和Swift客户端提供高可用性数据连接。HA组还可用于提供与网格管理器和租户管理器的高可用性连接。 
+---
+= 管理高可用性组
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+高可用性(High Availability、HA)组可用于为S3和Swift客户端提供高可用性数据连接。HA组还可用于提供与网格管理器和租户管理器的高可用性连接。
+
+* link:what-ha-group-is.html["什么是HA组"]
+* link:how-ha-groups-are-used.html["如何使用HA组"]
+* link:configuration-options-for-ha-groups.html["HA 组的配置选项"]
+* link:creating-high-availability-group.html["创建高可用性组"]
+* link:editing-high-availability-group.html["编辑高可用性组"]
+* link:removing-high-availability-group.html["删除高可用性组"]
+

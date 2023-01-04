@@ -1,0 +1,42 @@
+---
+permalink: maintain/introduction-to-storagegrid-recovery-and-maintenance.html 
+sidebar: sidebar 
+keywords: storagegrid, recovery, maintenance 
+summary: StorageGRID 的恢复和维护过程包括应用软件修补程序、恢复网格节点、恢复故障站点、停用网格节点或整个站点、执行网络维护、执行主机级别和中间件维护过程以及执行网格节点过程。 
+---
+= StorageGRID 恢复和维护简介
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+StorageGRID 的恢复和维护过程包括应用软件修补程序、恢复网格节点、恢复故障站点、停用网格节点或整个站点、执行网络维护、执行主机级别和中间件维护过程以及执行网格节点过程。
+
+所有恢复和维护活动都需要广泛了解StorageGRID 系统。您应查看StorageGRID 系统的拓扑、以确保了解网格配置。
+
+您必须严格按照所有说明进行操作、并注意所有警告。
+
+不支持未介绍的维护过程、也不需要服务参与。
+
+有关硬件过程，请参见 StorageGRID 设备的安装和维护说明。
+
+
+NOTE: "`Linux` " 是指 Red Hat ® Enterprise Linux ® ， Ubuntu ® ， CentOS 或 Debian ® 部署。使用 NetApp 互操作性表工具可获取受支持版本的列表。
+
+.相关信息
+link:../primer/index.html["网格入门"]
+
+link:../network/index.html["网络准则"]
+
+link:../admin/index.html["管理 StorageGRID"]
+
+link:../sg100-1000/index.html["SG100和AMP；SG1000服务设备"]
+
+link:../sg6000/index.html["SG6000 存储设备"]
+
+link:../sg5700/index.html["SG5700 存储设备"]
+
+link:../sg5600/index.html["SG5600 存储设备"]
+
+https://mysupport.netapp.com/matrix["NetApp 互操作性表工具"]

@@ -1,0 +1,28 @@
+---
+permalink: monitor/resetting-event-counts.html 
+sidebar: sidebar 
+keywords:  
+summary: 解决系统事件后、您可以将事件计数重置为零。 
+---
+= 正在重置事件计数
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+解决系统事件后、您可以将事件计数重置为零。
+
+.您需要的内容
+* 您必须使用支持的浏览器登录到网格管理器。
+* 您必须具有网格拓扑页面配置权限。
+
+
+.步骤
+. 选择*节点*>*网格节点_*>*事件*。
+. 确保已解决计数大于0的任何事件。
+. 单击*重置事件计数*。
++
+image::../media/reset_event_counts.png[重置事件计数]
+
+

@@ -1,0 +1,68 @@
+---
+permalink: admin/generating-self-signed-certificate-for-management-interface.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用脚本为需要严格主机名验证的管理API客户端生成自签名服务器证书。 
+---
+= 为管理接口生成自签名服务器证书
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用脚本为需要严格主机名验证的管理API客户端生成自签名服务器证书。
+
+.您需要的内容
+* 您必须具有特定的访问权限。
+* 您必须具有 `Passwords.txt` 文件
+
+
+.关于此任务
+在生产环境中、您应使用由已知证书颁发机构(CA)签名的证书。由 CA 签名的证书可以无中断地轮换。它们也更安全，因为它们可以更好地防止中间人攻击。
+
+.步骤
+. 获取每个管理节点的完全限定域名（ FQDN ）。
+. 登录到主管理节点：
++
+.. 输入以下命令： `ssh admin@primary_Admin_Node_IP`
+.. 输入中列出的密码 `Passwords.txt` 文件
+.. 输入以下命令切换到root： `su -`
+.. 输入中列出的密码 `Passwords.txt` 文件
++
+以root用户身份登录后、提示符将从变为 `$` to `#`。
+
+
+
+. 使用新的自签名证书配置 StorageGRID 。
++
+`$ sudo make-certificate --domains _wildcard-admin-node-fqdn_ --type management`
+
++
+** 适用于 `--domains`下、使用通配符表示所有管理节点的完全限定域名。例如： `*.ui.storagegrid.example.com` 使用*通配符表示 `admin1.ui.storagegrid.example.com` 和 `admin2.ui.storagegrid.example.com`。
+** 设置 `--type` to `management` 配置网格管理器和租户管理器使用的证书。
+** 默认情况下，生成的证书有效期为一年（ 365 天），必须在证书过期之前重新创建。您可以使用 `--days` 用于覆盖默认有效期的参数。
++
+
+NOTE: 证书的有效期从何时开始 `make-certificate` 已运行。您必须确保管理API客户端与StorageGRID 同步到同一时间源；否则、客户端可能会拒绝此证书。
+
++
+ $ sudo make-certificate --domains *.ui.storagegrid.example.com --type management --days 365
++
+生成的输出包含管理 API 客户端所需的公有 证书。
+
+
+
+. 选择并复制证书。
++
+在您的选择中包括开始和结束标记。
+
+. 从命令 Shell 中注销。 `$ exit`
+. 确认已配置证书：
++
+.. 访问网格管理器。
+.. 选择*配置**服务器证书**管理接口服务器证书*。
+
+
+. 将管理API客户端配置为使用您复制的公有 证书。包括开始和结束标记。
+

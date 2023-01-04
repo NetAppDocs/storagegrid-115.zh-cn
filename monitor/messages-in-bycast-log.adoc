@@ -1,0 +1,84 @@
+---
+permalink: monitor/messages-in-bycast-log.html 
+sidebar: sidebar 
+keywords: bycast, bycast.log, bycast log, bycast message 
+summary: '消息 `bycast.log` 由ADE (异步分布式环境)写入。ADE是每个网格节点的服务所使用的运行时环境。' 
+---
+= bycast.log 中的消息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+消息 `bycast.log` 由ADE (异步分布式环境)写入。ADE 是每个网格节点的服务所使用的运行时环境。
+
+以下是ADE消息的示例：
+
+[listing]
+----
+May 15 14:07:11 um-sec-rg1-agn3 ADE: |12455685    0357819531
+SVMR EVHR 2019-05-05T27T17:10:29.784677| ERROR 0906 SVMR: Health
+check on volume 3 has failed with reason 'TOUT'
+----
+ADE 消息包含以下信息：
+
+|===
+| 消息段 | 示例中的值 
+
+
+ a| 
+节点 ID
+ a| 
+12455685
+
+
+
+ a| 
+ADE 进程 ID
+ a| 
+0357819531
+
+
+
+ a| 
+模块名称
+ a| 
+SVMR
+
+
+
+ a| 
+消息标识符
+ a| 
+EVHR
+
+
+
+ a| 
+UTC 系统时间
+ a| 
+2019-05-05T27T17 ： 10 ： 29.784677 （ YYYY-MM-DDTHH ： MM ： SS.uuuuu ）
+
+
+
+ a| 
+严重性级别
+ a| 
+error
+
+
+
+ a| 
+内部跟踪编号
+ a| 
+0906
+
+
+
+ a| 
+message
+ a| 
+SVMR ：卷 3 的运行状况检查失败，原因为 "Tut"
+
+|===

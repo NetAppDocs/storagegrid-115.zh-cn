@@ -1,0 +1,71 @@
+---
+permalink: maintain/gathering-required-materials-for-grid-node-recovery.html 
+sidebar: sidebar 
+keywords: storagegrid, recovery, grid node recovery, node recovery 
+summary: 在执行维护过程之前，您必须确保具有必要的材料来恢复出现故障的网格节点。 
+---
+= 收集网格节点恢复所需的材料
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在执行维护过程之前，您必须确保具有必要的材料来恢复出现故障的网格节点。
+
+[cols="1a,2a"]
+|===
+| 项目 | 注释： 
+
+
+ a| 
+StorageGRID 安装归档
+ a| 
+如果需要恢复网格节点、则需要为您的平台创建StorageGRID 安装归档。
+
+* 注意： * 如果要恢复存储节点上的故障存储卷，则不需要下载文件。
+
+
+
+ a| 
+恢复软件包 `.zip` 文件
+ a| 
+获取最新恢复软件包的副本 `.zip` 文件：
+`sgws-recovery-package-_id-revision_.zip`
+
+的内容 `.zip` 每次修改系统时都会更新文件。在进行此类更改后，系统会指示您将最新版本的恢复软件包存储在安全位置。使用最新副本从网格故障中恢复。
+
+如果主管理节点运行正常，您可以从网格管理器下载恢复软件包。选择*维护***系统**恢复包*。
+
+如果您无法访问网格管理器，则可以在包含此 ADC 服务的某些存储节点上找到恢复软件包的加密副本。在每个存储节点上、检查恢复软件包的此位置： `/var/local/install/sgws-recovery-package-_grid-id_-_revision_.zip.gpg` 使用修订版号最高的恢复软件包。
+
+
+
+ a| 
+`Passwords.txt` 文件
+ a| 
+包含访问命令行上的网格节点所需的密码。包含在恢复包中。
+
+
+
+ a| 
+配置密码短语
+ a| 
+首次安装 StorageGRID 系统时，系统会创建并记录密码短语。配置密码短语不在中 `Passwords.txt` 文件
+
+
+
+ a| 
+适用于您的平台的最新文档
+ a| 
+有关您的平台当前支持的版本、请参见互操作性表工具。
+
+https://mysupport.netapp.com/matrix["NetApp 互操作性表工具"]
+
+请访问平台供应商的网站以获取相关文档。
+
+|===
+.相关信息
+link:downloading-and-extracting-storagegrid-installation-files.html["下载并提取StorageGRID 安装文件"]
+
+link:web-browser-requirements.html["Web 浏览器要求"]

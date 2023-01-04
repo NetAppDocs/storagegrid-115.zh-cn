@@ -1,0 +1,43 @@
+---
+permalink: admin/removing-high-availability-group.html 
+sidebar: sidebar 
+keywords:  
+summary: '您可以删除不再使用的高可用性\(HA\)组。' 
+---
+= 删除高可用性组
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以删除不再使用的高可用性(HA)组。
+
+.您需要的内容
+* 您必须使用支持的浏览器登录到网格管理器。
+* 您必须具有 root 访问权限。
+
+
+.介绍此任务
+如果删除HA组、则任何配置为使用该组的一个虚拟IP地址的S3或Swift客户端将无法再连接到StorageGRID。为防止客户端中断、应在删除HA组之前更新所有受影响的S3或Swift客户端应用程序。更新每个客户端以使用其他IP地址进行连接、例如、不同HA组的虚拟IP地址或在安装期间或使用DHCP为接口配置的IP地址。
+
+.步骤
+. 选择*配置*>*网络设置*>*高可用性组*。
++
+此时将显示高可用性组页面。
+
++
+image::../media/ha_groups_page_with_two_groups.png[HA组主屏幕]
+
+. 选择要删除的HA组、然后单击*删除*。
++
+此时将显示删除高可用性组警告。
+
++
+image::../media/ha_group_remove_warning.png[HA组删除警告]
+
+. 单击 * 确定 * 。
++
+此时将删除HA组。
+
+

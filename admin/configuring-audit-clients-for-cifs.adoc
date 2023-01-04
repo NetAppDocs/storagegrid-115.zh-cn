@@ -1,0 +1,20 @@
+---
+permalink: admin/configuring-audit-clients-for-cifs.html 
+sidebar: sidebar 
+keywords:  
+summary: 用于配置审核客户端的操作步骤 取决于身份验证方法： Windows 工作组或 Windows Active Directory \ （ AD\ ）。添加后，审核共享将自动启用为只读共享。 
+---
+= 为CIFS配置审核客户端
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+用于配置审核客户端的操作步骤 取决于身份验证方法： Windows 工作组或 Windows Active Directory （ AD ）。添加后，审核共享将自动启用为只读共享。
+
+
+NOTE: 已弃用通过 CIFS/Samba 进行审核导出，并将在未来的 StorageGRID 版本中删除。
+
+.相关信息
+link:../upgrade/index.html["升级软件"]

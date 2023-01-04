@@ -1,0 +1,21 @@
+---
+permalink: fabricpool/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= 为 FabricPool 配置 StorageGRID
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解如何将StorageGRID 配置为NetApp FabricPool 云层。
+
+* link:configuring-storagegrid-for-fabricpool.html["为FabricPool 配置StorageGRID"]
+* link:information-needed-to-attach-storagegrid-as-cloud-tier.html["将 StorageGRID 附加为云层所需的信息"]
+* link:using-storagegrid-ilm-with-fabricpool-data.html["将StorageGRID 信息生命周期管理与FabricPool 数据结合使用"]
+* link:creating-traffic-classification-policy-for-fabricpool.html["为FabricPool 创建流量分类策略"]
+* link:other-best-practices-for-storagegrid-and-fabricpool.html["StorageGRID 和 FabricPool 的其他最佳实践"]
+

@@ -1,0 +1,20 @@
+---
+permalink: admin/managing-platform-services-for-s3-tenant-accounts.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果为 S3 租户帐户启用平台服务，则必须配置网格，以便租户可以访问使用这些服务所需的外部资源。 
+---
+= 管理S3租户帐户的平台服务
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果为 S3 租户帐户启用平台服务，则必须配置网格，以便租户可以访问使用这些服务所需的外部资源。
+
+* link:what-platform-services-are.html["什么是平台服务"]
+* link:networking-and-ports-for-platform-services.html["用于平台服务的网络和端口"]
+* link:per-site-delivery-of-platform-services-messages.html["按站点交付平台服务消息"]
+* link:troubleshooting-platform-services.html["对平台服务进行故障排除"]
+

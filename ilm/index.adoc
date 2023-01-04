@@ -1,0 +1,19 @@
+---
+permalink: ilm/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= 使用 ILM 管理对象
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解如何使用信息生命周期规则和策略管理对象、以及如何使用S3对象锁定来遵守对象保留法规。
+
+* link:managing-objects-with-information-lifecycle-management.html["通过信息生命周期管理管理对象"]
+* link:managing-objects-with-s3-object-lock.html["使用S3对象锁定管理对象"]
+* link:example-ilm-rules-and-policies.html["ILM 规则和策略示例"]
+

@@ -1,0 +1,21 @@
+---
+permalink: ilm/how-objects-are-stored-replication-erasure-coding.html 
+sidebar: sidebar 
+keywords:  
+summary: StorageGRID 可以通过存储复制的副本或存储经过纠删编码的副本来防止对象丢失。您可以在ILM规则的放置说明中指定要创建的副本类型。 
+---
+= 对象的存储方式（复制或纠删编码）
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+StorageGRID 可以通过存储复制的副本或存储经过纠删编码的副本来防止对象丢失。您可以在ILM规则的放置说明中指定要创建的副本类型。
+
+* link:what-replication-is.html["什么是复制"]
+* link:why-you-should-not-use-single-copy-replication.html["为什么不应使用单副本复制"]
+* link:what-erasure-coding-is.html["什么是纠删编码"]
+* link:what-erasure-coding-schemes-are.html["什么是纠删编码方案"]
+* link:advantages-disadvantages-and-requirements-for-ec.html["纠删编码的优势，劣势和要求"]
+

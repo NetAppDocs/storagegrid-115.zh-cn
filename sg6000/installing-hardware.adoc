@@ -1,0 +1,27 @@
+---
+permalink: sg6000/installing-hardware.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, hardware, install, installing 
+summary: 硬件安装需要将 SG6000-CN 控制器和存储控制器架安装到机柜或机架中，连接缆线并接通电源。 
+---
+= 安装硬件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+硬件安装需要将 SG6000-CN 控制器和存储控制器架安装到机柜或机架中，连接缆线并接通电源。
+
+.步骤
+* link:registering-hardware.html["注册硬件"]
+* link:sg6060-installing-60-drive-shelves-into-cabinet-or-rack.html["SG6060：将60个驱动器磁盘架安装到机柜或机架中"]
+* link:sg6060-installing-drives.html["SG6060：安装驱动器"]
+* link:sgf6024-installing-24-drive-shelves-into-cabinet-or-rack.html["SGF6024：将24个驱动器磁盘架安装到机柜或机架中"]
+* link:sg6000-cn-installing-into-cabinet-or-rack.html["SG6000-CN：安装到机柜或机架中"]
+* link:cabling-appliance-sg6000.html["为设备布线(SG6000)"]
+* link:sg6060-cabling-optional-expansion-shelves.html["SG6060：为可选扩展架布线"]
+* link:connecting-power-cords-and-applying-power-sg6000.html["连接电源线并接通电源(SG6000)"]
+* link:viewing-status-indicators-and-buttons-on-sg6000-cn-controller.html["查看SG6000-CN控制器上的状态指示灯和按钮"]
+* link:viewing-boot-up-status-codes-for-sg6000-storage-controllers.html["查看SG6000存储控制器的启动状态代码"]
+

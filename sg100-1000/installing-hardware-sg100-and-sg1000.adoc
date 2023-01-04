@@ -1,0 +1,22 @@
+---
+permalink: sg100-1000/installing-hardware-sg100-and-sg1000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, hardware, install, installing 
+summary: 硬件安装需要将设备安装到机柜或机架中，连接缆线并接通电源。 
+---
+= 安装硬件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+硬件安装需要将设备安装到机柜或机架中，连接缆线并接通电源。
+
+.步骤
+* link:registering-hardware-sg100-and-sg1000.html["注册硬件"]
+* link:installing-appliance-in-cabinet-or-rack-sg100-and-sg1000.html["将设备安装到机柜或机架中(SG100和SG1000)"]
+* link:cabling-appliance-sg100-and-sg1000.html["为设备SG100和SG1000布线)"]
+* link:connecting-power-cords-and-applying-power-sg100-and-sg1000.html["连接电源线并接通电源(SG100和SG1000)"]
+* link:viewing-status-indicators-on-sg100-and-sg1000-appliances.html["查看SG100和SG1000设备上的状态指示灯"]
+

@@ -1,0 +1,71 @@
+---
+permalink: ilm/creating-ilm-rule.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以通过 ILM 规则管理对象数据随时间的放置。要创建 ILM 规则，请使用创建 ILM 规则向导。 
+---
+= 创建ILM规则
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以通过 ILM 规则管理对象数据随时间的放置。要创建 ILM 规则，请使用创建 ILM 规则向导。
+
+.开始之前
+* 您必须使用支持的浏览器登录到网格管理器。
+* 您必须具有特定的访问权限。
+* 如果要指定此规则适用场景 中的租户帐户、您必须具有"租户帐户"权限、或者您必须知道每个帐户的帐户ID。
+* 如果您希望规则按上次访问时间元数据筛选对象，则必须通过 S3 的存储分段或 Swift 的容器启用上次访问时间更新。
+* 如果要创建复制的副本、则必须已配置计划使用的任何存储池或云存储池。
+* 如果要创建纠删编码副本、则必须已配置纠删编码配置文件。
+* 您必须熟悉 link:data-protection-options-for-ingest.html["用于载入的数据保护选项"]。
+* 如果需要创建与S3对象锁定结合使用的合规规则、则必须熟悉 link:requirements-for-s3-object-lock.html["S3 对象锁定的要求"]。
+
+
+
+NOTE: 要为策略创建默认ILM规则、请改用此操作步骤 ： link:creating-default-ilm-rule.html["创建默认ILM规则"]。
+
+.关于此任务
+创建 ILM 规则时：
+
+* 请考虑 StorageGRID 系统的拓扑和存储配置。
+* 请考虑要创建的对象副本类型（复制或擦除编码）以及所需的每个对象的副本数量。
+* 确定连接到 StorageGRID 系统的应用程序中使用的对象元数据类型。ILM 规则根据对象的元数据筛选对象。
+* 请考虑随时间推移对象副本的放置位置。
+* 确定在载入时使用哪种数据保护选项(均衡、严格或双提交)
+
+
+.步骤
+. 选择 * ILM * > * 规则 * 。
++
+此时将显示 "ILM Rules" 页面，其中选中了 "Make 2 copies" 规则。
+
++
+image::../media/ilm_create_ilm_rule.png[ILM 规则页面]
+
++
+
+NOTE: 如果已为 StorageGRID 系统启用全局 S3 对象锁定设置，则 "ILM 规则 " 页面看起来略有不同。摘要表包含一个 * 符合 * 列，选定规则的详细信息包含一个 * 符合 * 字段。
+
+. 选择 * 创建 * 。
++
+此时将显示创建 ILM 规则向导的第 1 步（定义基础知识）。您可以使用 " 定义基础知识 " 页面定义规则适用场景 的对象。
+
+
+
+.相关信息
+link:../s3/index.html["使用 S3"]
+
+link:../swift/index.html["使用 Swift"]
+
+link:configuring-erasure-coding-profiles.html["配置擦除编码配置文件"]
+
+link:configuring-storage-pools.html["配置存储池"]
+
+link:using-cloud-storage-pools.html["使用云存储池"]
+
+link:data-protection-options-for-ingest.html["用于载入的数据保护选项"]
+
+link:managing-objects-with-s3-object-lock.html["使用S3对象锁定管理对象"]

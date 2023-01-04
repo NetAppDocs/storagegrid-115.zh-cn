@@ -1,0 +1,14 @@
+---
+permalink: monitor/monitoring-performance-networking-and-system-resources.html 
+sidebar: sidebar 
+keywords:  
+summary: 您应监控性能、网络和系统资源、以确定StorageGRID 是否能够处理其当前负载、并确保客户端性能不会随着时间的推移而降低。 
+---
+= 监控性能、网络和系统资源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您应监控性能、网络和系统资源、以确定StorageGRID 是否能够处理其当前负载、并确保客户端性能不会随着时间的推移而降低。

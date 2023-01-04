@@ -1,0 +1,22 @@
+---
+permalink: harden/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= 系统强化
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解用于保护StorageGRID 系统免受安全威胁的系统设置、最佳实践和建议。
+
+* link:hardening-storagegrid-system.html["强化StorageGRID 系统"]
+* link:hardening-guidelines-for-software-upgrades.html["软件升级的强化准则"]
+* link:hardening-guidelines-for-storagegrid-networks.html["StorageGRID 网络强化准则"]
+* link:hardening-guidelines-for-storagegrid-nodes.html["StorageGRID 节点的强化准则"]
+* link:hardening-guideline-for-server-certificates.html["服务器证书的强化准则"]
+* link:other-hardening-guidelines.html["其他强化准则"]]
+

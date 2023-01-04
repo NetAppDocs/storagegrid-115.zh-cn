@@ -1,0 +1,66 @@
+---
+permalink: admin/configuration-options-for-ha-groups.html 
+sidebar: sidebar 
+keywords:  
+summary: 下图举例说明了配置 HA 组的不同方式。每个选项都有优缺点。 
+---
+= HA 组的配置选项
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+下图举例说明了配置 HA 组的不同方式。每个选项都有优缺点。
+
+image::../media/high_availability_examples.png[HA 示例]
+
+创建多个重叠的HA组时、如主动-主动HA示例所示、总吞吐量会随节点和HA组的数量进行扩展。对于三个或更多节点以及三个或更多HA组、您还可以使用任何VIP继续操作、即使在需要使节点脱机的维护过程中也是如此。
+
+下表总结了图中所示每个 HA 配置的优势。
+
+[cols="1a,1a,1a"]
+|===
+| Configuration | 优势 | 缺点 
+
+
+ a| 
+主动备份 HA
+ a| 
+* 由 StorageGRID 管理，无外部依赖关系。
+* 快速故障转移。
+
+ a| 
+* 一个 HA 组中只有一个节点处于活动状态。每个 HA 组至少有一个节点处于空闲状态。
+
+
+
+
+ a| 
+DNS 轮循
+ a| 
+* 提高聚合吞吐量。
+* 无闲置主机。
+
+ a| 
+* 故障转移速度较慢，这可能取决于客户端行为。
+* 需要在 StorageGRID 之外配置硬件。
+* 需要客户实施的运行状况检查。
+
+
+
+
+ a| 
+主动-主动
+ a| 
+* 流量分布在多个 HA 组中。
+* 可随 HA 组数量扩展的高聚合吞吐量。
+* 快速故障转移。
+
+ a| 
+* 配置更复杂。
+* 需要在 StorageGRID 之外配置硬件。
+* 需要客户实施的运行状况检查。
+
+
+|===

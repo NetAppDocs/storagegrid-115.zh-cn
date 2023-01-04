@@ -1,0 +1,36 @@
+---
+permalink: monitor/exporting-text-reports.html 
+sidebar: sidebar 
+keywords: reports, text, export text, report 
+summary: 导出的文本报告将打开一个新的浏览器选项卡，在此可以选择和复制数据。 
+---
+= 导出文本报告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+导出的文本报告将打开一个新的浏览器选项卡，在此可以选择和复制数据。
+
+.关于此任务
+然后，可以将复制的数据保存到新文档（例如电子表格）中，并用于分析 StorageGRID 系统的性能。
+
+.步骤
+. 选择*支持*>*工具*>*网格拓扑*。
+. 创建文本报告。
+. 单击 * 导出 *image:../media/icon_export.gif["导出图标"]。
++
+image::../media/export_text_report.gif[周围文本所述的屏幕截图]
+
++
+此时将打开导出文本报告窗口，其中显示了此报告。
+
++
+image::../media/export_text_report_data.gif[显示示例文本报告的屏幕截图]
+
+. 选择并复制导出文本报告窗口的内容。
++
+现在，可以将此数据粘贴到电子表格等第三方文档中。
+
+

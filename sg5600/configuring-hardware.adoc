@@ -1,0 +1,22 @@
+---
+permalink: sg5600/configuring-hardware.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, hardware, configure, configuration, set up, setup, network, networking 
+summary: 为设备接通电源后，您必须配置 SANtricity 存储管理器，该软件将用于监控硬件。您还必须配置 StorageGRID 要使用的网络连接。 
+---
+= 配置硬件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+为设备接通电源后，您必须配置 SANtricity 存储管理器，该软件将用于监控硬件。您还必须配置 StorageGRID 要使用的网络连接。
+
+.步骤
+* link:configuring-storagegrid-connections.html["配置StorageGRID 连接"]
+* link:configuring-santricity-storage-manager.html["正在配置SANtricity 存储管理器"]
+* link:optional-enabling-node-encryption.html["可选：启用节点加密"]
+* link:optional-changing-to-raid6-mode-sg5660-only.html["可选：更改为RAID6模式(仅限SG5660)"]
+* link:optional-remapping-network-ports-for-appliance-sg5600-and-sg5700.html["可选：重新映射设备的网络端口"]
+

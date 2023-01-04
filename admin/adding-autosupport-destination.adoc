@@ -1,0 +1,67 @@
+---
+permalink: admin/adding-autosupport-destination.html 
+sidebar: sidebar 
+keywords:  
+summary: 启用 AutoSupport 后，系统会向 NetApp 支持部门发送运行状况和状态消息。您可以为所有 AutoSupport 消息指定一个其他目标。 
+---
+= 添加其他AutoSupport 目标
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+启用 AutoSupport 后，系统会向 NetApp 支持部门发送运行状况和状态消息。您可以为所有 AutoSupport 消息指定一个其他目标。
+
+.您需要的内容
+* 您必须使用支持的浏览器登录到网格管理器。
+* 您必须具有 " 根访问 " 或 " 其他网格配置 " 权限。
+
+
+.关于此任务
+要验证或更改用于发送AutoSupport 消息的协议、请参见有关指定AutoSupport 协议的说明。
+
+
+NOTE: 您不能使用 SMTP 协议将 AutoSupport 消息发送到其他目标。
+
+link:specifying-protocol-for-autosupport-messages.html["指定AutoSupport 消息的协议"]
+
+.步骤
+. 选择*支持*>*工具*>* AutoSupport *。
++
+此时将显示 AutoSupport 页面，并选择了 * 设置 * 选项卡。
+
+. 选择 * 启用其他 AutoSupport 目标 * 。
++
+此时将显示其他 AutoSupport 目标字段。
+
++
+image::../media/autosupport_additional_destinations.png[AutoSupport 正在添加其他目标]
+
+. 输入其他 AutoSupport 目标服务器的服务器主机名或 IP 地址。
++
+
+NOTE: 您只能输入一个附加目标。
+
+. 输入用于连接到其他 AutoSupport 目标服务器的端口（对于 HTTP ，默认为端口 80 ，对于 HTTPS ，默认为端口 443 ）。
+. 要发送包含证书验证的 AutoSupport 消息，请在 * 证书验证 * 下拉列表中选择 * 使用自定义 CA 捆绑包 * 。然后，执行以下操作之一：
++
+** 使用编辑工具将 PEM 编码的每个 CA 证书文件的所有内容复制并粘贴到 * CA bundle* 字段中，该字段按证书链顺序串联。您必须包括 `----BEGIN CERTIFICATE----` 和 `----END CERTIFICATE----` 您选择的内容。
++
+image::../media/autosupport_certificate.png[AutoSupport 证书]
+
+** 选择 * 浏览 * ，导航到包含证书的文件，然后选择 * 打开 * 上传文件。证书验证可确保 AutoSupport 消息的传输安全。
+
+
+. 要在不验证证书的情况下发送 AutoSupport 消息，请在 * 证书验证 * 下拉列表中选择 * 不验证证书 * 。
++
+只有当您有充分的理由不使用证书验证时，例如证书出现临时问题时，才选择此选项。
+
++
+警告此时将显示一条消息： " 您未使用 TLS 证书来保护与其他 AutoSupport 目标的连接。 "
+
+. 选择 * 保存 * 。
++
+未来所有每周，事件触发和用户触发的 AutoSupport 消息都将发送到其他目标。
+
+

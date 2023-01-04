@@ -1,0 +1,19 @@
+---
+permalink: primer/how-storagegrid-manages-data.html 
+sidebar: sidebar 
+keywords:  
+summary: 在开始使用 StorageGRID 系统时，了解 StorageGRID 系统如何管理数据非常有用。 
+---
+= StorageGRID 如何管理数据
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在开始使用 StorageGRID 系统时，了解 StorageGRID 系统如何管理数据非常有用。
+
+* link:what-object-is.html["什么是对象"]
+* link:how-object-data-is-protected.html["如何保护对象数据"]
+* link:life-of-object.html["对象的生命周期"]
+

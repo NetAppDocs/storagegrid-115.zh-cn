@@ -1,0 +1,28 @@
+---
+permalink: upgrade/changes-to-tenant-management-api.html 
+sidebar: sidebar 
+keywords: tenant management api, api, api version, swagger, rest api 
+summary: StorageGRID 11.5使用租户管理API版本3。版本 3 已弃用版本 2 ；但版本 1 和版本 2 仍受支持。 
+---
+= 对租户管理 API 进行的更改
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+StorageGRID 11.5使用租户管理API版本3。版本 3 已弃用版本 2 ；但版本 1 和版本 2 仍受支持。
+
+
+IMPORTANT: 您可以继续在StorageGRID 11.5中使用管理API版本1和版本2；但是、在未来版本的StorageGRID 中、对这些版本的API的支持将被删除。升级到StorageGRID 11.5后、可以使用停用已弃用的v1和v2 API `PUT /grid/config/management` API。
+
+
+
+== 租户存储使用情况API的新参数
+
+。 `GET /org/usage` API现在具有 `strictConsistency` 参数。要在跨存储节点检索存储使用情况信息时强制实现全局一致性、请将此参数设置为 `true`。此参数设置为时 `false` (默认)、StorageGRID 会尝试使用强全局一致性来检索使用情况信息、但如果无法满足强全局一致性、则会回退到强站点一致性。
+
+.相关信息
+link:../s3/index.html["使用 S3"]
+
+link:../tenant/index.html["使用租户帐户"]

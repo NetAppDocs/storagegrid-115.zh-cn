@@ -1,0 +1,21 @@
+---
+permalink: sg5600/setting-up-santricity-storage-manager.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, SANtricity Storage Manager, SANtricity, Storage Manager, configure, configuring, setup, set up, setting up 
+summary: 访问 SANtricity 存储管理器后，您可以使用它配置硬件设置。通常，在将设备部署为 StorageGRID 系统中的存储节点之前，您需要配置这些设置。 
+---
+= 设置SANtricity 存储管理器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+访问 SANtricity 存储管理器后，您可以使用它配置硬件设置。通常，在将设备部署为 StorageGRID 系统中的存储节点之前，您需要配置这些设置。
+
+.步骤
+* link:configuring-autosupport.html["正在配置 AutoSupport"]
+* link:verifying-receipt-of-autosupport.html["验证收到AutoSupport"]
+* link:configuring-email-and-snmp-trap-alert-notifications.html["配置电子邮件和SNMP陷阱警报通知"]
+* link:setting-passwords-for-santricity-storage-manager.html["设置SANtricity 存储管理器的密码"]
+

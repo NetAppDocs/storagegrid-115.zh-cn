@@ -1,0 +1,39 @@
+---
+permalink: upgrade/performing-upgrade.html 
+sidebar: sidebar 
+keywords: upgrade, software upgrade 
+summary: '"软件升级"页面将指导您完成上传所需文件以及升级StorageGRID 系统中所有网格节点的过程。' 
+---
+= 正在执行升级
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+"软件升级"页面将指导您完成上传所需文件以及升级StorageGRID 系统中所有网格节点的过程。
+
+.您需要的内容
+您了解以下信息：
+
+* 您必须使用网格管理器从主管理节点升级所有数据中心站点的所有网格节点。
+* 要检测并解决问题，您可以在开始实际升级之前手动运行升级预检。开始升级时，系统会执行相同的预检。预检失败将停止升级过程、并且可能需要技术支持参与才能解决。
+* 开始升级时、主管理节点会自动升级。
+* 升级主管理节点后、您可以选择接下来要升级的网格节点。
+* 您必须升级StorageGRID 系统中的所有网格节点才能完成升级、但可以按任意顺序升级各个网格节点。您可以选择单个网格节点、网格节点组或所有网格节点。您可以根据需要重复多次选择网格节点的过程、直到所有站点上的所有网格节点都升级为止。
+* 在网格节点上开始升级时，该节点上的服务将停止。稍后，网格节点将重新启动。除非您确定网格节点已准备好停止并重新启动，否则请勿批准网格节点的升级。
+* 升级完所有网格节点后、系统将启用新功能并恢复操作；但是、您必须等待执行停用或扩展操作步骤 、直到后台*升级数据库*任务和*最终升级步骤*任务完成为止。
+* 您必须在开始使用的同一虚拟机管理程序平台上完成升级。
+
+
+.步骤
+. link:linux-installing-rpm-or-deb-package-on-all-hosts.html["Linux：在所有主机上安装RPM或Deb软件包"]
+. link:starting-upgrade.html["正在启动升级"]
+. link:upgrading-grid-nodes-and-completing-upgrade.html["升级网格节点并完成升级"]
+. link:increasing-metadata-reserved-space-setting.html["增加元数据预留空间设置"]
+
+
+.相关信息
+link:../admin/index.html["管理 StorageGRID"]
+
+link:estimating-time-to-complete-upgrade.html["估计完成升级所需的时间"]

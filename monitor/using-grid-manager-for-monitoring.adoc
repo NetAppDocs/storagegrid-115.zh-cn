@@ -1,0 +1,19 @@
+---
+permalink: monitor/using-grid-manager-for-monitoring.html 
+sidebar: sidebar 
+keywords:  
+summary: 网格管理器是监控StorageGRID 系统的最重要工具。本节介绍网格管理器信息板、并提供有关节点页面的详细信息。 
+---
+= 使用网格管理器进行监控
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+网格管理器是监控StorageGRID 系统的最重要工具。本节介绍网格管理器信息板、并提供有关节点页面的详细信息。
+
+* link:web-browser-requirements.html["Web 浏览器要求"]
+* link:viewing-dashboard.html["查看信息板"]
+* link:viewing-nodes-page.html["查看节点页面"]
+

@@ -1,0 +1,36 @@
+---
+permalink: tenant/disabling-identity-federation.html 
+sidebar: sidebar 
+keywords: storagegrid, tenant, disable identity federation, disabling identity federation, federated identity source 
+summary: 如果为此租户配置了身份联合服务、则可以临时或永久禁用租户组和用户的身份联合。禁用身份联合后、StorageGRID 系统与身份源之间不会进行通信。但是、您配置的任何设置都将保留下来、以便将来可以轻松地重新启用身份联合。 
+---
+= 正在禁用身份联合
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果为此租户配置了身份联合服务、则可以临时或永久禁用租户组和用户的身份联合。禁用身份联合后、StorageGRID 系统与身份源之间不会进行通信。但是、您配置的任何设置都将保留下来、以便将来可以轻松地重新启用身份联合。
+
+.您需要的内容
+* 您必须使用支持的浏览器登录到租户管理器。
+* 您必须具有特定的访问权限。
+
+
+.关于此任务
+在禁用身份联合之前，您应注意以下事项：
+
+* 联合用户将无法登录。
+* 当前已登录的联合用户将保留对租户帐户的访问权限、直到其会话到期为止、但在会话到期后、他们将无法登录。
+* StorageGRID 系统与身份源之间不会进行同步。
+
+
+.步骤
+. 选择 * 访问管理 * > * 身份联合 * 。
+. 取消选中*启用身份联合*复选框。
+. 选择 * 保存 * 。
+
+
+.相关信息
+link:tenant-management-permissions.html["租户管理权限"]

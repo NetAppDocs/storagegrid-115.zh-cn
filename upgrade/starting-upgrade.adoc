@@ -1,0 +1,99 @@
+---
+permalink: upgrade/starting-upgrade.html 
+sidebar: sidebar 
+keywords: upgrade, start, starting 
+summary: 准备好执行升级后、请选择下载的文件并输入配置密码短语。您可以选择在执行实际升级之前运行升级预检。 
+---
+= 正在启动升级
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+准备好执行升级后、请选择下载的文件并输入配置密码短语。您可以选择在执行实际升级之前运行升级预检。
+
+.您需要的内容
+您已查看所有注意事项并完成中的所有步骤 link:upgrade-planning-and-preparation.html["升级规划和准备"]。
+
+.步骤
+. 使用支持的浏览器登录到网格管理器。
+. 选择 * 维护 * > * 系统 * > * 软件更新 * 。
++
+此时将显示软件更新页面。
+
+. 选择 * StorageGRID Upgrade* 。
++
+此时将显示StorageGRID 升级页面、并显示最近完成升级的日期和时间、除非主管理节点在执行升级后已重新启动或管理API重新启动。
+
+. 选择 `.upgrade` 您下载的文件。
++
+.. 选择 * 浏览 * 。
+.. 找到并选择文件： `NetApp_StorageGRID_version_Software_uniqueID.upgrade`
+.. 选择 * 打开 * 。
++
+已上传并验证此文件。验证过程完成后，升级文件名称旁边会显示一个绿色复选标记。
+
+
+
+. 在文本框中输入配置密码短语。
++
+已启用 * 运行预检 * 和 * 开始升级 * 按钮。
+
++
+image::../media/storagegrid_upgrade_buttons_enabled.png[已启用 StorageGRID 升级按钮]
+
+. 如果要在开始实际升级之前验证系统的状况、请选择*运行预检*。然后、解决报告的任何预检错误。
++
+
+IMPORTANT: 如果您已打开任何自定义防火墙端口，则会在预检验证期间收到通知。在继续升级之前，您必须联系技术支持。
+
++
+
+NOTE: 在选择*开始升级*时、也会执行相同的预检。选择 * 运行预检 * 可在开始升级之前检测并解决问题。
+
+. 准备好执行升级后，请选择 * 开始升级 * 。
++
+此时将显示一条警告，提醒您在重新启动主管理节点后，浏览器的连接将断开。当主管理节点重新可用时、您需要清除Web浏览器的缓存并重新加载软件升级页面。
+
++
+image::../media/software_upgrade_connection_will_be_lost.png[软件升级连接将丢失]
+
+. 选择 * 确定 * 确认警告并启动升级过程。
++
+升级开始时：
+
++
+.. 此时将运行升级预检。
++
+
+NOTE: 如果报告了任何预检错误，请解决这些错误，然后再次选择 * 开始升级 * 。
+
+.. 升级主管理节点、包括停止服务、升级软件和重新启动服务。在升级主管理节点期间、您将无法访问网格管理器。审核日志也将不可用。此升级可能需要长达 30 分钟的时间。
++
+
+NOTE: 在升级主管理节点时、会显示以下错误消息的多个副本、您可以忽略这些副本。
+
++
+image::../media/software_upgrade_problem_connecting_error.png[软件升级问题连接错误]
+
++
+image::../media/software_upgrade_503_error.png[软件升级 503 错误]
+
++
+image::../media/software_upgrade_400_error.png[软件升级 400 错误]
+
+
+
+. 升级主管理节点后、清除Web浏览器的缓存、重新登录并重新加载软件升级页面。
++
+有关说明，请参见 Web 浏览器的文档。
+
++
+
+IMPORTANT: 您必须清除 Web 浏览器的缓存，才能删除先前版本的软件所使用的过时资源。
+
+
+
+.相关信息
+link:upgrade-planning-and-preparation.html["升级规划和准备"]

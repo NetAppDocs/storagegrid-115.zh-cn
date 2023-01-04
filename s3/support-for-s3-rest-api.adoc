@@ -1,0 +1,19 @@
+---
+permalink: s3/support-for-s3-rest-api.html 
+sidebar: sidebar 
+keywords:  
+summary: StorageGRID 支持简单存储服务 \ （ S3\ ） API ，该 API 作为一组表示状态传输 \ （ REST \ ） Web 服务实施。通过对 S3 REST API 的支持，您可以将为 S3 Web 服务开发的面向服务的应用程序与使用 StorageGRID 系统的内部对象存储连接起来。这就要求对客户端应用程序当前使用 S3 REST API 调用的情况进行最少的更改。 
+---
+= 支持S3 REST API
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+StorageGRID 支持简单存储服务（ S3 ） API ，该 API 作为一组表示状态传输（ Representational State Transfer ， REST ） Web 服务来实施。通过对 S3 REST API 的支持，您可以将为 S3 Web 服务开发的面向服务的应用程序与使用 StorageGRID 系统的内部对象存储连接起来。这需要对客户端应用程序当前使用 S3 REST API 调用的情况进行最少的更改。
+
+* link:changes-to-s3-rest-api-support.html["对 S3 REST API 支持的更改"]
+* link:supported-versions.html["支持的版本"]
+* link:support-for-storagegrid-platform-services.html["支持 StorageGRID 平台服务"]
+

@@ -1,0 +1,58 @@
+---
+permalink: network/storagegrid-networking-overview.html 
+sidebar: sidebar 
+keywords: storagegrid, network, networking, ethernet, subnet, routing 
+summary: 为 StorageGRID 系统配置网络需要在以太网交换， TCP/IP 网络，子网，网络路由和防火墙方面具有丰富的经验。 
+---
+= StorageGRID 网络概述
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+为 StorageGRID 系统配置网络需要在以太网交换， TCP/IP 网络，子网，网络路由和防火墙方面具有丰富的经验。
+
+在配置网络之前、请熟悉_Grid primer_中所述的StorageGRID 架构。
+
+在部署和配置StorageGRID 之前、您必须配置网络基础架构。网格中的所有节点之间以及网格与外部客户端和服务之间都需要进行通信。
+
+外部客户端和外部服务需要连接到 StorageGRID 网络才能执行如下功能：
+
+* 存储和检索对象数据
+* 接收电子邮件通知
+* 访问 StorageGRID 管理界面（网格管理器和租户管理器）
+* 访问审核共享（可选）
+* 提供以下服务：
++
+** 网络时间协议（ NTP ）
+** 域名系统（ DNS ）
+** 密钥管理服务器（ KMS ）
+
+
+
+
+必须正确配置 StorageGRID 网络，才能处理这些功能等的流量。
+
+在确定要使用的三个StorageGRID 网络中的哪一个以及这些网络的配置方式之后、您可以按照相应的说明安装和配置StorageGRID 节点。
+
+.相关信息
+link:../primer/index.html["网格入门"]
+
+link:../admin/index.html["管理 StorageGRID"]
+
+link:../release-notes/index.html["发行说明"]
+
+link:../rhel/index.html["安装 Red Hat Enterprise Linux 或 CentOS"]
+
+link:../ubuntu/index.html["安装 Ubuntu 或 Debian"]
+
+link:../vmware/index.html["安装 VMware"]
+
+link:../sg100-1000/index.html["SG100和AMP；SG1000服务设备"]
+
+link:../sg6000/index.html["SG6000 存储设备"]
+
+link:../sg5700/index.html["SG5700 存储设备"]
+
+link:../sg5600/index.html["SG5600 存储设备"]

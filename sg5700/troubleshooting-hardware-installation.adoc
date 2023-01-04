@@ -1,0 +1,19 @@
+---
+permalink: sg5700/troubleshooting-hardware-installation.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, troubleshoot, troubleshooting, hardware, install, installation 
+summary: 如果您在安装期间遇到问题，查看与硬件设置和连接问题相关的故障排除信息可能会很有帮助。 
+---
+= 对硬件安装进行故障排除
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您在安装期间遇到问题，查看与硬件设置和连接问题相关的故障排除信息可能会很有帮助。
+
+.相关信息
+link:hardware-setup-appears-to-hang.html["硬件设置似乎挂起"]
+
+link:troubleshooting-connection-issues.html["对连接问题进行故障排除"]

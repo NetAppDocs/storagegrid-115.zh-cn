@@ -1,0 +1,22 @@
+---
+permalink: tenant/managing-s3-platform-services.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果您的S3租户帐户允许使用平台服务、则可以使用平台服务利用外部服务并为S3存储分段配置CloudMirror复制、通知和搜索集成。 
+---
+= 管理S3平台服务
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您的S3租户帐户允许使用平台服务、则可以使用平台服务利用外部服务并为S3存储分段配置CloudMirror复制、通知和搜索集成。
+
+* link:what-platform-services-are.html["什么是平台服务"]
+* link:considerations-for-using-platform-services.html["使用平台服务的注意事项"]
+* link:configuring-platform-services-endpoints.html["配置平台服务端点"]
+* link:configuring-cloudmirror-replication.html["配置CloudMirror复制"]
+* link:configuring-event-notifications.html["配置事件通知"]
+* link:using-search-integration-service.html["使用搜索集成服务"]
+

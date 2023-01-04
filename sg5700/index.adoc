@@ -1,0 +1,27 @@
+---
+permalink: sg5700/index.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance 
+summary: 了解如何安装和维护StorageGRID SG5712和SG5760设备。 
+---
+= SG5700 存储设备
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解如何安装和维护StorageGRID SG5712和SG5760设备。
+
+* link:storagegrid-appliance-overview.html["StorageGRID 设备概述"]
+* link:installation-and-deployment-overview.html["安装和部署概述"]
+* link:preparing-for-installation.html["准备安装"]
+* link:installing-hardware.html["安装硬件"]
+* link:configuring-hardware-sg5712-60.html["配置硬件"]
+* link:deploying-appliance-storage-node.html["部署设备存储节点"]
+* link:monitoring-storage-appliance-installation.html["监控存储设备安装"]
+* link:automating-appliance-installation-and-configuration.html["自动化设备安装和配置"]
+* link:overview-of-installation-rest-apis.html["安装 REST API 概述"]
+* link:troubleshooting-hardware-installation.html["对硬件安装进行故障排除"]
+* link:maintaining-sg5700-appliance.html["维护SG5700设备"]
+

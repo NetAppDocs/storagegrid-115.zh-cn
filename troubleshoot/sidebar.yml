@@ -1,0 +1,33 @@
+---
+section: troubleshoot
+title: 对 StorageGRID 系统进行故障排除
+url: "/troubleshoot/troubleshooting-storagegrid-system.html"
+entries:
+- title: 对对象和存储问题进行故障排除
+  url: "/troubleshoot/troubleshooting-object-and-storage-issues.html"
+  entries:
+  - title: 验证对象完整性
+    url: "/troubleshoot/verifying-object-integrity.html"
+  - title: 对对象数据丢失和缺失进行故障排除
+    url: "/troubleshoot/troubleshooting-lost-and-missing-object-data.html"
+    entries:
+    - title: 调查丢失的对象
+      url: "/troubleshoot/investigating-lost-objects.html"
+    - title: 搜索并还原可能丢失的对象
+      url: "/troubleshoot/searching-for-and-restoring-potentially-lost-objects.html"
+    - title: 重置丢失和缺失的对象计数
+      url: "/troubleshoot/resetting-lost-and-missing-object-counts.html"
+  - title: 对对象数据存储不足警报进行故障排除
+    url: "/troubleshoot/troubleshooting-low-object-data-storage-alert.html"
+  - title: 对存储状态(SSTS)警报进行故障排除
+    url: "/troubleshoot/troubleshooting-storage-status-alarm.html"
+  - title: 对平台服务消息的交付进行故障排除(SMTTT警报)
+    url: "/troubleshoot/troubleshooting-delivery-platform-services-messages.html"
+- title: 对元数据问题进行故障排除
+  url: "/troubleshoot/troubleshooting-metadata-issues.html"
+- title: 对证书错误进行故障排除
+  url: "/troubleshoot/troubleshooting-certificate-errors.html"
+- title: 对管理节点和用户界面问题进行故障排除
+  url: "/troubleshoot/troubleshooting-admin-node-and-user-interface-issues.html"
+- title: 对网络、硬件和平台问题进行故障排除
+  url: "/troubleshoot/troubleshooting-network-hardware-and-platform-issues.html"

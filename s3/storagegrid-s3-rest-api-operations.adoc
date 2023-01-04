@@ -1,0 +1,1065 @@
+---
+permalink: s3/storagegrid-s3-rest-api-operations.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= StorageGRID S3 REST API 操作
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+S3 REST API 中添加了特定于 StorageGRID 系统的操作。
+
+
+
+== 获取存储分段一致性请求
+
+使用获取存储分段一致性请求，您可以确定应用于特定存储分段的一致性级别。
+
+默认一致性控制设置为保证新创建的对象的写入后读。
+
+要完成此操作、您必须具有S3：GetBucketConsistency权限或帐户root。
+
+
+
+=== 请求示例
+
+[source, subs="specialcharacters,quotes"]
+----
+GET /bucket?x-ntap-sg-consistency HTTP/1.1
+Date: _date_
+Authorization: _authorization string_
+Host: _host_
+----
+
+
+=== 响应
+
+在响应XML中、 `<Consistency>` 将返回以下值之一：
+
+|===
+| 一致性控制 | Description 
+
+
+ a| 
+全部
+ a| 
+所有节点都会立即接收数据，否则请求将失败。
+
+
+
+ a| 
+强大的全局功能
+ a| 
+保证所有站点中所有客户端请求的写入后读一致性。
+
+
+
+ a| 
+强大的站点
+ a| 
+保证站点内所有客户端请求的写入后读一致性。
+
+
+
+ a| 
+读后写
+ a| 
+（默认）为新对象提供写入后读一致性，并为对象更新提供最终一致性。提供高可用性和数据保护保证。与Amazon S3一致性保证匹配。
+
+* 注意： * 如果应用程序对不存在的对象使用 head 请求，则在一个或多个存储节点不可用时，可能会收到大量 500 个内部服务器错误。要防止出现这些错误，请将一致性控制设置为 "`Available` " ，除非您需要类似于 Amazon S3 的一致性保证。
+
+
+
+ a| 
+可用（机头操作的最终一致性）
+ a| 
+与 `read-after-new-write` 一致性级别相同，但仅为机头操作提供最终一致性。如果存储节点不可用，则为机头操作提供的可用性比 " `read-after-new-write` " 更高。与 Amazon S3 一致性保证不同，仅适用于机头操作。
+
+|===
+
+
+=== 响应示例
+
+[listing]
+----
+HTTP/1.1 200 OK
+Date: Fri, 18 Sep 2020 01:02:18 GMT
+Connection: CLOSE
+Server: StorageGRID/11.5.0
+x-amz-request-id: 12345
+Content-Length: 127
+Content-Type: application/xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Consistency xmlns="http://s3.storagegrid.com/doc/2015-02-01/">read-after-new-write</Consistency>
+----
+.相关信息
+link:consistency-controls.html["一致性控制"]
+
+
+
+== PUT 存储分段一致性请求
+
+通过 PUT 分段一致性请求，您可以指定要应用于对分段执行的操作的一致性级别。
+
+默认一致性控制设置为保证新创建的对象的写入后读。
+
+要完成此操作、您必须具有S3：PutBucketConsistency权限或帐户root。
+
+
+
+=== 请求
+
+。 `x-ntap-sg-consistency` 参数必须包含以下值之一：
+
+|===
+| 一致性控制 | Description 
+
+
+ a| 
+全部
+ a| 
+所有节点都会立即接收数据，否则请求将失败。
+
+
+
+ a| 
+强大的全局功能
+ a| 
+保证所有站点中所有客户端请求的写入后读一致性。
+
+
+
+ a| 
+强大的站点
+ a| 
+保证站点内所有客户端请求的写入后读一致性。
+
+
+
+ a| 
+读后写
+ a| 
+（默认）为新对象提供写入后读一致性，并为对象更新提供最终一致性。提供高可用性和数据保护保证。与Amazon S3一致性保证匹配。
+
+* 注意： * 如果应用程序对不存在的对象使用 head 请求，则在一个或多个存储节点不可用时，可能会收到大量 500 个内部服务器错误。要防止出现这些错误，请将一致性控制设置为 "`Available` " ，除非您需要类似于 Amazon S3 的一致性保证。
+
+
+
+ a| 
+可用（机头操作的最终一致性）
+ a| 
+与 `read-after-new-write` 一致性级别相同，但仅为机头操作提供最终一致性。如果存储节点不可用，则为机头操作提供的可用性比 " `read-after-new-write` " 更高。与 Amazon S3 一致性保证不同，仅适用于机头操作。
+
+|===
+* 注： * 通常，您应使用 `read-after-new-write` 一致性控制值。如果请求无法正常工作，请尽可能更改应用程序客户端的行为。或者，配置客户端以指定每个 API 请求的一致性控制。请仅作为最后一种方法在存储分段级别设置一致性控制。
+
+
+
+=== 请求示例
+
+[source, subs="specialcharacters,quotes"]
+----
+PUT /bucket?x-ntap-sg-consistency=strong-global HTTP/1.1
+Date: _date_
+Authorization: _authorization string_
+Host: _host_
+----
+.相关信息
+link:consistency-controls.html["一致性控制"]
+
+
+
+== 获取分段上次访问时间请求
+
+通过获取分段上次访问时间请求，您可以确定是为单个分段启用还是禁用了上次访问时间更新。
+
+要完成此操作、您必须具有S3：GetBucketLastAccessTime权限或帐户root。
+
+
+
+=== 请求示例
+
+[source, subs="specialcharacters,quotes"]
+----
+GET /bucket?x-ntap-sg-lastaccesstime HTTP/1.1
+Date: _date_
+Authorization: _authorization string_
+Host: _host_
+----
+
+
+=== 响应示例
+
+此示例显示已为存储分段启用上次访问时间更新。
+
+[listing]
+----
+HTTP/1.1 200 OK
+Date: Sat, 29 Nov 2015 01:02:18 GMT
+Connection: CLOSE
+Server: StorageGRID/10.3.0
+x-amz-request-id: 12345
+Content-Length: 127
+Content-Type: application/xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<LastAccessTime xmlns="http://s3.storagegrid.com/doc/2015-02-01/">enabled
+</LastAccessTime>
+----
+
+
+== PUT 分段上次访问时间请求
+
+通过 PUT 分段上次访问时间请求，您可以为各个分段启用或禁用上次访问时间更新。禁用上次访问时间更新可提高性能，它是使用 10.3.0 或更高版本创建的所有存储分段的默认设置。
+
+要完成此操作、您必须对某个存储分段拥有S3：PutBucketLastAccessTime权限、或者以root帐户身份登录。
+
+
+NOTE: 从 StorageGRID 10.3 版开始，默认情况下，所有新存储分段都会禁用对上次访问时间的更新。如果您的存储分段是使用早期版本的 StorageGRID 创建的，并且您希望与新的默认行为匹配，则必须明确禁用上述每个存储分段的上次访问时间更新。您可以使用租户管理器中的 PUT 分段上次访问时间请求， * S3 > * 分段 * > * 更改上次访问设置 * 复选框或租户管理 API 启用或禁用对最后访问时间的更新。
+
+如果禁用了某个存储分段的上次访问时间更新，则会对存储分段上的操作应用以下行为：
+
+* GET 对象， GET 对象 ACL ， GET 对象标记和 HEAD 对象请求不会更新上次访问时间。此对象不会添加到用于信息生命周期管理（ ILM ）评估的队列中。
+* PUT 对象—仅更新元数据的复制和 PUT 对象标记请求也会更新上次访问时间。对象将添加到队列中以进行 ILM 评估。
+* 如果对源存储分段禁用了对最后访问时间的更新，则 PUT Object - Copy Requests 不会更新源存储分段的最后访问时间。复制的对象不会添加到源存储分段的 ILM 评估队列中。但是，对于目标， PUT 对象 - 复制请求始终更新上次访问时间。对象副本将添加到队列中以进行 ILM 评估。
+* 完成多部件上传请求更新上次访问时间。已完成的对象将添加到队列中以进行 ILM 评估。
+
+
+
+
+=== 请求示例
+
+此示例将为存储分段启用上次访问时间。
+
+[source, subs="specialcharacters,quotes"]
+----
+PUT /bucket?x-ntap-sg-lastaccesstime=enabled HTTP/1.1
+Date: _date_
+Authorization: _authorization string_
+Host: _host_
+----
+此示例将禁用存储分段的上次访问时间。
+
+[source, subs="specialcharacters,quotes"]
+----
+PUT /bucket?x-ntap-sg-lastaccesstime=disabled HTTP/1.1
+Date: _date_
+Authorization: _authorization string_
+Host: _host_
+----
+.相关信息
+link:../tenant/index.html["使用租户帐户"]
+
+
+
+== 删除存储分段元数据通知配置请求
+
+通过删除存储分段元数据通知配置请求，您可以通过删除配置 XML 来禁用各个存储分段的搜索集成服务。
+
+要完成此操作、您必须对某个存储分段拥有S3：DeleteBucketMetadataNotification权限、或者以root帐户身份登录。
+
+
+
+=== 请求示例
+
+此示例显示了禁用存储分段的搜索集成服务。
+
+[source, subs="specialcharacters,quotes"]
+----
+DELETE /test1?x-ntap-sg-metadata-notification HTTP/1.1
+Date: _date_
+Authorization: _authorization string_
+Host: _host_
+----
+
+
+== 获取存储分段元数据通知配置请求
+
+使用获取分段元数据通知配置请求，您可以检索用于为各个分段配置搜索集成的配置 XML 。
+
+要完成此操作、您必须具有S3：GetBucketMetadataNotification权限或帐户root。
+
+
+
+=== 请求示例
+
+此请求将检索名为的存储分段的元数据通知配置 `bucket`。
+
+[source, subs="specialcharacters,quotes"]
+----
+GET /bucket?x-ntap-sg-metadata-notification HTTP/1.1
+Date: _date_
+Authorization: _authorization string_
+Host: _host_
+----
+
+
+=== 响应
+
+响应正文包括存储分段的元数据通知配置。通过元数据通知配置，您可以确定如何配置存储分段以进行搜索集成。也就是说，您可以通过它确定哪些对象已编制索引，以及将其对象元数据发送到哪些端点。
+
+[listing]
+----
+<MetadataNotificationConfiguration>
+    <Rule>
+        <ID>Rule-1</ID>
+        <Status>rule-status</Status>
+        <Prefix>key-prefix</Prefix>
+        <Destination>
+           <Urn>arn:aws:es:_region:account-ID_:domain/_mydomain/myindex/mytype_</Urn>
+        </Destination>
+    </Rule>
+    <Rule>
+        <ID>Rule-2</ID>
+         ...
+    </Rule>
+     ...
+</MetadataNotificationConfiguration>
+----
+每个元数据通知配置都包含一个或多个规则。每个规则都指定其适用场景 的对象以及 StorageGRID 应将对象元数据发送到的目标。必须使用 StorageGRID 端点的 URN 指定目标。
+
+|===
+| Name | Description | Required 
+
+
+ a| 
+MetadataNotificationConfiguration
+ a| 
+用于指定元数据通知的对象和目标的规则的容器标记。
+
+包含一个或多个规则元素。
+ a| 
+是的。
+
+
+
+ a| 
+规则
+ a| 
+用于标识应将其元数据添加到指定索引中的对象的规则的容器标记。
+
+拒绝前缀重叠的规则。
+
+包含在 MetadataNotificationConfiguration 元素中。
+ a| 
+是的。
+
+
+
+ a| 
+ID
+ a| 
+规则的唯一标识符。
+
+包含在 Rule 元素中。
+ a| 
+否
+
+
+
+ a| 
+Status
+ a| 
+状态可以是 " 已启用 " 或 " 已禁用 " 。不会对已禁用的规则执行任何操作。
+
+包含在 Rule 元素中。
+ a| 
+是的。
+
+
+
+ a| 
+前缀
+ a| 
+与前缀匹配的对象受此规则的影响，其元数据将发送到指定目标。
+
+要匹配所有对象，请指定一个空前缀。
+
+包含在 Rule 元素中。
+ a| 
+是的。
+
+
+
+ a| 
+目标
+ a| 
+规则目标的容器标记。
+
+包含在 Rule 元素中。
+ a| 
+是的。
+
+
+
+ a| 
+URN
+ a| 
+发送对象元数据的目标的 urn 。必须是具有以下属性的 StorageGRID 端点的 URN ：
+
+* `es` 必须是第三个元素。
+* URN必须以存储元数据的索引和类型结尾、格式为 `domain-name/myindex/mytype`。
+
+
+端点使用租户管理器或租户管理 API 进行配置。它们的形式如下：
+
+* `arn:aws:es:_region:account-ID_:domain/mydomain/myindex/mytype`
+* `urn:mysite:es:::mydomain/myindex/mytype`
+
+
+必须在提交配置 XML 之前配置端点，否则配置将失败并显示 404 错误。
+
+urn 包含在目标元素中。
+ a| 
+是的。
+
+|===
+
+
+=== 响应示例
+
+包含在之间的XML  `<MetadataNotificationConfiguration></MetadataNotificationConfiguration>` 标记显示了如何为存储分段配置与搜索集成端点的集成。在此示例中、对象元数据将发送到名为的Elasticsearch索引 `current` 并键入named `2017` 托管在名为的AWS域中 `records`。
+
+[listing]
+----
+HTTP/1.1 200 OK
+Date: Thu, 20 Jul 2017 18:24:05 GMT
+Connection: KEEP-ALIVE
+Server: StorageGRID/11.0.0
+x-amz-request-id: 3832973499
+Content-Length: 264
+Content-Type: application/xml
+
+<MetadataNotificationConfiguration>
+    <Rule>
+        <ID>Rule-1</ID>
+        <Status>Enabled</Status>
+        <Prefix>2017</Prefix>
+        <Destination>
+           <Urn>arn:aws:es:us-east-1:3333333:domain/records/current/2017</Urn>
+        </Destination>
+    </Rule>
+</MetadataNotificationConfiguration>
+----
+.相关信息
+link:../tenant/index.html["使用租户帐户"]
+
+
+
+== PUT 存储分段元数据通知配置请求
+
+通过 PUT Bucket 元数据通知配置请求，您可以为各个存储分段启用搜索集成服务。您在请求正文中提供的元数据通知配置 XML 用于指定将其元数据发送到目标搜索索引的对象。
+
+要完成此操作、您必须对某个存储分段拥有S3：PutBucketMetadataNotification权限、或者以root帐户身份登录。
+
+
+
+=== 请求
+
+此请求必须在请求正文中包含元数据通知配置。每个元数据通知配置都包含一个或多个规则。每个规则都指定其适用场景 的对象以及 StorageGRID 应将对象元数据发送到的目标。
+
+可以按对象名称的前缀筛选对象。例如、您可以发送具有前缀的对象的元数据 `/images` 到一个目标、以及具有前缀的对象 `/videos` 另一个。
+
+前缀重叠的配置无效，在提交时会被拒绝。例如、一种配置、其中包含一个规则、用于具有前缀的对象 `test` 和第二个规则、用于具有前缀的对象 `test2` 不允许。
+
+必须使用 StorageGRID 端点的 URN 指定目标。如果提交元数据通知配置、或者请求以失败的形式出现故障、则端点必须存在 `400 Bad Request`。错误消息显示： `Unable to save the metadata notification (search) policy. The specified endpoint URN does not exist: _URN_.`
+
+[listing]
+----
+<MetadataNotificationConfiguration>
+    <Rule>
+        <ID>Rule-1</ID>
+        <Status>rule-status</Status>
+        <Prefix>key-prefix</Prefix>
+        <Destination>
+           <Urn>arn:aws:es:region:account-ID:domain/mydomain/myindex/mytype</Urn>
+        </Destination>
+    </Rule>
+    <Rule>
+        <ID>Rule-2</ID>
+         ...
+    </Rule>
+     ...
+</MetadataNotificationConfiguration>
+----
+下表介绍了元数据通知配置 XML 中的元素。
+
+|===
+| Name | Description | Required 
+
+
+ a| 
+MetadataNotificationConfiguration
+ a| 
+用于指定元数据通知的对象和目标的规则的容器标记。
+
+包含一个或多个规则元素。
+ a| 
+是的。
+
+
+
+ a| 
+规则
+ a| 
+用于标识应将其元数据添加到指定索引中的对象的规则的容器标记。
+
+拒绝前缀重叠的规则。
+
+包含在 MetadataNotificationConfiguration 元素中。
+ a| 
+是的。
+
+
+
+ a| 
+ID
+ a| 
+规则的唯一标识符。
+
+包含在 Rule 元素中。
+ a| 
+否
+
+
+
+ a| 
+Status
+ a| 
+状态可以是 " 已启用 " 或 " 已禁用 " 。不会对已禁用的规则执行任何操作。
+
+包含在 Rule 元素中。
+ a| 
+是的。
+
+
+
+ a| 
+前缀
+ a| 
+与前缀匹配的对象受此规则的影响，其元数据将发送到指定目标。
+
+要匹配所有对象，请指定一个空前缀。
+
+包含在 Rule 元素中。
+ a| 
+是的。
+
+
+
+ a| 
+目标
+ a| 
+规则目标的容器标记。
+
+包含在 Rule 元素中。
+ a| 
+是的。
+
+
+
+ a| 
+URN
+ a| 
+发送对象元数据的目标的 urn 。必须是具有以下属性的 StorageGRID 端点的 URN ：
+
+* `es` 必须是第三个元素。
+* URN必须以存储元数据的索引和类型结尾、格式为 `domain-name/myindex/mytype`。
+
+
+端点使用租户管理器或租户管理 API 进行配置。它们的形式如下：
+
+* `arn:aws:es:region:account-ID:domain/mydomain/myindex/mytype`
+* `urn:mysite:es:::mydomain/myindex/mytype`
+
+
+必须在提交配置 XML 之前配置端点，否则配置将失败并显示 404 错误。
+
+urn 包含在目标元素中。
+ a| 
+是的。
+
+|===
+
+
+=== 请求示例
+
+此示例显示了为存储分段启用搜索集成。在此示例中，所有对象的对象元数据都将发送到同一目标。
+
+[source, subs="specialcharacters,quotes"]
+----
+PUT /test1?x-ntap-sg-metadata-notification HTTP/1.1
+Date: _date_
+Authorization: _authorization string_
+Host: _host_
+
+<MetadataNotificationConfiguration>
+    <Rule>
+        <ID>Rule-1</ID>
+        <Status>Enabled</Status>
+        <Prefix></Prefix>
+        <Destination>
+           <Urn>urn:sgws:es:::sgws-notifications/test1/all</Urn>
+        </Destination>
+    </Rule>
+</MetadataNotificationConfiguration>
+----
+在此示例中、是指与前缀匹配的对象的对象元数据 `/images` 发送到一个目标、而与前缀匹配的对象的对象元数据则发送到一个目标 `/videos` 发送到另一个目标。
+
+[source, subs="specialcharacters,quotes"]
+----
+PUT /graphics?x-ntap-sg-metadata-notification HTTP/1.1
+Date: _date_
+Authorization: _authorization string_
+Host: _host_
+
+<MetadataNotificationConfiguration>
+    <Rule>
+        <ID>Images-rule</ID>
+        <Status>Enabled</Status>
+        <Prefix>/images</Prefix>
+        <Destination>
+           <Urn>arn:aws:es:us-east-1:3333333:domain/es-domain/graphics/imagetype</Urn>
+        </Destination>
+    </Rule>
+    <Rule>
+        <ID>Videos-rule</ID>
+        <Status>Enabled</Status>
+        <Prefix>/videos</Prefix>
+        <Destination>
+           <Urn>arn:aws:es:us-west-1:22222222:domain/es-domain/graphics/videotype</Urn>
+        </Destination>
+    </Rule>
+</MetadataNotificationConfiguration>
+----
+.相关信息
+link:../tenant/index.html["使用租户帐户"]
+
+
+
+=== 由搜索集成服务生成的 JSON
+
+为存储分段启用搜索集成服务后，每次添加，更新或删除对象元数据或标记时，系统都会生成一个 JSON 文档并将其发送到目标端点。
+
+此示例显示了使用密钥的对象时可能生成的JSON示例 `SGWS/Tagging.txt` 在名为的存储分段中创建 `test`。。 `test` 存储分段未进行版本控制、因此 `versionId` 标记为空。
+
+[listing]
+----
+{
+  "bucket": "test",
+  "key": "SGWS/Tagging.txt",
+  "versionId": "",
+  "accountId": "86928401983529626822",
+  "size": 38,
+  "md5": "3d6c7634a85436eee06d43415012855",
+  "region":"us-east-1"
+  "metadata": {
+    "age": "25"
+  },
+  "tags": {
+    "color": "yellow"
+  }
+}
+----
+
+
+=== 元数据通知中包含的对象元数据
+
+下表列出了启用搜索集成后发送到目标端点的 JSON 文档中包含的所有字段。
+
+文档名称包括存储分段名称，对象名称和版本 ID （如果存在）。
+
+|===
+| Type | 项目名称 | Description 
+
+
+ a| 
+存储分段和对象信息
+ a| 
+存储分段
+ a| 
+存储分段的名称
+
+
+
+ a| 
+存储分段和对象信息
+ a| 
+key
+ a| 
+对象密钥名称
+
+
+
+ a| 
+存储分段和对象信息
+ a| 
+版本 ID
+ a| 
+对象版本，用于受版本控制的分段中的对象
+
+
+
+ a| 
+存储分段和对象信息
+ a| 
+region
+ a| 
+分段区域、例如 `us-east-1`
+
+
+
+ a| 
+系统元数据
+ a| 
+size
+ a| 
+HTTP 客户端可见的对象大小（以字节为单位）
+
+
+
+ a| 
+系统元数据
+ a| 
+MD5
+ a| 
+对象哈希
+
+
+
+ a| 
+用户元数据
+ a| 
+元数据
+`_key:value_`
+ a| 
+对象的所有用户元数据，作为键值对
+
+
+
+ a| 
+Tags
+ a| 
+tags
+`_key:value_`
+ a| 
+为对象定义的所有对象标记，作为键值对
+
+|===
+* 注： * 对于标记和用户元数据， StorageGRID 会将日期和数字作为字符串或 S3 事件通知传递给 Elasticsearch 。要配置 Elasticsearch 以将这些字符串解释为日期或数字，请按照 Elasticsearch 说明进行动态字段映射和映射日期格式。在配置搜索集成服务之前，必须在索引上启用动态字段映射。为文档编制索引后，您无法在索引中编辑文档的字段类型。
+
+
+
+== 获取存储使用情况请求
+
+" 获取存储使用量 " 请求会告知您帐户正在使用的存储总量以及与帐户关联的每个存储分段的存储总量。
+
+帐户及其存储分段使用的存储量可通过修改后的GET服务请求获得 `x-ntap-sg-usage` 查询参数。存储分段使用量与系统处理的 PUT 和 DELETE 请求分开跟踪。根据请求处理情况，使用量值与预期值匹配可能会有一定的延迟，尤其是在系统负载较重时。
+
+默认情况下， StorageGRID 会尝试使用强全局一致性检索使用情况信息。如果无法实现强全局一致性， StorageGRID 将尝试以强站点一致性检索使用情况信息。
+
+要完成此操作、您必须具有S3：ListAllMy桶 权限或帐户root。
+
+
+
+=== 请求示例
+
+[source, subs="specialcharacters,quotes"]
+----
+GET /?x-ntap-sg-usage HTTP/1.1
+Date: _date_
+Authorization: _authorization string_
+Host: _host_
+----
+
+
+=== 响应示例
+
+此示例显示了一个帐户，该帐户在两个存储分段中包含四个对象和 12 字节的数据。每个存储分段包含两个对象和六个字节的数据。
+
+[listing]
+----
+HTTP/1.1 200 OK
+Date: Sat, 29 Nov 2015 00:49:05 GMT
+Connection: KEEP-ALIVE
+Server: StorageGRID/10.2.0
+x-amz-request-id: 727237123
+Content-Length: 427
+Content-Type: application/xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<UsageResult xmlns="http://s3.storagegrid.com/doc/2015-02-01">
+<CalculationTime>2014-11-19T05:30:11.000000Z</CalculationTime>
+<ObjectCount>4</ObjectCount>
+<DataBytes>12</DataBytes>
+<Buckets>
+<Bucket>
+<Name>bucket1</Name>
+<ObjectCount>2</ObjectCount>
+<DataBytes>6</DataBytes>
+</Bucket>
+<Bucket>
+<Name>bucket2</Name>
+<ObjectCount>2</ObjectCount>
+<DataBytes>6</DataBytes>
+</Bucket>
+</Buckets>
+</UsageResult>
+----
+
+
+=== 版本控制
+
+存储的每个对象版本都将用于 `ObjectCount` 和 `DataBytes` 响应中的值。删除标记不会添加到 `ObjectCount` 总计。
+
+.相关信息
+link:consistency-controls.html["一致性控制"]
+
+
+
+== 已弃用旧合规性存储分段请求
+
+您可能需要使用 StorageGRID S3 REST API 来管理使用原有合规性功能创建的分段。
+
+
+
+=== 已弃用合规性功能
+
+先前 StorageGRID 版本中提供的 StorageGRID 合规性功能已弃用，并已被 S3 对象锁定取代。
+
+如果先前启用了全局合规性设置、则在升级到StorageGRID 11.5时、系统会自动启用全局S3对象锁定设置。您不能再在启用了合规性的情况下创建新的存储分段；但是，您可以根据需要使用 StorageGRID S3 REST API 管理任何现有的旧合规存储分段。
+
+link:s3-rest-api-supported-operations-and-limitations.html["使用 S3 对象锁定"]
+
+link:../ilm/index.html["使用 ILM 管理对象"]
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/StorageGRID/How_to_manage_legacy_Compliant_buckets_in_StorageGRID_11.5["NetApp 知识库：如何在 StorageGRID 11.5 中管理原有的合规存储分段"]
+
+
+
+=== 已弃用：为满足合规性而修改存储分段请求
+
+SGCompliance XML 元素已弃用。以前，您可以将此 StorageGRID 自定义元素包含在 PUT 存储分段请求的可选 XML 请求正文中，以创建合规存储分段。
+
+
+IMPORTANT: 先前 StorageGRID 版本中提供的 StorageGRID 合规性功能已弃用，并已被 S3 对象锁定取代。
+
+link:s3-rest-api-supported-operations-and-limitations.html["使用 S3 对象锁定"]
+
+link:../ilm/index.html["使用 ILM 管理对象"]
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/StorageGRID/How_to_manage_legacy_Compliant_buckets_in_StorageGRID_11.5["NetApp 知识库：如何在 StorageGRID 11.5 中管理原有的合规存储分段"]
+
+您不能再在已启用合规性的情况下创建新存储分段。如果您尝试使用 PUT 分段请求修改以满足合规性要求来创建新的合规分段，则会返回以下错误消息：
+
+[listing]
+----
+The Compliance feature is deprecated.
+Contact your StorageGRID administrator if you need to create new Compliant buckets.
+----
+.相关信息
+link:../ilm/index.html["使用 ILM 管理对象"]
+
+link:../tenant/index.html["使用租户帐户"]
+
+
+
+=== 已弃用：获取存储分段合规性请求
+
+获取存储分段合规性请求已弃用。但是，您可以继续使用此请求来确定当前对现有旧版合规存储分段有效的合规性设置。
+
+
+IMPORTANT: 先前 StorageGRID 版本中提供的 StorageGRID 合规性功能已弃用，并已被 S3 对象锁定取代。
+
+link:s3-rest-api-supported-operations-and-limitations.html["使用 S3 对象锁定"]
+
+link:../ilm/index.html["使用 ILM 管理对象"]
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/StorageGRID/How_to_manage_legacy_Compliant_buckets_in_StorageGRID_11.5["NetApp 知识库：如何在 StorageGRID 11.5 中管理原有的合规存储分段"]
+
+要完成此操作、您必须具有S3：GetBucketCompliance权限或帐户root。
+
+
+
+==== 请求示例
+
+通过此示例请求、您可以确定名为的存储分段的合规性设置 `mybucket`。
+
+[source, subs="specialcharacters,quotes"]
+----
+GET /mybucket/?x-ntap-sg-compliance HTTP/1.1
+Date: _date_
+Authorization: _authorization string_
+Host: _host_
+----
+
+
+==== 响应示例
+
+在响应XML中、 `<SGCompliance>` 列出了对存储分段有效的合规性设置。此示例响应显示了一个存储分段的合规性设置，从将对象载入网格开始，每个对象将保留一年（ 525600 分钟）。此存储分段当前没有法律上的保留。每个对象将在一年后自动删除。
+
+[source, subs="specialcharacters,quotes"]
+----
+HTTP/1.1 200 OK
+Date: _date_
+Connection: _connection_
+Server: StorageGRID/11.1.0
+x-amz-request-id: _request ID_
+Content-Length: _length_
+Content-Type: application/xml
+
+<SGCompliance>
+  <RetentionPeriodMinutes>525600</RetentionPeriodMinutes>
+  <LegalHold>false</LegalHold>
+  <AutoDelete>true</AutoDelete>
+</SGCompliance>
+----
+|===
+| Name | Description 
+
+
+ a| 
+RetentionPeriodMinutes
+ a| 
+添加到此存储分段的对象的保留期限长度，以分钟为单位。保留期限从将对象载入网格时开始。
+
+
+
+ a| 
+乐高积木
+ a| 
+* true ：此存储分段当前处于合法保留状态。除非取消合法保留，否则无法删除此存储分段中的对象，即使其保留期限已过期也是如此。
+* false ：此存储分段当前未处于合法保留状态。此存储分段中的对象可以在保留期限到期时删除。
+
+
+
+
+ a| 
+自动删除
+ a| 
+* true ：此存储分段中的对象将在保留期限到期时自动删除，除非此存储分段处于合法保留状态。
+* false ：保留期限到期后，不会自动删除此存储分段中的对象。如果需要删除这些对象，必须手动将其删除。
+
+
+|===
+
+
+==== 错误响应
+
+如果未创建符合要求的存储分段、则响应的HTTP状态代码为 `404 Not Found`、带有S3错误代码 `XNoSuchBucketCompliance`。
+
+.相关信息
+link:../ilm/index.html["使用 ILM 管理对象"]
+
+link:../tenant/index.html["使用租户帐户"]
+
+
+
+=== 已弃用： PUT 存储分段合规性请求
+
+PUT 存储分段合规性请求已弃用。但是，您可以继续使用此请求修改现有旧版合规存储分段的合规性设置。例如，您可以将现有存储分段置于合法保留状态或延长其保留期限。
+
+
+IMPORTANT: 先前 StorageGRID 版本中提供的 StorageGRID 合规性功能已弃用，并已被 S3 对象锁定取代。
+
+link:s3-rest-api-supported-operations-and-limitations.html["使用 S3 对象锁定"]
+
+link:../ilm/index.html["使用 ILM 管理对象"]
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/StorageGRID/How_to_manage_legacy_Compliant_buckets_in_StorageGRID_11.5["NetApp 知识库：如何在 StorageGRID 11.5 中管理原有的合规存储分段"]
+
+要完成此操作、您必须具有S3：PutBucketCompliance权限或帐户root。
+
+发出 PUT 存储分段合规性请求时，必须为合规性设置的每个字段指定一个值。
+
+
+
+==== 请求示例
+
+此示例请求修改名为的存储分段的合规性设置 `mybucket`。在此示例中、对象位于中 `mybucket` 现在将保留两年(1、051、200分钟)、而不是一年、从将对象载入网格开始。此存储分段没有法律上的保留。每个对象将在两年后自动删除。
+
+[source, subs="specialcharacters,quotes"]
+----
+PUT /mybucket/?x-ntap-sg-compliance HTTP/1.1
+Date: _date_
+Authorization: _authorization name_
+Host: _host_
+Content-Length: 152
+
+<SGCompliance>
+  <RetentionPeriodMinutes>1051200</RetentionPeriodMinutes>
+  <LegalHold>false</LegalHold>
+  <AutoDelete>true</AutoDelete>
+</SGCompliance>
+----
+|===
+| Name | Description 
+
+
+ a| 
+RetentionPeriodMinutes
+ a| 
+添加到此存储分段的对象的保留期限长度，以分钟为单位。保留期限从将对象载入网格时开始。
+
+* 注意： * 为 RetentionPeriodMinutes 指定新值时，必须指定一个等于或大于存储分段当前保留期限的值。设置存储分段的保留期限后，您不能减小该值；您只能增加该值。
+
+
+
+ a| 
+乐高积木
+ a| 
+* true ：此存储分段当前处于合法保留状态。除非取消合法保留，否则无法删除此存储分段中的对象，即使其保留期限已过期也是如此。
+* false ：此存储分段当前未处于合法保留状态。此存储分段中的对象可以在保留期限到期时删除。
+
+
+
+
+ a| 
+自动删除
+ a| 
+* true ：此存储分段中的对象将在保留期限到期时自动删除，除非此存储分段处于合法保留状态。
+* false ：保留期限到期后，不会自动删除此存储分段中的对象。如果需要删除这些对象，必须手动将其删除。
+
+
+|===
+
+
+==== 合规性设置的一致性级别
+
+当您使用 PUT 存储分段合规性请求更新 S3 存储分段的合规性设置时， StorageGRID 会尝试更新整个网格中存储分段的元数据。默认情况下， StorageGRID 使用 * 强 - 全局 * 一致性级别来保证所有数据中心站点以及包含存储分段元数据的所有存储节点在更改的合规性设置中具有读 - 写一致性。
+
+如果由于某个站点上的数据中心站点或多个存储节点不可用而导致StorageGRID 无法达到*强-全局*一致性级别、则响应的HTTP状态代码为 `503 Service Unavailable.`
+
+如果收到此响应，您必须联系网格管理员，以确保所需的存储服务尽快可用。如果网格管理员无法在每个站点提供足够的存储节点，技术支持可能会指示您通过强制执行 * 强站点 * 一致性级别来重试失败的请求。
+
+
+IMPORTANT: 除非技术支持指示您这样做，并且您了解使用此级别可能产生的后果，否则切勿强制使用 * 强站点 * 一致性级别来满足 PUT 存储分段合规性要求。
+
+当一致性级别降低到 * 强站点 * 时， StorageGRID 保证更新后的合规性设置仅对站点中的客户端请求具有读写后一致性。这意味着，在所有站点和存储节点均可用之前， StorageGRID 系统可能会暂时为此存储分段设置多个不一致的设置。设置不一致可能导致意外和意外的行为。例如，如果您将某个存储分段置于合法保留状态并强制降低一致性级别，则某些数据中心站点上可能仍会继续使用存储分段先前的合规性设置（即合法保留）。因此，您认为处于合法保留状态的对象可能会在保留期限到期时被用户删除，或者如果启用了自动删除，也可以删除。
+
+要强制使用*强站点*一致性级别、请重新发出PUT存储分段合规性请求并加入 `Consistency-Control` HTTP请求标头、如下所示：
+
+[listing]
+----
+PUT /mybucket/?x-ntap-sg-compliance HTTP/1.1
+Consistency-Control: strong-site
+----
+
+
+==== 错误响应
+
+* 如果未创建符合要求的存储分段、则响应的HTTP状态代码为 `404 Not Found`。
+* 条件 `RetentionPeriodMinutes` 在请求小于存储分段的当前保留期限时、HTTP状态代码为 `400 Bad Request`。
+
+
+.相关信息
+link:storagegrid-s3-rest-api-operations.html["已弃用：为满足合规性而修改存储分段请求"]
+
+link:../tenant/index.html["使用租户帐户"]
+
+link:../ilm/index.html["使用 ILM 管理对象"]

@@ -1,0 +1,24 @@
+---
+permalink: admin/restoring-default-server-certificates-for-s3-swift-api-endpoints.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以还原为对S3和Swift REST API端点使用默认服务器证书。 
+---
+= 还原S3和Swift REST API端点的默认服务器证书
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以还原为对S3和Swift REST API端点使用默认服务器证书。
+
+.步骤
+. 选择*配置*>*网络设置*>*服务器证书*。
+. 在对象存储API服务端点服务器证书部分中、单击*使用默认证书*。
+. 单击确认对话框中的 * 确定 * 。
++
+还原对象存储API端点的默认服务器证书时、您配置的自定义服务器证书文件将被删除、并且无法从系统中恢复。默认服务器证书将用于所有后续的新API客户端连接。
+
+. 刷新页面以确保 Web 浏览器已更新。
+

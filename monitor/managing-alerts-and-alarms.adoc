@@ -1,0 +1,49 @@
+---
+permalink: monitor/managing-alerts-and-alarms.html 
+sidebar: sidebar 
+keywords: managing, alarms, alerts 
+summary: StorageGRID 警报系统旨在通知您需要关注的操作问题。您还可以根据需要使用旧警报系统监控系统。 
+---
+= 管理警报和警报
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+StorageGRID 警报系统旨在通知您需要关注的操作问题。您还可以根据需要使用旧警报系统监控系统。本节包含以下子部分：
+
+* link:comparing-alerts-and-alarms.html["比较警报和警报"]
+* link:managing-alerts.html["管理警报"]
+* link:managing-alarms.html["管理警报(旧系统)"]
+
+
+StorageGRID 包含两个系统、用于向您告知问题。
+
+
+
+== 警报系统
+
+警报系统是用于监控 StorageGRID 系统中可能发生的任何问题的主要工具。警报系统提供了一个易于使用的界面，用于检测，评估和解决问题。
+
+当警报规则条件评估为 true 时，系统将在特定严重性级别触发警报。触发警报后，将执行以下操作：
+
+* 网格管理器的信息板上会显示一个警报严重性图标，当前警报计数将递增。
+* 警报显示在*节点*>*节点_*>*概述*选项卡上。
+* 假定您已配置 SMTP 服务器并为收件人提供了电子邮件地址，则会发送电子邮件通知。
+* 假定您已配置 StorageGRID SNMP 代理，则会发送简单网络管理协议（ SNMP ）通知。
+
+
+
+
+== 传统警报系统
+
+警报系统受支持、但被视为传统系统。与警报一样，当属性达到定义的阈值时，也会在特定严重性级别触发警报。但是，与警报不同的是，对于可以安全忽略的事件，系统会触发许多警报，这可能会导致电子邮件或 SNMP 通知过多。
+
+触发警报后，将执行以下操作：
+
+* 信息板上的原有警报计数将递增。
+* 警报将显示在*支持*>*警报(原有)*>*当前警报*页面上。
+* 假定您已配置 SMTP 服务器并配置了一个或多个邮件列表，则会发送电子邮件通知。
+* 假设您已配置 StorageGRID SNMP 代理，则可能会发送 SNMP 通知。（并非针对所有警报或警报严重性发送 SNMP 通知。）
+

@@ -1,0 +1,41 @@
+---
+permalink: upgrade/impact-of-upgrade-on-groups-and-user-accounts.html 
+sidebar: sidebar 
+keywords: upgrade, permissions 
+summary: 您必须了解 StorageGRID 升级的影响，以便可以在升级完成后相应地更新组和用户帐户。 
+---
+= 升级对组和用户帐户的影响
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须了解 StorageGRID 升级的影响，以便可以在升级完成后相应地更新组和用户帐户。
+
+
+
+== 对组权限和选项进行的更改
+
+升级到StorageGRID 11.5后、也可以选择以下新权限和选项(*配置*>*访问控制*>*管理组*)。
+
+[cols="1a,2a"]
+|===
+| 权限或选项 | Description 
+
+
+ a| 
+存储设备管理员
+ a| 
+要从网格管理器访问SANtricity System Manager用户界面、需要此用户界面。
+
+
+
+ a| 
+访问模式
+ a| 
+管理组时、您可以为此新选项选择*只读*、以防止用户更改为组选择的设置和功能。具有只读访问模式的组中的用户可以查看设置、但无法更改这些设置。
+
+|===
+.相关信息
+link:../admin/index.html["管理 StorageGRID"]

@@ -1,0 +1,34 @@
+---
+permalink: ilm/managing-objects-with-s3-object-lock.html 
+sidebar: sidebar 
+keywords:  
+summary: 作为网格管理员，您可以为 StorageGRID 系统启用 S3 对象锁定，并实施合规的 ILM 策略，以确保特定 S3 存储分段中的对象在指定时间内不会被删除或覆盖。 
+---
+= 使用S3对象锁定管理对象
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+作为网格管理员，您可以为 StorageGRID 系统启用 S3 对象锁定，并实施合规的 ILM 策略，以确保特定 S3 存储分段中的对象在指定时间内不会被删除或覆盖。
+
+
+
+== 什么是 S3 对象锁定？
+
+StorageGRID S3 对象锁定功能是一种对象保护解决方案 ，相当于 Amazon Simple Storage Service （ Amazon S3 ）中的 S3 对象锁定。
+
+如图所示，如果为 StorageGRID 系统启用了全局 S3 对象锁定设置，则 S3 租户帐户可以在启用或不启用 S3 对象锁定的情况下创建存储分段。如果某个存储分段启用了 S3 对象锁定，则 S3 客户端应用程序可以选择为该存储分段中的任何对象版本指定保留设置。对象版本必须具有指定的保留设置，以受 S3 对象锁定的保护。
+
+image::../media/s3_object_lock_architecture.png[S3 对象锁定架构]
+
+StorageGRID S3 对象锁定功能提供了一种保留模式，相当于 Amazon S3 合规模式。默认情况下，任何用户都无法覆盖或删除受保护的对象版本。StorageGRID S3 对象锁定功能不支持监管模式，并且不允许具有特殊权限的用户绕过保留设置或删除受保护的对象。
+
+如果存储分段启用了 S3 对象锁定，则在创建或更新对象时， S3 客户端应用程序可以选择指定以下任一或两个对象级别保留设置：
+
+* * 保留至日期 * ：如果对象版本的保留至日期为未来日期，则可以检索该对象，但无法修改或删除它。可以根据需要增加对象的保留截止日期，但不能缩短此日期。
+* * 合法保留 * ：对对象版本应用合法保留时，会立即锁定该对象。例如，您可能需要对与调查或法律争议相关的对象进行法律保留。合法保留没有到期日期，但在明确删除之前始终有效。合法保留与保留日期无关。
+
+
+有关这些设置的详细信息、请转至中的"`使用S3对象锁定`" link:../s3/s3-rest-api-supported-operations-and-limitations.html["S3 REST API 支持的操作和限制"]。

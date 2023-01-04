@@ -1,0 +1,72 @@
+---
+permalink: upgrade/changes-to-grid-management-api.html 
+sidebar: sidebar 
+keywords: grid management api, api, api version, swagger, rest api 
+summary: StorageGRID 11.5使用网格管理API版本3。版本 3 已弃用版本 2 ；但版本 1 和版本 2 仍受支持。 
+---
+= 对网格管理 API 进行的更改
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+StorageGRID 11.5使用网格管理API版本3。版本 3 已弃用版本 2 ；但版本 1 和版本 2 仍受支持。
+
+
+IMPORTANT: 您可以继续在StorageGRID 11.5中使用管理API版本1和版本2；但是、在未来版本的StorageGRID 中、对这些版本的API的支持将被删除。升级到StorageGRID 11.5后、可以使用停用已弃用的v1和v2 API `PUT /grid/config/management` API。
+
+
+
+== 新的客户端证书部分
+
+新部分、 `/grid/client-certificates`、用于配置客户端证书、以便对StorageGRID Prometheus数据库进行安全的身份验证访问。例如、您可以使用Grafana从外部监控StorageGRID。
+
+
+
+== 原有合规性端点移至新的S3-object-lock部分
+
+随着StorageGRID S3对象锁定的推出、用于管理网格原有合规性设置的API已移至Swagger用户界面的一个新部分。"S3-object-lock*"部分包括这两个部分 `/grid/compliance-global` API端点、现在用于控制全局S3对象锁定设置。为了与现有应用程序兼容、端点URI保持不变。
+
+
+
+== 已删除Swift管理员密码帐户端点
+
+StorageGRID 10.4中已弃用的以下帐户API端点现已删除：
+
+[listing]
+----
+https://<IP-Address>/api/v1/grid/accounts/<AccountID>/swift-admin-password
+----
+
+
+== 新的网格密码部分
+
+使用*网格密码*部分可以执行网格密码管理操作。此部分包括两个 `/grid/change-provisioning-passphrase` API端点。通过这些端点、用户可以更改StorageGRID 配置密码短语并检索密码短语更改的状态。
+
+
+
+== 已将storageAdmin权限添加到组API
+
+。 `/grid/groups` API现在包含storageAdmin权限。
+
+
+
+== 存储使用情况API的新参数
+
+。 `+GET /grid/accounts/{id}/usage+` API现在具有 `strictConsistency` 参数。要在跨存储节点检索存储使用情况信息时强制实现全局一致性、请将此参数设置为 `true`。此参数设置为时 `false` (默认)、StorageGRID 会尝试使用强全局一致性来检索使用情况信息、但如果无法满足强全局一致性、则会回退到强站点一致性。
+
+
+
+== 新建节点运行状况API
+
+新的 `/grid/node-health` 已添加端点。此API通过检查节点上是否存在ACTIVE _alerts_来返回每个节点的当前状态。。 `/grid/health/topology` API用于检查节点上是否存在活动的_alarms_is已弃用。
+
+
+
+== 更改为"ApplianceStorageShellvesPowerSupplyDegraded"警报规则ID
+
+警报规则ID "ApplianceStorageShelvesPowerSupplyDegraded"已重命名为"ApplianceStorageShelvesDegraded"、以更好地反映警报的实际行为。
+
+.相关信息
+link:../admin/index.html["管理 StorageGRID"]

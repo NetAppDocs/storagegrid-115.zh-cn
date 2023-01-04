@@ -1,0 +1,26 @@
+---
+permalink: monitor/file-rotation-for-bycast-log.html 
+sidebar: sidebar 
+keywords: file rotation, bycast, log, file rotation, bycast.log 
+summary: '当 `bycast.log` 文件达到1 GB、现有文件将被保存、新日志文件将启动。' 
+---
+= bycast.log 的文件轮换
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+当 `bycast.log` 文件达到1 GB、现有文件将被保存、新日志文件将启动。
+
+已保存的文件将重命名 `bycast.log.1`、新文件名为 `bycast.log`。当出现新的时 `bycast.log` 达到1 GB、 `bycast.log.1` 已重命名并压缩为 `bycast.log.2.gz`，和 `bycast.log` 已重命名 `bycast.log.1`。
+
+的轮换限制 `bycast.log` 为21个文件。当的第22版 `bycast.log` 文件已创建、最早的文件将被删除。
+
+的轮换限制 `bycast-err.log` 是七个文件。
+
+
+NOTE: 如果日志文件已被压缩，则不能将其解压缩到写入该文件的同一位置。将文件解压缩到同一位置可能会干扰日志轮换脚本。
+
+.相关信息
+link:collecting-log-files-and-system-data.html["收集日志文件和系统数据"]

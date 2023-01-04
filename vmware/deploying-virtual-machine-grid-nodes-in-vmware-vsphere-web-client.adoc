@@ -1,0 +1,28 @@
+---
+permalink: vmware/deploying-virtual-machine-grid-nodes-in-vmware-vsphere-web-client.html 
+sidebar: sidebar 
+keywords: storagegrid, deploying grid nodes, deploy grid nodes, vsphere, vsphere web client 
+summary: 您可以使用 VMware vSphere Web Client 将每个网格节点部署为虚拟机。在部署期间、系统会创建每个网格节点并将其连接到一个或多个网络。如果您需要部署任何StorageGRID 设备存储节点、请在部署所有虚拟机网格节点后参见该设备的安装和维护说明。 
+---
+= 在VMware vSphere Web Client中部署虚拟机网格节点
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 VMware vSphere Web Client 将每个网格节点部署为虚拟机。在部署期间、系统会创建每个网格节点并将其连接到一个或多个网络。如果您需要部署任何StorageGRID 设备存储节点、请在部署所有虚拟机网格节点后参见该设备的安装和维护说明。
+
+* link:collecting-information-about-your-deployment-environment.html["收集有关部署环境的信息"]
+* link:how-grid-nodes-discover-primary-admin-node.html["网格节点如何发现主管理节点"]
+* link:deploying-storagegrid-node-as-virtual-machine.html["将StorageGRID 节点部署为虚拟机"]
+
+
+.相关信息
+link:../sg100-1000/index.html["SG100和AMP；SG1000服务设备"]
+
+link:../sg5600/index.html["SG5600 存储设备"]
+
+link:../sg5700/index.html["SG5700 存储设备"]
+
+link:../sg6000/index.html["SG6000 存储设备"]

@@ -1,0 +1,100 @@
+---
+section: ubuntu
+title: 安装 Ubuntu 或 Debian
+url: "/ubuntu/index.html"
+entries:
+- title: 安装概述
+  url: "/ubuntu/installation-overview.html"
+- title: 规划和准备
+  url: "/ubuntu/planning-and-preparation.html"
+  entries:
+  - title: 所需材料
+    url: "/ubuntu/required-materials.html"
+  - title: 下载并提取StorageGRID 安装文件
+    url: "/ubuntu/downloading-and-extracting-storagegrid-installation-files.html"
+  - title: CPU 和 RAM 要求
+    url: "/ubuntu/cpu-and-ram-requirements.html"
+  - title: 存储和性能要求
+    url: "/ubuntu/storage-and-performance-requirements.html"
+  - title: 节点容器迁移要求
+    url: "/ubuntu/node-container-migration-requirements.html"
+  - title: Web 浏览器要求
+    url: "/ubuntu/web-browser-requirements.html"
+  - title: 部署工具
+    url: "/ubuntu/deployment-tools.html"
+  - title: 准备主机
+    url: "/ubuntu/preparing-hosts.html"
+    entries:
+    - title: 安装 Linux
+      url: "/ubuntu/installing-linux.html"
+    - title: 了解安装的AppArmor.配置文件
+      url: "/ubuntu/understanding-apparmor-profile-installation.html"
+    - title: 配置主机网络
+      url: "/ubuntu/configuring-host-network.html"
+      entries:
+      - title: MAC 地址克隆的注意事项和建议
+        url: "/ubuntu/considerations-and-recommendations-for-mac-address-cloning.html"
+      - title: 示例 1 ：映射到物理或虚拟 NIC 的一对一映射
+        url: "/ubuntu/example-1-1-to-1-mapping-to-physical-or-virtual-nics.html"
+      - title: 示例 2 ： LACP 绑定传输 VLAN
+        url: "/ubuntu/example-2-lacp-bond-carrying-vlans.html"
+    - title: 配置主机存储
+      url: "/ubuntu/configuring-host-storage.html"
+    - title: 配置Docker存储卷
+      url: "/ubuntu/configuring-docker-storage-volume.html"
+    - title: 安装 Docker
+      url: "/ubuntu/installing-docker.html"
+    - title: 安装StorageGRID 主机服务
+      url: "/ubuntu/installing-storagegrid-webscale-host-services.html"
+- title: 部署虚拟网格节点
+  url: "/ubuntu/deploying-virtual-grid-nodes.html"
+  entries:
+  - title: 正在创建节点配置文件
+    url: "/ubuntu/creating-node-configuration-files.html"
+    entries:
+    - title: 网格节点如何发现主管理节点
+      url: "/ubuntu/how-grid-nodes-discover-primary-admin-node.html"
+    - title: 示例节点配置文件
+      url: "/ubuntu/example-node-configuration-files.html"
+  - title: 正在验证StorageGRID 配置
+    url: "/ubuntu/validating-storagegrid-configuration.html"
+  - title: 启动 StorageGRID 主机服务
+    url: "/ubuntu/starting-storagegrid-host-service.html"
+- title: 配置网格并完成安装
+  url: "/ubuntu/configuring-grid-and-completing-installation.html"
+  entries:
+  - title: 导航到网格管理器
+    url: "/ubuntu/navigating-to-grid-manager.html"
+  - title: 指定StorageGRID 许可证信息
+    url: "/ubuntu/specifying-storagegrid-license-information.html"
+  - title: 正在添加站点
+    url: "/ubuntu/adding-sites.html"
+  - title: 指定网格网络子网
+    url: "/ubuntu/specifying-grid-network-subnets.html"
+  - title: 批准待定网格节点
+    url: "/ubuntu/approving-pending-grid-nodes.html"
+  - title: 指定网络时间协议服务器信息
+    url: "/ubuntu/specifying-network-time-protocol-server-information.html"
+  - title: 指定域名系统服务器信息
+    url: "/ubuntu/specifying-domain-name-system-server-information.html"
+  - title: 指定StorageGRID 系统密码
+    url: "/ubuntu/specifying-storagegrid-system-passwords.html"
+  - title: 查看配置并完成安装
+    url: "/ubuntu/reviewing-your-configuration-and-completing-installation.html"
+  - title: 安装后准则
+    url: "/ubuntu/post-installation-guidelines.html"
+- title: 自动化安装
+  url: "/ubuntu/automating-installation.html"
+  entries:
+  - title: 自动安装和配置StorageGRID 主机服务
+    url: "/ubuntu/automating-installation-and-configuration-of-storagegrid-host-service.html"
+  - title: 自动化配置StorageGRID
+    url: "/ubuntu/automating-configuration-of-storagegrid.html"
+- title: 安装 REST API 概述
+  url: "/ubuntu/overview-of-installation-rest-api.html"
+- title: 下一步行动
+  url: "/ubuntu/where-to-go-next.html"
+- title: 对安装问题进行故障排除
+  url: "/ubuntu/troubleshooting-installation-issues.html"
+- title: "/etc/network/interfaces 示例"
+  url: "/ubuntu/example-etc-network-interfaces.html"

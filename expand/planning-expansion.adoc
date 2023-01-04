@@ -1,0 +1,20 @@
+---
+permalink: expand/planning-expansion.html 
+sidebar: sidebar 
+keywords: expand, expansion, planning 
+summary: 您可以扩展StorageGRID 以增加存储容量、添加元数据容量、添加冗余或新功能或添加新站点。需要添加的节点的数量、类型和位置取决于扩展的原因。 
+---
+= 规划StorageGRID 扩展
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以扩展StorageGRID 以增加存储容量、添加元数据容量、添加冗余或新功能或添加新站点。需要添加的节点的数量、类型和位置取决于扩展的原因。
+
+* link:adding-storage-capacity.html["正在添加存储容量"]
+* link:adding-metadata-capacity.html["正在添加元数据容量"]
+* link:adding-grid-nodes-to-add-capabilities.html["添加网格节点以向系统添加功能"]
+* link:adding-new-site.html["添加新站点"]
+

@@ -23257,4 +23257,6 @@
   <block id="02e1de7683e58012e382ad0522d47c2b" category="sidebar">创建其他用户的S3访问密钥</block>
   <block id="5b2a79adecc8d3cc03324c0ff8c3e657" category="sidebar">查看其他用户的S3访问密钥</block>
   <block id="d4a4412fd4130eef9caedf4616926255" category="sidebar">删除其他用户的S3访问密钥</block>
+  <block id="af4d73da90971496489b983213043e04" category="inline-link-macro">更改一致性级别</block>
+  <block id="89be7df175609147f17e262cfab59214" category="paragraph">对于FabricPool 存储分段、建议的存储分段一致性级别为"read-after-new-write"。不建议使用"可用"一致性级别。请参见 <block ref="413cea68bf83f659681660c3a9e8ec4f" category="inline-link-macro-rx"></block>。</block>
 </blocks>

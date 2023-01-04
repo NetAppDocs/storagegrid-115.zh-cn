@@ -1,0 +1,16 @@
+---
+permalink: monitor/about-bycast-log.html 
+sidebar: sidebar 
+keywords: bycast, log 
+summary: '/var/local/log/bycast.log 文件是 StorageGRID 软件的主要故障排除文件。有一个 `bycast.log` 每个网格节点的文件。该文件包含特定于该网格节点的消息。' 
+---
+= 关于 bycast.log
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+文件 `/var/local/log/bycast.log` 是StorageGRID 软件的主要故障排除文件。有一个 `bycast.log` 每个网格节点的文件。该文件包含特定于该网格节点的消息。
+
+文件 `/var/local/log/bycast-err.log` 是的一部分 `bycast.log`。它包含严重性错误和严重的消息。

@@ -1,0 +1,25 @@
+---
+permalink: ilm/using-cloud-storage-pools.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用云存储池将StorageGRID 对象移动到外部存储位置、例如S3 Glacier或Microsoft Azure Blob存储。将对象移动到网格之外可以利用低成本存储层进行长期归档。 
+---
+= 使用云存储池
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用云存储池将StorageGRID 对象移动到外部存储位置、例如S3 Glacier或Microsoft Azure Blob存储。将对象移动到网格之外可以利用低成本存储层进行长期归档。
+
+* link:what-cloud-storage-pool-is.html["什么是云存储池"]
+* link:lifecycle-of-cloud-storage-pool-object.html["云存储池对象的生命周期"]
+* link:when-to-use-cloud-storage-pools.html["何时使用云存储池"]
+* link:considerations-for-cloud-storage-pools.html["云存储池注意事项"]
+* link:comparing-cloud-storage-pools-to-cloudmirror-replication.html["比较云存储池和 CloudMirror 复制"]
+* link:creating-cloud-storage-pool.html["创建云存储池"]
+* link:editing-cloud-storage-pool.html["编辑云存储池"]
+* link:removing-cloud-storage-pool.html["删除云存储池"]
+* link:troubleshooting-cloud-storage-pools.html["对云存储池进行故障排除"]
+

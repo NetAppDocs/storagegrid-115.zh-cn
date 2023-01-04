@@ -1,0 +1,78 @@
+---
+section: vmware
+title: 安装 VMware
+url: "/vmware/index.html"
+entries:
+- title: 安装概述
+  url: "/vmware/installation-overview.html"
+- title: 规划和准备
+  url: "/vmware/planning-and-preparation.html"
+  entries:
+  - title: 所需材料
+    url: "/vmware/required-materials.html"
+  - title: 下载并提取StorageGRID 安装文件
+    url: "/vmware/downloading-and-extracting-storagegrid-installation-files.html"
+  - title: 软件要求
+    url: "/vmware/software-requirements.html"
+  - title: CPU 和 RAM 要求
+    url: "/vmware/cpu-and-ram-requirements.html"
+  - title: 存储和性能要求
+    url: "/vmware/storage-and-performance-requirements.html"
+  - title: Web 浏览器要求
+    url: "/vmware/web-browser-requirements.html"
+- title: 在VMware vSphere Web Client中部署虚拟机网格节点
+  url: "/vmware/deploying-virtual-machine-grid-nodes-in-vmware-vsphere-web-client.html"
+  entries:
+  - title: 收集有关部署环境的信息
+    url: "/vmware/collecting-information-about-your-deployment-environment.html"
+  - title: 网格节点如何发现主管理节点
+    url: "/vmware/how-grid-nodes-discover-primary-admin-node.html"
+  - title: 将StorageGRID 节点部署为虚拟机
+    url: "/vmware/deploying-storagegrid-node-as-virtual-machine.html"
+- title: 配置网格并完成安装
+  url: "/vmware/configuring-grid-and-completing-installation.html"
+  entries:
+  - title: 导航到网格管理器
+    url: "/vmware/navigating-to-grid-manager.html"
+  - title: 指定StorageGRID 许可证信息
+    url: "/vmware/specifying-storagegrid-license-information.html"
+  - title: 正在添加站点
+    url: "/vmware/adding-sites.html"
+  - title: 指定网格网络子网
+    url: "/vmware/specifying-grid-network-subnets.html"
+  - title: 批准待定网格节点
+    url: "/vmware/approving-pending-grid-nodes.html"
+  - title: 指定网络时间协议服务器信息
+    url: "/vmware/specifying-network-time-protocol-server-information.html"
+  - title: 指定域名系统服务器信息
+    url: "/vmware/specifying-domain-name-system-server-information.html"
+  - title: 指定StorageGRID 系统密码
+    url: "/vmware/specifying-storagegrid-system-passwords.html"
+  - title: 查看配置并完成安装
+    url: "/vmware/reviewing-your-configuration-and-completing-installation.html"
+  - title: 安装后准则
+    url: "/vmware/post-installation-guidelines.html"
+- title: 自动化安装
+  url: "/vmware/automating-installation.html"
+  entries:
+  - title: 在VMware vSphere中自动部署网格节点
+    url: "/vmware/automating-grid-node-deployment-in-vmware-vsphere.html"
+    entries:
+    - title: 定义部署的配置文件
+      url: "/vmware/defining-configuration-file-for-your-deployment.html"
+      entries:
+      - title: 配置文件设置
+        url: "/vmware/configuration-file-settings.html"
+    - title: 运行Bash脚本
+      url: "/vmware/running-bash-script.html"
+  - title: 自动化配置StorageGRID
+    url: "/vmware/automating-configuration-of-storagegrid.html"
+- title: 安装 REST API 概述
+  url: "/vmware/overview-of-installation-rest-api.html"
+- title: 下一步行动
+  url: "/vmware/where-to-go-next.html"
+- title: 对安装问题进行故障排除
+  url: "/vmware/troubleshooting-installation-issues.html"
+  entries:
+  - title: 虚拟机资源预留需要调整
+    url: "/vmware/virtual-machine-resource-reservation-requires-adjustment.html"

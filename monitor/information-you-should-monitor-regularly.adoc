@@ -1,0 +1,91 @@
+---
+permalink: monitor/information-you-should-monitor-regularly.html 
+sidebar: sidebar 
+keywords: monitor, monitoring, StorageGRID, 
+summary: StorageGRID 是一种容错分布式存储系统，即使发生错误或节点或站点不可用，它也可以继续运行。您必须主动监控系统运行状况，工作负载和使用情况统计信息，以便在潜在问题影响网格的效率或可用性之前采取措施解决这些问题。 
+---
+= 您应定期监控的信息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+StorageGRID 是一种容错分布式存储系统，即使发生错误或节点或站点不可用，它也可以继续运行。您必须主动监控系统运行状况，工作负载和使用情况统计信息，以便在潜在问题影响网格的效率或可用性之前采取措施解决这些问题。
+
+繁忙的系统会生成大量信息。本节提供了有关持续监控的最重要信息的指导。本节包含以下子部分：
+
+* link:monitoring-system-health.html["监控系统运行状况"]
+* link:monitoring-storage-capacity.html["监控存储容量"]
+* link:monitoring-information-lifecycle-management.html["监控信息生命周期管理"]
+* link:monitoring-performance-networking-and-system-resources.html["监控性能、网络和系统资源"]
+* link:monitoring-tenant-activity.html["监控租户活动"]
+* link:monitoring-archival-capacity.html["监控归档容量"]
+* link:monitoring-load-balancing-operations.html["监控负载平衡操作"]
+* link:applying-hotfixes-or-upgrading-software-if-necessary.html["如有必要、应用修补程序或升级软件"]
+
+
+|===
+| 要监控的内容 | Frequency 
+
+
+ a| 
+Grid Manager信息板上显示的系统运行状况数据如果与前一天发生了任何更改、请注意。
+ a| 
+每天
+
+
+
+ a| 
+消耗存储节点对象和元数据容量的速率
+ a| 
+每周
+
+
+
+ a| 
+信息生命周期管理操作
+ a| 
+每周
+
+
+
+ a| 
+性能、网络和系统资源：
+
+* 查询延迟
+* 连接和网络连接
+* 节点级资源
+
+ a| 
+每周
+
+
+
+ a| 
+租户活动
+ a| 
+每周
+
+
+
+ a| 
+外部归档存储系统的容量
+ a| 
+每周
+
+
+
+ a| 
+负载平衡操作
+ a| 
+在初始配置之后以及任何配置更改之后
+
+
+
+ a| 
+提供软件修补程序和软件升级
+ a| 
+每月
+
+|===

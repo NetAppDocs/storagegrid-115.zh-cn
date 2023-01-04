@@ -1,0 +1,57 @@
+---
+permalink: sg5700/unable-to-connect-to-appliance.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, troubleshoot, troubleshooting, connect, connection, unable to connect, no connection 
+summary: 如果无法连接到设备，则可能存在网络问题描述 ，或者硬件安装可能未成功完成。 
+---
+= 无法连接到设备
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果无法连接到设备，则可能存在网络问题描述 ，或者硬件安装可能未成功完成。
+
+.步骤
+. 如果无法连接到 SANtricity 系统管理器：
++
+.. 尝试使用SANtricity System Manager管理网络上E2800控制器的IP地址对设备执行Ping操作：+
+`*ping _E2800_Controller_IP_*`
+.. 如果 ping 未收到任何响应，请确认您使用的 IP 地址正确无误。
++
+使用 E2800 控制器上管理端口 1 的 IP 地址。
+
+.. 如果 IP 地址正确，请检查设备布线和网络设置。
++
+如果无法解决问题描述 问题，请联系技术支持。
+
+.. 如果 ping 成功，请打开 Web 浏览器。
+.. 输入SANtricity 系统管理器的URL：+
+`*https://_E2800_Controller_IP_*`
++
+此时将显示 SANtricity 系统管理器的登录页面。
+
+
+
+. 如果无法连接到 E5700SG 控制器：
++
+.. 尝试使用E5700SG控制器的IP地址对设备执行ping操作：+
+`*ping _E5700SG_Controller_IP_*`
+.. 如果 ping 未收到任何响应，请确认您使用的 IP 地址正确无误。
++
+您可以使用网格网络，管理网络或客户端网络上设备的 IP 地址。
+
+.. 如果 IP 地址正确，请检查设备布线， SFP 收发器和网络设置。
++
+如果无法解决问题描述 问题，请联系技术支持。
+
+.. 如果 ping 成功，请打开 Web 浏览器。
+.. 输入StorageGRID 设备安装程序的URL：+
+`*https://_E5700SG_Controller_IP_:8443*`
++
+此时将显示主页页面。
+
+
+
+

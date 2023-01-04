@@ -1,0 +1,38 @@
+---
+permalink: tenant/forcing-synchronization-with-identity-source.html 
+sidebar: sidebar 
+keywords: storagegrid, tenant, identity source, synchronize identity source 
+summary: StorageGRID 系统会定期同步身份源中的联合组和用户。如果要尽快启用或限制用户权限，可以强制启动同步。 
+---
+= 强制与身份源同步
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+StorageGRID 系统会定期同步身份源中的联合组和用户。如果要尽快启用或限制用户权限，可以强制启动同步。
+
+.您需要的内容
+* 您必须使用支持的浏览器登录到租户管理器。
+* 您必须具有特定的访问权限。
+* 必须启用已保存的身份源。
+
+
+.步骤
+. 选择 * 访问管理 * > * 身份联合 * 。
++
+此时将显示"Identity Federation"页面。*同步服务器*按钮位于页面右上角。
+
++
+
+NOTE: 如果未启用保存的身份源、则*同步服务器*按钮将不会处于活动状态。
+
+. 选择*同步服务器*。
++
+此时将显示一条确认消息、指示同步已成功启动。
+
+
+
+.相关信息
+link:tenant-management-permissions.html["租户管理权限"]

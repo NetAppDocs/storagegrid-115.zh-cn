@@ -1,0 +1,32 @@
+---
+permalink: admin/setting-archive-node-to-read-only-if-tsm-middleware-reaches-capacity.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果目标 TSM 中间件服务器达到容量，则可以对归档节点进行优化，使其仅执行检索。 
+---
+= 在TSM中间件达到容量时将归档节点设置为只读
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果目标 TSM 中间件服务器达到容量，则可以对归档节点进行优化，使其仅执行检索。
+
+.您需要的内容
+* 您必须使用支持的浏览器登录到网格管理器。
+* 您必须具有特定的访问权限。
+
+
+.步骤
+. 选择*支持*>*工具*>*网格拓扑*。
+. 选择*归档节点_*** ARR***目标*。
+. 选择 * 配置 * > * 主 * 。
+. 将最大检索会话数更改为与会话数中列出的并发会话数相同。
+. 将最大存储会话数更改为 0 。
++
+
+NOTE: 如果归档节点为只读，则无需将最大存储会话数更改为 0 。不会创建存储会话。
+
+. 单击 * 应用更改 * 。
+

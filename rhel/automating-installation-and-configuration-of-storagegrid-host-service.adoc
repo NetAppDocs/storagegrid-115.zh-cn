@@ -1,0 +1,23 @@
+---
+permalink: rhel/automating-installation-and-configuration-of-storagegrid-host-service.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用 Ansible ， Puppet ， Chef ， Fabric 或 SaltStack 等标准业务流程框架自动安装 StorageGRID 主机服务。 
+---
+= 自动安装和配置StorageGRID 主机服务
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Ansible ， Puppet ， Chef ， Fabric 或 SaltStack 等标准业务流程框架自动安装 StorageGRID 主机服务。
+
+StorageGRID 主机服务打包在RPM中、并由配置文件驱动、这些配置文件可以提前准备(或以编程方式)以启用自动安装。如果您已经使用标准业务流程框架来安装和配置 RHEL 或 CentOS ，则在攻略手册或秘诀中添加 StorageGRID 应该非常简单。
+
+中的安装归档提供了一个示例Ansible角色和攻略手册 `/extras` 文件夹。Ansible攻略手册介绍了如何 `storagegrid` 角色准备主机并将StorageGRID 安装到目标服务器上。您可以根据需要自定义角色或攻略手册。
+
+
+NOTE: 此示例攻略手册不包括在启动 StorageGRID 主机服务之前创建网络设备所需的步骤。在完成并使用攻略手册之前，请添加以下步骤。
+
+您可以自动执行准备主机和部署虚拟网格节点的所有步骤。

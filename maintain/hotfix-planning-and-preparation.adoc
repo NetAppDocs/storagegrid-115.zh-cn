@@ -1,0 +1,21 @@
+---
+permalink: maintain/hotfix-planning-and-preparation.html 
+sidebar: sidebar 
+keywords: storagegrid, hotfix 
+summary: 您必须在应用修补程序之前进行规划，以确保 StorageGRID 系统的中断降至最低。 
+---
+= 修补程序规划和准备
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须在应用修补程序之前进行规划，以确保 StorageGRID 系统的中断降至最低。
+
+.步骤
+* link:how-your-system-is-affected-when-you-apply-hotfix.html["应用修补程序时对系统的影响"]
+* link:obtaining-required-materials-for-hotfix.html["获取修补程序所需的材料"]
+* link:downloading-hotfix-file.html["正在下载修补程序文件"]
+* link:checking-systems-condition-before-applying-hotfix.html["在应用修补程序之前检查系统状况"]
+

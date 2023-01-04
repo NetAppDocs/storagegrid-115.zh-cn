@@ -1,0 +1,36 @@
+---
+permalink: admin/disabling-weekly-autosupport-messages.html 
+sidebar: sidebar 
+keywords:  
+summary: 默认情况下， StorageGRID 系统配置为每周向 NetApp 支持发送一次 AutoSupport 消息。 
+---
+= 禁用每周AutoSupport 消息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+默认情况下， StorageGRID 系统配置为每周向 NetApp 支持发送一次 AutoSupport 消息。
+
+.您需要的内容
+* 您必须使用支持的浏览器登录到网格管理器。
+* 您必须具有 " 根访问 " 或 " 其他网格配置 " 权限。
+
+
+.关于此任务
+要确定每周AutoSupport 消息的发送时间、请参见*每周AutoSupport *下的*下一计划时间*、其位于* AutoSupport *>*结果*页面上。 image:../media/autosupport_weekly_next_scheduled_time.png["每周 AutoSupport 下一计划时间"]
+
+您可以随时禁止自动发送AutoSupport 消息。
+
+.步骤
+. 选择*支持*>*工具*>* AutoSupport *。
++
+此时将显示 AutoSupport 页面，并选择了 * 设置 * 选项卡。
+
+. 清除*启用每周AutoSupport *复选框。
++
+image::../media/autosupport_disable_weekly.png[AutoSupport 页面]
+
+. 选择 * 保存 * 。
+

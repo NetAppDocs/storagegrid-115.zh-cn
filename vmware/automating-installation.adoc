@@ -1,0 +1,18 @@
+---
+permalink: vmware/automating-installation.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以自动部署VMware虚拟网格节点、配置网格节点以及配置StorageGRID 设备。 
+---
+= 自动化安装
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以自动部署VMware虚拟网格节点、配置网格节点以及配置StorageGRID 设备。
+
+* link:automating-grid-node-deployment-in-vmware-vsphere.html["在VMware vSphere中自动部署网格节点"]
+* link:automating-configuration-of-storagegrid.html["自动化配置StorageGRID"]
+

@@ -1,0 +1,21 @@
+---
+permalink: ilm/creating-storage-grades-storage-pools-ec-profiles-regions.html 
+sidebar: sidebar 
+keywords:  
+summary: 在为StorageGRID 系统创建ILM规则之前、您必须定义对象存储位置、确定所需的副本类型、并可选择配置S3区域。 
+---
+= 创建存储级别、存储池、EC配置文件和区域
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在为StorageGRID 系统创建ILM规则之前、您必须定义对象存储位置、确定所需的副本类型、并可选择配置S3区域。
+
+* link:creating-and-assigning-storage-grades.html["创建和分配存储级别"]
+* link:configuring-storage-pools.html["配置存储池"]
+* link:using-cloud-storage-pools.html["使用云存储池"]
+* link:configuring-erasure-coding-profiles.html["配置擦除编码配置文件"]
+* link:configuring-regions-optional-and-s3-only.html["配置区域(可选、仅S3)"]
+

@@ -1,0 +1,23 @@
+---
+permalink: sg5600/configuring-storagegrid-connections.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, storagegrid connections, connections, configure, setup, set up 
+summary: 在将 StorageGRID 设备部署为 StorageGRID 网格中的存储节点之前，必须先配置设备与计划使用的网络之间的连接。您可以通过浏览到 StorageGRID 设备安装程序来配置网络连接，该安装程序包含在 E5600SG 控制器 \ （设备中的计算控制器 \ ）中。 
+---
+= 配置StorageGRID 连接
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在将 StorageGRID 设备部署为 StorageGRID 网格中的存储节点之前，必须先配置设备与计划使用的网络之间的连接。您可以通过浏览到 StorageGRID 设备安装程序来配置网络连接，该安装程序包含在 E5600SG 控制器（设备中的计算控制器）上。
+
+.步骤
+* link:accessing-storagegrid-appliance-installer-sg5600.html["访问StorageGRID 设备安装程序"]
+* link:verifying-and-upgrading-storagegrid-appliance-installer-version.html["验证和升级StorageGRID 设备安装程序版本"]
+* link:configuring-network-links-sg5600.html["配置网络链路(SG5600)"]
+* link:setting-ip-configuration-sg5600.html["设置IP配置"]
+* link:verifying-network-connections.html["验证网络连接"]
+* link:verifying-port-level-network-connections.html["验证端口级别的网络连接"]
+

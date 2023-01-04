@@ -1,0 +1,42 @@
+---
+permalink: ilm/how-objects-are-ingested.html 
+sidebar: sidebar 
+keywords:  
+summary: StorageGRID 通过执行同步放置或执行与对象匹配的ILM规则中指定的双提交来在载入期间保护对象。 
+---
+= 如何载入对象
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+StorageGRID 通过执行同步放置或执行与对象匹配的ILM规则中指定的双提交来在载入期间保护对象。
+
+当S3或Swift客户端将对象存储到网格时、StorageGRID 将使用以下两种方法之一载入对象：
+
+* *同步放置*：StorageGRID 会立即创建满足ILM要求所需的所有对象副本。创建所有副本后、StorageGRID 会向客户端发送"`ingest successful`"消息。
++
+如果StorageGRID 无法立即创建所有对象副本(例如、由于所需位置暂时不可用)、则它会向客户端发送"`ingest failed`"消息、或者、它会回退到创建临时对象副本并稍后评估ILM、具体取决于您在创建ILM规则时所做的选择。
+
+* *双提交*：StorageGRID 会立即为该对象创建两个中间副本、每个副本位于不同的存储节点上、并向客户端发送"`ingest successful`"消息。然后、StorageGRID 会将对象排队以进行ILM评估。
++
+在StorageGRID 执行ILM评估时、它会首先检查临时副本是否满足ILM规则中的放置说明。例如、这两个中间副本可能满足双副本ILM规则中的说明、但它们不符合纠删编码规则中的说明。如果临时副本不符合ILM指令、StorageGRID 将创建新的对象副本并删除不需要的任何临时副本。
+
++
+如果StorageGRID 无法创建两个中间副本(例如、如果网络问题描述 阻止创建第二个副本)、则StorageGRID 不会重试。载入失败。
+
++
+
+NOTE: S3或Swift客户端可以指定StorageGRID 在载入时通过指定创建一个临时副本 `REDUCED_REDUNDANCY` 存储类。有关详细信息、请参见实施S3或Swift客户端的说明。
+
+
+
+默认情况下、StorageGRID 使用同步放置在载入期间保护对象。
+
+.相关信息
+link:data-protection-options-for-ingest.html["用于载入的数据保护选项"]
+
+link:../s3/index.html["使用 S3"]
+
+link:../swift/index.html["使用 Swift"]

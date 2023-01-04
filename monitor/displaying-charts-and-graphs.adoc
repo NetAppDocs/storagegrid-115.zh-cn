@@ -1,0 +1,64 @@
+---
+permalink: monitor/displaying-charts-and-graphs.html 
+sidebar: sidebar 
+keywords: charts, display graphs 
+summary: '节点页面包含您应定期访问的图形和图表、用于监控存储容量和吞吐量等属性。在某些情况下、尤其是在与技术支持合作时、您可以使用"支持">"工具">"网格拓扑"页面访问其他图表。' 
+---
+= 显示图表和图形
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+节点页面包含您应定期访问的图形和图表、用于监控存储容量和吞吐量等属性。在某些情况下、尤其是在与技术支持人员合作时、您可以使用*支持*>*工具*>*网格拓扑*页面访问其他图表。
+
+.您需要的内容
+您必须使用支持的浏览器登录到网格管理器。
+
+.步骤
+. 选择*节点*。然后，选择节点，站点或整个网格。
+. 选择要查看其信息的选项卡。
++
+某些选项卡包含一个或多个 Grafana 图表，用于绘制一段时间内 Prometheus 指标的值。例如、节点的*节点*>*硬件*选项卡包含两个Grafana图表。
+
++
+image::../media/nodes_page_hardware_tab_graphs.png[节点页面硬件选项卡图形]
+
+. 或者，将光标悬停在图表上方可查看特定时间点的更详细值。
++
+image::../media/nodes_page_memory_usage_details.png[节点页面内存使用情况详细信息]
+
+. 您通常可以根据需要显示特定属性或指标的图表。从节点页面上的表中、单击图表图标 image:../media/icon_chart_new.gif["图表图标"] 或 image:../media/icon_chart_new_for_11_5.png["图表图标—11.5新增"] 属性名称右侧。
++
+
+NOTE: 并非所有指标和属性都有图表。
+
++
+*示例1*：从存储节点的对象选项卡中、您可以单击图表图标 image:../media/icon_chart_new.gif["图表图标"] 查看元数据查询随时间变化的平均延迟。
+
++
+image::../media/icon_nodes_average_latency_chart.png[节点平均延迟图表图标]
+
++
+image::../media/charts_average_query_latency.png[图表平均查询延迟]
+
++
+*示例2*：从存储节点的对象选项卡中、您可以单击图表图标 image:../media/icon_chart_new_for_11_5.png["图表图标—11.5新增"] 可查看随时间检测到的丢失对象计数的 Grafana 图形。
+
++
+image::../media/object_count_table.png[对象计数表]
+
++
+image::../media/charts_lost_object_detected.png[检测到图表丢失对象]
+
+. 要显示节点页面上未显示的属性的图表、请选择*支持*>*工具*>*网格拓扑*。
+. 选择 *_GRID NODE_* > * 组件或 service_* > * 概述 * > * 主要 * 。
++
+image::../media/nms_chart.gif[周围文本所述的屏幕截图]
+
+. 单击图表图标 image:../media/icon_chart_new.gif["图表图标"] 属性旁边。
++
+显示内容将自动更改为 "* 报告 * > * 图表 * " 页面。此图表显示属性在过去一天的数据。
+
+

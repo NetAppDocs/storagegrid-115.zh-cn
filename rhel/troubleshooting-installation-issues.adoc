@@ -1,0 +1,41 @@
+---
+permalink: rhel/troubleshooting-installation-issues.html 
+sidebar: sidebar 
+keywords: storagegrid, rhel, redhat, redhat linux, troubleshoot installation, troubleshooting installation 
+summary: 如果在安装 StorageGRID 系统时出现任何问题，您可以访问安装日志文件。技术支持可能还需要使用安装日志文件来解决问题。 
+---
+= 对安装问题进行故障排除
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果在安装 StorageGRID 系统时出现任何问题，您可以访问安装日志文件。技术支持可能还需要使用安装日志文件来解决问题。
+
+运行每个节点的容器提供了以下安装日志文件：
+
+* `/var/local/log/install.log` (可在所有网格节点上找到)
+* `/var/local/log/gdu-server.log` (位于主管理节点上)
+
+
+主机上提供了以下安装日志文件：
+
+* `/var/log/storagegrid/daemon.log`
+* `/var/log/storagegrid/nodes/node-name.log`
+
+
+要了解如何访问日志文件，请参见有关 StorageGRID 监控和故障排除的说明。有关排除设备安装问题的帮助，请参见适用于您的设备的安装和维护说明。如果您需要其他帮助，请联系技术支持。
+
+.相关信息
+link:../monitor/index.html["监控和放大；故障排除"]
+
+link:../sg100-1000/index.html["SG100和AMP；SG1000服务设备"]
+
+link:../sg6000/index.html["SG6000 存储设备"]
+
+link:../sg5700/index.html["SG5700 存储设备"]
+
+link:../sg5600/index.html["SG5600 存储设备"]
+
+https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"^]

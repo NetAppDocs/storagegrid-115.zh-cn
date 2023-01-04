@@ -1,0 +1,20 @@
+---
+permalink: release-notes/index.html 
+sidebar: sidebar 
+keywords:  
+summary: 获取有关新功能、已知问题和已修复问题的特定版本信息。 
+---
+= 发行说明
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+获取有关新功能、已删除和已弃用功能、已修复问题和已知问题的特定版本信息。
+
+本文档站点以外提供了发行说明。系统将提示您使用 NetApp 支持站点凭据登录。
+
+* https://library.netapp.com/ecmdocs/ECMLP2873529/html/frameset.html["HTML"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2873529["PDF"^]
+

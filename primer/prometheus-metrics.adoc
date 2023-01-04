@@ -1,0 +1,40 @@
+---
+permalink: primer/prometheus-metrics.html 
+sidebar: sidebar 
+keywords: prometheus, metrics, grafana 
+summary: 管理节点上的 Prometheus 服务从所有节点上的服务收集时间序列指标。 
+---
+= Prometheus 指标
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+管理节点上的 Prometheus 服务从所有节点上的服务收集时间序列指标。
+
+Prometheus 收集的指标会在网格管理器的许多位置使用：
+
+* * 节点页面 * ：节点页面上提供的选项卡上的图形和图表使用 Grafana 可视化工具显示 Prometheus 收集的时间序列指标。Grafana 以图形和图表格式显示时间序列数据，而 Prometheus 用作后端数据源。
++
+image::../media/prometheus_graph.png[Prometheus图形]
+
+* * 警报 * ：如果使用 Prometheus 指标的警报规则条件评估为 true ，则会在特定严重性级别触发警报。
+* * 网格管理 APi* ：您可以在自定义警报规则中使用 Prometheus 指标，也可以使用外部自动化工具来监控 StorageGRID 系统。有关完整的Prometheus指标列表、请参见网格管理API (*帮助*>* API文档*>*指标*)。虽然有1000多个指标可用、但监控最关键的StorageGRID 操作只需要相对较少的指标。
++
+
+NOTE: 名称中包含 _private_ 的指标仅供内部使用，在 StorageGRID 版本之间可能会发生更改，恕不另行通知。
+
+* *支持*>*工具*>*诊断*页面和*支持*>*工具*>*指标*页面：这些页面主要供技术支持使用、它们提供了许多工具和图表、这些工具和图表使用了Prometheus指标的值。
++
+
+NOTE: 指标页面中的某些功能和菜单项有意不起作用，可能会发生更改。
+
+
+
+.相关信息
+link:monitoring-and-managing-alerts.html["监控和管理警报"]
+
+link:using-storagegrid-support-options.html["使用StorageGRID 支持选项"]
+
+link:../monitor/index.html["监控和放大；故障排除"]

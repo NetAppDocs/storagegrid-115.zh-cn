@@ -1,0 +1,189 @@
+---
+permalink: s3/operations-on-objects.html 
+sidebar: sidebar 
+keywords: bucket, buckets, operations on buckets 
+summary: 本节介绍 StorageGRID 系统如何对对象实施 S3 REST API 操作。 
+---
+= 对对象执行的操作
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+本节介绍 StorageGRID 系统如何对对象实施 S3 REST API 操作。
+
+* link:using-s3-object-lock.html["使用 S3 对象锁定"]
+* link:using-server-side-encryption.html["使用服务器端加密"]
+* link:get-object.html["获取对象"]
+* link:head-object.html["HEAD 对象"]
+* link:post-object-restore.html["后对象还原"]
+* link:put-object.html["PUT 对象"]
+* link:put-object-copy.html["PUT 对象—复制"]
+
+
+以下条件适用于所有对象操作：
+
+* 对对象执行的所有操作均支持StorageGRID 一致性控制、但以下操作除外：
++
+** 获取对象 ACL
+** `OPTIONS /`
+** PUT 对象合法保留
+** 放置对象保留
+
+
+* 冲突的客户端请求(例如、两个客户端写入同一密钥)将按"`latest-WINS`"的原则进行解决。"`latest-WINS`"评估的时间取决于StorageGRID 系统何时完成给定请求、而不是S3客户端何时开始操作。
+* StorageGRID 存储分段中的所有对象均归存储分段所有者所有，包括由匿名用户或其他帐户创建的对象。
+* 无法通过 S3 访问通过 Swift 载入到 StorageGRID 系统的数据对象。
+
+
+下表介绍了 StorageGRID 如何实施 S3 REST API 对象操作。
+
+|===
+| 操作 | 实施 
+
+
+ a| 
+删除对象
+ a| 
+多因素身份验证(MFA)和响应标头 `x-amz-mfa` 不支持。
+
+在处理删除对象请求时， StorageGRID 会尝试立即从所有存储位置删除此对象的所有副本。如果成功， StorageGRID 会立即向客户端返回响应。如果无法在 30 秒内删除所有副本（例如，由于某个位置暂时不可用），则 StorageGRID 会将这些副本排队等待删除，然后指示客户端成功删除。
+
+* 版本控制 *
+
+要删除特定版本、请求者必须是存储分段所有者并使用 `versionId` 子资源。使用此子资源将永久删除此版本。如果 `versionId` 对应于删除标记、即响应标头 `x-amz-delete-marker` 返回时设置为 `true`。
+
+* 删除对象时不使用 `versionId` 子资源在已启用版本的存储分段上、将生成删除标记。。 `versionId` 对于删除标记、使用返回 `x-amz-version-id` 响应标头和 `x-amz-delete-marker` 返回的响应标头设置为 `true`。
+* 删除对象时不使用 `versionId` 子资源在版本暂停的分段上、它会永久删除已存在的"null"版本或"null"删除标记、并生成新的"null"删除标记。。 `x-amz-delete-marker` 返回的响应标头设置为 `true`。
+
+
+* 注意 * ：在某些情况下，一个对象可能存在多个删除标记。
+
+
+
+ a| 
+删除多个对象
+ a| 
+多因素身份验证(MFA)和响应标头 `x-amz-mfa` 不支持。
+
+可以在同一请求消息中删除多个对象。
+
+
+
+ a| 
+删除对象标记
+ a| 
+使用 `tagging` 用于从对象中删除所有标记的子资源。在所有 Amazon S3 REST API 行为下实施。
+
+* 版本控制 *
+
+如果 `versionId` 请求中未指定查询参数、此操作将从受版本控制的存储分段中的对象的最新版本中删除所有标记。如果对象的当前版本为删除标记、则会使用返回`MethodNotAllowed`状态 `x-amz-delete-marker` 响应标头设置为 `true`。
+
+
+
+ a| 
+获取对象
+ a| 
+link:get-object.html["获取对象"]
+
+
+
+ a| 
+获取对象 ACL
+ a| 
+如果为帐户提供了必要的访问凭据，则此操作将返回肯定响应以及对象所有者的 ID ， DisplayName 和权限，指示所有者对对象具有完全访问权限。
+
+
+
+ a| 
+获取对象合法保留
+ a| 
+link:s3-rest-api-supported-operations-and-limitations.html["使用 S3 对象锁定"]
+
+
+
+ a| 
+获取对象保留
+ a| 
+link:s3-rest-api-supported-operations-and-limitations.html["使用 S3 对象锁定"]
+
+
+
+ a| 
+获取对象标记
+ a| 
+使用 `tagging` 子资源以返回对象的所有标记。在所有 Amazon S3 REST API 行为下实施
+
+* 版本控制 *
+
+如果 `versionId` 请求中未指定查询参数、此操作将返回受版本控制的存储分段中对象的最新版本中的所有标记。如果对象的当前版本为删除标记、则会使用返回`MethodNotAllowed`状态 `x-amz-delete-marker` 响应标头设置为 `true`。
+
+
+
+ a| 
+HEAD 对象
+ a| 
+link:head-object.html["HEAD 对象"]
+
+
+
+ a| 
+后对象还原
+ a| 
+link:post-object-restore.html["后对象还原"]
+
+
+
+ a| 
+PUT 对象
+ a| 
+link:put-object.html["PUT 对象"]
+
+
+
+ a| 
+PUT 对象—复制
+ a| 
+link:put-object-copy.html["PUT 对象—复制"]
+
+
+
+ a| 
+PUT 对象合法保留
+ a| 
+link:s3-rest-api-supported-operations-and-limitations.html["使用 S3 对象锁定"]
+
+
+
+ a| 
+放置对象保留
+ a| 
+link:s3-rest-api-supported-operations-and-limitations.html["使用 S3 对象锁定"]
+
+
+
+ a| 
+PUT 对象标记
+ a| 
+使用 `tagging` 用于向现有对象添加一组标记的子资源。在所有 Amazon S3 REST API 行为下实施
+
+* 标记更新和载入行为 *
+
+使用 PUT 对象标记更新对象的标记时， StorageGRID 不会重新载入对象。这意味着不会使用匹配 ILM 规则中指定的 " 载入行为 " 选项。通过正常后台 ILM 进程重新评估 ILM 时，更新触发的任何对象放置更改都会进行。
+
+这意味着，如果 ILM 规则对载入行为使用严格选项，则在无法放置所需对象时（例如，由于新需要的位置不可用），不会执行任何操作。更新后的对象会保留其当前位置，直到可以进行所需的位置为止。
+
+* 解决冲突 *
+
+冲突的客户端请求(例如、两个客户端写入同一密钥)将按"`latest-WINS`"的原则进行解决。"`latest-WINS`"评估的时间取决于StorageGRID 系统何时完成给定请求、而不是S3客户端何时开始操作。
+
+* 版本控制 *
+
+如果 `versionId` 未在此请求中指定查询参数、此操作会将标记添加到受版本控制的存储分段中的对象的最新版本。如果对象的当前版本为删除标记、则会使用返回`MethodNotAllowed`状态 `x-amz-delete-marker` 响应标头设置为 `true`。
+
+|===
+.相关信息
+link:consistency-controls.html["一致性控制"]
+
+link:s3-operations-tracked-in-audit-logs.html["审核日志中跟踪的 S3 操作"]

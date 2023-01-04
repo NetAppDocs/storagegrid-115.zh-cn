@@ -1,0 +1,25 @@
+---
+permalink: ubuntu/index.html 
+sidebar: sidebar 
+keywords:  
+summary: 了解如何在Ubuntu或Debian部署中安装StorageGRID 软件。 
+---
+= 安装 Ubuntu 或 Debian
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解如何在Ubuntu或Debian部署中安装StorageGRID 软件。
+
+* link:installation-overview.html["安装概述"]
+* link:planning-and-preparation.html["规划和准备"]
+* link:deploying-virtual-grid-nodes.html["部署虚拟网格节点"]
+* link:configuring-grid-and-completing-installation.html["配置网格并完成安装"]
+* link:automating-installation.html["自动化安装"]
+* link:overview-of-installation-rest-api.html["安装 REST API 概述"]
+* link:where-to-go-next.html["下一步行动"]
+* link:troubleshooting-installation-issues.html["对安装问题进行故障排除"]
+* link:example-etc-network-interfaces.html["/etc/network/interfaces 示例"]
+

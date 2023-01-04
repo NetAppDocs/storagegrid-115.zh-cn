@@ -1,0 +1,25 @@
+---
+permalink: monitor/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= 监控StorageGRID 系统
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解如何监控StorageGRID 系统以及如何评估可能发生的问题。列出所有系统警报。
+
+* link:using-grid-manager-for-monitoring.html["使用网格管理器进行监控"]
+* link:information-you-should-monitor-regularly.html["您应定期监控的信息"]
+* link:managing-alerts-and-alarms.html["管理警报和警报"]
+* link:using-snmp-monitoring.html["使用SNMP监控"]
+* link:collecting-additional-storagegrid-data.html["收集其他StorageGRID 数据"]
+* link:../troubleshoot/troubleshooting-storagegrid-system.html["对StorageGRID 系统进行故障排除"]
+* link:alerts-reference.html["警报参考"]
+* link:alarms-reference.html["警报参考（旧系统）"]
+* link:../monitor/logs-files-reference.html["日志文件参考"]
+

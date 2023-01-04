@@ -1,0 +1,25 @@
+---
+permalink: maintain/index.html 
+sidebar: sidebar 
+keywords:  
+summary: 了解如何应用修补程序；恢复出现故障的网格节点；停用网格节点和站点；以及在发生系统故障时恢复对象。 
+---
+= 保持恢复
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解如何应用修补程序；恢复出现故障的网格节点；停用网格节点和站点；以及在发生系统故障时恢复对象。
+
+* link:introduction-to-storagegrid-recovery-and-maintenance.html["StorageGRID 恢复和维护简介"]
+* link:storagegrid-hotfix-procedure.html["StorageGRID 热修补程序操作步骤"]
+* link:grid-node-recovery-procedures.html["网格节点恢复过程"]
+* link:how-site-recovery-is-performed-by-technical-support.html["技术支持如何执行站点恢复"]
+* link:decommission-procedure.html["停用操作步骤"]
+* link:network-maintenance-procedures.html["网络维护过程"]
+* link:host-level-and-middleware-procedures.html["主机级别和中间件过程"]
+* link:grid-node-procedures.html["网格节点过程"]
+* link:appliance-node-cloning.html["设备节点克隆"]
+

@@ -1,0 +1,24 @@
+---
+permalink: admin/migrating-data-into-storagegrid.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以将大量数据迁移到 StorageGRID 系统，同时使用 StorageGRID 系统执行日常操作。 
+---
+= 将数据迁移到StorageGRID
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以将大量数据迁移到 StorageGRID 系统，同时使用 StorageGRID 系统执行日常操作。
+
+下一节将指导您了解并规划将大量数据迁移到 StorageGRID 系统。本指南不是数据迁移的通用指南，也不包括执行迁移的详细步骤。请遵循本节中的准则和说明，确保在不影响日常操作的情况下将数据高效迁移到 StorageGRID 系统中，并确保 StorageGRID 系统能够正确处理迁移的数据。
+
+* link:confirming-capacity-of-storagegrid-system.html["确认StorageGRID 系统的容量"]
+* link:determining-ilm-policy-for-migrated-data.html["确定已迁移数据的ILM策略"]
+* link:impact-of-migration-on-operations.html["迁移对操作的影响"]
+* link:scheduling-data-migration.html["计划数据迁移"]
+* link:monitoring-data-migration.html["监控数据迁移"]
+* link:creating-custom-notifications-for-migration-alarms.html["为迁移警报创建自定义通知"]
+

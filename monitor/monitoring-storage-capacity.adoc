@@ -1,0 +1,21 @@
+---
+permalink: monitor/monitoring-storage-capacity.html 
+sidebar: sidebar 
+keywords:  
+summary: 您必须监控存储节点上的可用总空间、以确保StorageGRID 系统不会用尽对象或对象元数据的存储空间。 
+---
+= 监控存储容量
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须监控存储节点上的可用总空间、以确保StorageGRID 系统不会用尽对象或对象元数据的存储空间。
+
+StorageGRID 会分别存储对象数据和对象元数据，并为包含对象元数据的分布式 Cassandra 数据库预留特定空间量。监控对象和对象元数据的已用空间总量，以及每个对象的已用空间量趋势。这样，您可以提前计划添加节点，并避免任何服务中断。
+
+您可以查看整个网格、每个站点以及StorageGRID 系统中每个存储节点的存储容量信息。
+
+.相关信息
+link:viewing-storage-tab.html["查看存储选项卡"]

@@ -1,0 +1,99 @@
+---
+section: s3
+title: 使用S3 REST API
+url: "/s3/index.html"
+entries:
+- title: 支持S3 REST API
+  url: "/s3/support-for-s3-rest-api.html"
+  entries:
+  - title: 对 S3 REST API 支持的更改
+    url: "/s3/changes-to-s3-rest-api-support.html"
+  - title: 支持的版本
+    url: "/s3/supported-versions.html"
+  - title: 支持 StorageGRID 平台服务
+    url: "/s3/support-for-storagegrid-platform-services.html"
+- title: 配置租户帐户和连接
+  url: "/s3/configuring-tenant-accounts-and-connections.html"
+- title: StorageGRID 如何实施S3 REST API
+  url: "/s3/how-storagegrid-implements-s3-rest-api.html"
+  entries:
+  - title: 客户端请求冲突
+    url: "/s3/conflicting-client-requests.html"
+  - title: 一致性控制
+    url: "/s3/consistency-controls.html"
+  - title: StorageGRID ILM 规则如何管理对象
+    url: "/s3/how-storagegrid-ilm-rules-manage-objects.html"
+  - title: 对象版本控制
+    url: "/s3/object-versioning.html"
+  - title: 实施S3 REST API的建议
+    url: "/s3/recommendations-for-implementing-s3-rest-api.html"
+- title: S3 REST API 支持的操作和限制
+  url: "/s3/s3-rest-api-supported-operations-and-limitations.html"
+  entries:
+  - title: 对请求进行身份验证
+    url: "/s3/authenticating-requests.html"
+  - title: 对服务执行的操作
+    url: "/s3/operations-on-the-service.html"
+  - title: 对存储分段执行的操作
+    url: "/s3/operations-on-buckets.html"
+  - title: 对存储分段执行自定义操作
+    url: "/s3/custom-operations-on-buckets.html"
+  - title: 对对象执行的操作
+    url: "/s3/operations-on-objects.html"
+    entries:
+    - title: 使用 S3 对象锁定
+      url: "/s3/using-s3-object-lock.html"
+    - title: 使用服务器端加密
+      url: "/s3/using-server-side-encryption.html"
+    - title: 获取对象
+      url: "/s3/get-object.html"
+    - title: HEAD 对象
+      url: "/s3/head-object.html"
+    - title: 后对象还原
+      url: "/s3/post-object-restore.html"
+    - title: PUT 对象
+      url: "/s3/put-object.html"
+    - title: PUT 对象—复制
+      url: "/s3/put-object-copy.html"
+  - title: 多部分上传操作
+    url: "/s3/operations-for-multipart-uploads.html"
+    entries:
+    - title: 列出多部件上传
+      url: "/s3/list-multipart-uploads.html"
+    - title: 启动多部件上传
+      url: "/s3/initiate-multipart-upload.html"
+    - title: 上传部件
+      url: "/s3/upload-part.html"
+    - title: 上传部件—复制
+      url: "/s3/upload-part-copy.html"
+    - title: 完成多部件上传
+      url: "/s3/complete-multipart-upload.html"
+  - title: 错误响应
+    url: "/s3/error-responses.html"
+- title: StorageGRID S3 REST API 操作
+  url: "/s3/storagegrid-s3-rest-api-operations.html"
+- title: 存储分段和组访问策略
+  url: "/s3/bucket-and-group-access-policies.html"
+- title: 为REST API配置安全性
+  url: "/s3/configuring-security-for-rest-api.html"
+- title: 监控和审核操作
+  url: "/s3/monitoring-and-auditing-operations.html"
+  entries:
+  - title: 监控对象载入和检索速率
+    url: "/s3/monitoring-object-ingest-and-retrieval-rates.html"
+  - title: 访问和查看审核日志
+    url: "/s3/accessing-and-reviewing-audit-logs.html"
+    entries:
+    - title: 审核日志中跟踪的 S3 操作
+      url: "/s3/s3-operations-tracked-in-audit-logs.html"
+- title: 活动，空闲和并发 HTTP 连接的优势
+  url: "/s3/benefits-of-active-idle-and-concurrent-http-connections.html"
+  entries:
+  - title: 保持空闲 HTTP 连接处于打开状态的优势
+    url: "/s3/benefits-of-keeping-idle-http-connections-open.html"
+  - title: 活动 HTTP 连接的优势
+    url: "/s3/benefits-of-active-http-connections.html"
+  - title: 并发 HTTP 连接的优势
+    url: "/s3/benefits-of-concurrent-http-connections.html"
+  - title: 为读取和写入操作分隔 HTTP 连接池
+    url: "/s3/separation-of-http-connection-pools-for-read-and-write-operations.html"

@@ -1,0 +1,19 @@
+---
+permalink: ilm/configuring-erasure-coding-profiles.html 
+sidebar: sidebar 
+keywords:  
+summary: '您可以通过将存储池与纠删编码方案(例如6+3)关联来配置纠删编码配置文件。然后、在为ILM规则配置放置说明时、您可以选择擦除编码配置文件。如果对象与规则匹配、则会根据纠删编码方案创建数据和奇偶校验片段并将其分布到存储池中的存储位置。' 
+---
+= 配置擦除编码配置文件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以通过将存储池与纠删编码方案(例如6+3)关联来配置纠删编码配置文件。然后、在为ILM规则配置放置说明时、您可以选择擦除编码配置文件。如果对象与规则匹配、则会根据纠删编码方案创建数据和奇偶校验片段并将其分布到存储池中的存储位置。
+
+* link:creating-erasure-coding-profile.html["创建擦除编码配置文件"]
+* link:renaming-erasure-coding-profile.html["重命名擦除编码配置文件"]
+* link:deactivating-erasure-coding-profile.html["停用擦除编码配置文件"]
+

@@ -1,0 +1,44 @@
+---
+permalink: maintain/fixing-missing-block-device-errors.html 
+sidebar: sidebar 
+keywords: storagegrid, missing block device, block device error 
+summary: '系统会检查每个已恢复的节点是否映射到有效的块设备专用文件或块设备专用文件的有效软链接。如果StorageGRID 在中发现无效映射 `/etc/storagegrid/nodes/_node-name_.conf` file、将显示缺少块设备错误。' 
+---
+= 修复缺少的块设备错误
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+系统会检查每个已恢复的节点是否映射到有效的块设备专用文件或块设备专用文件的有效软链接。如果StorageGRID 在中发现无效映射 `/etc/storagegrid/nodes/_node-name_.conf` file、将显示缺少块设备错误。
+
+如果您发现与此模式匹配的错误：
+
+`Checking configuration file /etc/storagegrid/nodes/_node-name_.conf for node _node-name_...`
+`ERROR: _node-name_: BLOCK_DEVICE_PURPOSE = _path-name_``_node-name_：_path-name_不存在`
+
+这意味着 `/etc/storagegrid/nodes/_node-name_.conf` 将_node-name_用于目的的块设备映射到Linux文件系统中的给定路径名、但该位置没有有效的块设备专用文件或指向块设备专用文件的软链接。
+
+`D您已完成"部署新的Linux主机"中的步骤。`对所有块设备使用与原始主机相同的永久性设备名称。
+
+如果无法还原或重新创建缺少的块设备专用文件，您可以分配一个具有适当大小和存储类别的新块设备，并编辑节点配置文件以更改 block_device_purpose 的值以指向新的块设备专用文件。
+
+从适用于您的 Linux 操作系统的安装说明的 `S存储要求` 一节中的表中确定适当的大小和存储类别。在继续更换块设备之前，请查看 "`配置主机存储` " 中的建议。
+
+
+IMPORTANT: 必须为从开始的任何配置文件变量提供新的块存储设备 `BLOCK_DEVICE_` 由于出现故障的主机丢失了原始块设备、因此请确保新块设备未格式化、然后再尝试执行进一步的恢复过程。如果您使用的是共享存储并已创建新卷，则新块设备将取消格式化。如果不确定，请对任何新的块存储设备特殊文件运行以下命令。
+
+
+CAUTION: 仅对新块存储设备运行以下命令。如果您认为块存储仍包含要恢复的节点的有效数据，请勿运行此命令，因为设备上的任何数据都将丢失。
+
+[listing]
+----
+sudo dd if=/dev/zero of=/dev/mapper/my-block-device-name bs=1G count=1
+----
+.相关信息
+link:deploying-new-linux-hosts.html["部署新的Linux主机"]
+
+link:../rhel/index.html["安装 Red Hat Enterprise Linux 或 CentOS"]
+
+link:../ubuntu/index.html["安装 Ubuntu 或 Debian"]

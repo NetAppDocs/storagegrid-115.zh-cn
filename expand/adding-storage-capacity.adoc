@@ -1,0 +1,22 @@
+---
+permalink: expand/adding-storage-capacity.html 
+sidebar: sidebar 
+keywords: storage, capacity, add, adding, expand, expansion, full storage node 
+summary: 当现有存储节点已满时、您必须增加StorageGRID 系统的存储容量。 
+---
+= 正在添加存储容量
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+当现有存储节点已满时、您必须增加StorageGRID 系统的存储容量。
+
+要增加存储容量、您必须先了解数据当前存储在何处、然后在所有所需位置添加容量。例如、如果您当前在多个站点上存储对象数据的副本、则可能需要增加每个站点的存储容量。
+
+* link:guidelines-for-adding-object-capacity.html["添加对象容量的准则"]
+* link:adding-storage-capacity-for-replicated-objects.html["为复制的对象添加存储容量"]
+* link:adding-storage-capacity-for-erasure-coded-objects.html["为经过擦除编码的对象添加存储容量"]
+* link:considerations-for-rebalancing-erasure-coded-data.html["重新平衡经过纠删编码的数据的注意事项"]
+

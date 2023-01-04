@@ -1,0 +1,23 @@
+---
+permalink: sg6000/configuring-storagegrid-connections.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, storagegrid connections, connections, configure, setup, set up 
+summary: 在将 StorageGRID 设备部署为 StorageGRID 系统中的存储节点之前，您必须配置设备与计划使用的网络之间的连接。您可以通过浏览到 StorageGRID 设备安装程序来配置网络连接，该安装程序预安装在 SG6000-CN 控制器 \ （计算控制器 \ ）上。 
+---
+= 配置StorageGRID 连接
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在将 StorageGRID 设备部署为 StorageGRID 系统中的存储节点之前，您必须配置设备与计划使用的网络之间的连接。您可以通过浏览到 StorageGRID 设备安装程序来配置网络连接，该安装程序预安装在 SG6000-CN 控制器（计算控制器）上。
+
+.步骤
+* link:accessing-storagegrid-appliance-installer-sg6000.html["访问StorageGRID 设备安装程序"]
+* link:verifying-and-upgrading-storagegrid-appliance-installer-version.html["验证和升级StorageGRID 设备安装程序版本"]
+* link:configuring-network-links-sg6000.html["配置网络链路(SG6000)"]
+* link:configuring-storagegrid-ip-addresses-sg6000.html["配置StorageGRID IP地址"]
+* link:verifying-network-connections.html["验证网络连接"]
+* link:verifying-port-level-network-connections.html["验证端口级别的网络连接"]
+

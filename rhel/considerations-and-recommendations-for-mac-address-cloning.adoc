@@ -1,0 +1,68 @@
+---
+permalink: rhel/considerations-and-recommendations-for-mac-address-cloning.html 
+sidebar: sidebar 
+keywords:  
+summary: MAC地址克隆会导致Docker容器使用主机的MAC地址、而主机则使用您指定的地址或随机生成的地址的MAC地址。您应使用 MAC 地址克隆来避免使用混杂模式网络配置。 
+---
+= MAC 地址克隆的注意事项和建议
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MAC地址克隆会导致Docker容器使用主机的MAC地址、而主机则使用您指定的地址或随机生成的地址的MAC地址。您应使用 MAC 地址克隆来避免使用混杂模式网络配置。
+
+
+
+== 启用 MAC 克隆
+
+在某些环境中，可以通过 MAC 地址克隆来增强安全性，因为它使您可以对管理网络，网格网络和客户端网络使用专用虚拟 NIC 。让Docker容器使用主机上专用NIC的MAC地址可以避免使用混杂模式网络配置。
+
+
+IMPORTANT: MAC 地址克隆用于安装虚拟服务器，可能无法在所有物理设备配置中正常运行。
+
+
+NOTE: 如果某个节点由于 MAC 克隆目标接口繁忙而无法启动，则在启动节点之前，您可能需要将链路设置为 " 关闭 " 。此外，在链路启动时，虚拟环境可能会阻止网络接口上的 MAC 克隆。如果某个节点由于接口繁忙而无法设置 MAC 地址并启动，则在启动该节点之前将链路设置为 " 关闭 " 可能会修复问题描述 。
+
+默认情况下， MAC 地址克隆处于禁用状态，必须通过节点配置密钥进行设置。您应在安装 StorageGRID 时启用它。
+
+每个网络有一个密钥：
+
+* `ADMIN_NETWORK_TARGET_TYPE_INTERFACE_CLONE_MAC`
+* `GRID_NETWORK_TARGET_TYPE_INTERFACE_CLONE_MAC`
+* `CLIENT_NETWORK_TARGET_TYPE_INTERFACE_CLONE_MAC`
+
+
+如果将密钥设置为"true"、则Docker容器将使用主机NIC的MAC地址。此外，主机将使用指定容器网络的 MAC 地址。默认情况下、容器地址是随机生成的地址、但前提是您已使用设置了一个地址 `_NETWORK_MAC` 节点配置密钥、则改用该地址。主机和容器始终具有不同的 MAC 地址。
+
+
+IMPORTANT: 在虚拟主机上启用 MAC 克隆而不同时在虚拟机管理程序上启用混杂模式可能会使用主机的接口发生原因 Linux 主机网络连接停止工作。
+
+
+
+== Mac 克隆使用情形
+
+MAC 克隆需要考虑两种使用情形：
+
+* 未启用Mac克隆：何时 `_CLONE_MAC` 节点配置文件中的密钥未设置或设置为"false"、主机将使用主机NIC MAC、容器将具有StorageGRID生成的MAC、除非在中指定了MAC `_NETWORK_MAC` 密钥。如果在中设置了地址 `_NETWORK_MAC` 密钥、容器将具有在中指定的地址 `_NETWORK_MAC` 密钥。此密钥配置要求使用混杂模式。
+* 已启用Mac克隆：何时 `_CLONE_MAC` 节点配置文件中的密钥设置为"true"、容器使用主机NIC MAC、而主机使用StorageGRID生成的MAC、除非在中指定了MAC `_NETWORK_MAC` 密钥。如果在中设置了地址 `_NETWORK_MAC` 密钥、主机将使用指定的地址、而不是生成的地址。在此密钥配置中，不应使用混杂模式。
+
+
+
+NOTE: 如果您不希望使用 MAC 地址克隆，而希望允许所有接口接收和传输非虚拟机管理程序分配的 MAC 地址的数据， 对于配置模式， MAC 地址更改和伪造传输，请确保虚拟交换机和端口组级别的安全属性设置为 * 接受 * 。虚拟交换机上设置的值可以被端口组级别的值覆盖，因此请确保这两个位置的设置相同。
+
+要启用 MAC 克隆，请参见 link:creating-node-configuration-files.html["有关创建节点配置文件的说明"]。
+
+
+
+== Mac 克隆示例
+
+在 MAC 地址为 11 ： 22 ： 33 ： 44 ： 55 ： 66 的主机上为接口 ens256 启用 MAC 克隆的示例，以及节点配置文件中的以下密钥：
+
+* `ADMIN_NETWORK_TARGET = ens256`
+* `ADMIN_NETWORK_MAC = b2:9c:02:c2:27:10`
+* `ADMIN_NETWORK_TARGET_TYPE_INTERFACE_CLONE_MAC = true`
+
+
+* 结果 * ： ens256 的主机 MAC 为 B2 ： 9c ： 02 ： C2 ： 27 ： 10 ，管理网络 MAC 为 11 ： 22 ： 33 ： 44 ： 55 ： 66

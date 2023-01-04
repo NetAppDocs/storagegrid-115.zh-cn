@@ -1,0 +1,42 @@
+---
+permalink: admin/enabling-single-sign-on.html 
+sidebar: sidebar 
+keywords:  
+summary: '在使用沙盒模式测试所有StorageGRID 依赖方信任后、您可以启用单点登录\(SSO\)。' 
+---
+= 启用单点登录
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在使用沙盒模式测试所有StorageGRID 依赖方信任之后、您可以启用单点登录(SSO)。
+
+.您需要的内容
+* 您必须已从身份源导入至少一个联合组、并已将root访问管理权限分配给该组。对于任何现有租户帐户、您必须确认至少有一个联合用户对网格管理器和租户管理器具有root访问权限。
+* 您必须已使用沙盒模式测试所有依赖方信任。
+
+
+.步骤
+. 选择*配置**访问控制**单点登录*。
++
+此时将显示Single Sign-On页面、并选择了*沙盒模式*。
+
+. 将 SSO 状态更改为 * 已启用 * 。
+. 单击 * 保存 * 。
++
+此时将显示一条警告消息。
+
++
+image::../media/sso_status_enabled_warning.gif[启用SSO的警告消息]
+
+. 查看警告、然后单击*确定*。
++
+现在，已启用单点登录。
+
++
+
+IMPORTANT: 所有用户都必须使用SSO访问网格管理器、租户管理器、网格管理API和租户管理API。本地用户无法再访问 StorageGRID 。
+
+

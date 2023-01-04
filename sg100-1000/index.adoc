@@ -1,0 +1,27 @@
+---
+permalink: sg100-1000/index.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node 
+summary: 了解如何安装和维护StorageGRID SG100和SG1000设备。 
+---
+= SG100和SG1000服务设备
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解如何安装和维护StorageGRID SG100和SG1000设备。
+
+* link:sg100-and-sg1000-appliances-overview.html["SG100 和 SG1000 设备概述"]
+* link:sg100-and-sg1000-applications.html["SG100 和 SG1000 应用程序"]
+* link:installation-and-deployment-overview.html["安装和部署概述"]
+* link:preparing-for-installation-sg100-and-sg1000.html["准备安装"]
+* link:installing-hardware-sg100-and-sg1000.html["安装硬件"]
+* link:configuring-storagegrid-connections-sg100-and-sg1000.html["配置StorageGRID 连接"]
+* link:configuring-bmc-interface-sg1000.html["配置BMC接口"]
+* link:optional-enabling-node-encryption.html["可选：启用节点加密"]
+* link:deploying-services-appliance-node.html["部署服务设备节点"]
+* link:troubleshooting-hardware-installation-sg100-and-sg1000.html["对硬件安装进行故障排除"]
+* link:maintaining-services-appliance-sg100-and-sg1000.html["维护设备"]
+

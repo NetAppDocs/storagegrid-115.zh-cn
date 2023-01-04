@@ -1,0 +1,22 @@
+---
+permalink: network/index.html 
+sidebar: sidebar 
+keywords:  
+summary: 了解StorageGRID 架构和网络拓扑。熟悉网络配置和配置的要求。 
+---
+= 网络连接准则
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解StorageGRID 架构和网络拓扑。熟悉网络配置和配置的要求。
+
+* link:storagegrid-networking-overview.html["StorageGRID 网络概述"]
+* link:networking-requirements-and-guidelines.html["网络连接要求和准则"]
+* link:deployment-specific-networking-requirements.html["部署特定的网络注意事项"]
+* link:network-installation-and-provisioning.html["网络安装和配置"]
+* link:post-installation-guidelines.html["安装后准则"]
+* link:network-port-reference.html["网络端口参考"]
+

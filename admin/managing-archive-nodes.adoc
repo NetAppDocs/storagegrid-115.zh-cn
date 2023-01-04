@@ -1,0 +1,22 @@
+---
+permalink: admin/managing-archive-nodes.html 
+sidebar: sidebar 
+keywords:  
+summary: '您也可以选择使用归档节点部署StorageGRID 系统的每个数据中心站点、以便连接到目标外部归档存储系统、例如Tivoli Storage Manager (TSM\)。' 
+---
+= 管理归档节点
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您也可以选择使用归档节点部署StorageGRID 系统的每个数据中心站点、以便连接到目标外部归档存储系统、例如Tivoli Storage Manager (TSM)。
+
+配置与外部目标的连接后，您可以配置归档节点以优化 TSM 性能，在 TSM 服务器容量接近或不可用时使归档节点脱机，以及配置复制和检索设置。您还可以为归档节点设置自定义警报。
+
+* link:what-archive-node-is.html["什么是归档节点"]
+* link:configuring-archive-node-connections-to-archival-storage.html["配置归档节点与归档存储的连接"]
+* link:setting-custom-alarms-for-archive-node.html["为归档节点设置自定义警报"]
+* link:integrating-tivoli-storage-manager.html["集成Tivoli Storage Manager"]
+

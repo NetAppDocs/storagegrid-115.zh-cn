@@ -1,0 +1,25 @@
+---
+permalink: s3/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= 使用 S3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解客户端应用程序如何使用S3 API与StorageGRID 系统相连接。
+
+* link:support-for-s3-rest-api.html["支持S3 REST API"]
+* link:configuring-tenant-accounts-and-connections.html["配置租户帐户和连接"]
+* link:how-storagegrid-implements-s3-rest-api.html["StorageGRID 如何实施S3 REST API"]
+* link:s3-rest-api-supported-operations-and-limitations.html["S3 REST API 支持的操作和限制"]
+* link:storagegrid-s3-rest-api-operations.html["StorageGRID S3 REST API 操作"]
+* link:bucket-and-group-access-policies.html["存储分段和组访问策略"]
+* link:configuring-security-for-rest-api.html["为REST API配置安全性"]
+* link:monitoring-and-auditing-operations.html["监控和审核操作"]
+* link:benefits-of-active-idle-and-concurrent-http-connections.html["活动，空闲和并发 HTTP 连接的优势"]
+

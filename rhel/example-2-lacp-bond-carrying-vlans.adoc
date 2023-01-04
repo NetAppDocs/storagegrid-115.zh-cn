@@ -1,0 +1,39 @@
+---
+permalink: rhel/example-2-lacp-bond-carrying-vlans.html 
+sidebar: sidebar 
+keywords:  
+summary: 示例 2 假定您熟悉绑定网络接口以及在所使用的 Linux 分发版上创建 VLAN 接口。 
+---
+= 示例 2 ： LACP 绑定传输 VLAN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+示例 2 假定您熟悉绑定网络接口以及在所使用的 Linux 分发版上创建 VLAN 接口。
+
+示例 2 介绍了一种基于 VLAN 的通用灵活方案，该方案有助于在单个主机上的所有节点之间共享所有可用网络带宽。此示例尤其适用于裸机主机。
+
+要了解此示例，假设每个数据中心有三个单独的网格网络，管理员网络和客户端网络子网。子网位于不同的 VLAN （ 1001 ， 1002 和 1003 ）上，并通过 LACP 绑定的中继端口（ bond0 ）提供给主机。您应在此绑定上配置三个 VLAN 接口： bond0.1001 ， bond0.1002 和 bond0.1003 。
+
+如果同一主机上的节点网络需要单独的 VLAN 和子网，则可以在绑定上添加 VLAN 接口并将其映射到主机（如图中的 bond0.1004 所示）。
+
+image::../media/rhel_install_vlan_diag_2.gif[此图通过周围的文本进行了说明。]
+
+.步骤
+. 将用于 StorageGRID 网络连接的所有物理网络接口聚合到一个 LACP 绑定中。
++
+对每个主机上的绑定使用相同的名称，例如 bond0 。
+
+. 创建使用此绑定作为关联"`物理设备的VLAN接口,`" using the standard VLAN interface naming convention `physdev-name.VLAN ID`。
++
+请注意，步骤 1 和 2 要求对终止网络链路另一端的边缘交换机进行适当配置。此外，边缘交换机端口还必须聚合到 LACP 端口通道中，并配置为中继，并允许通过所有必需的 VLAN 。
+
++
+本文档提供了此每主机网络配置方案的示例接口配置文件。
+
+
+
+.相关信息
+link:example-etc-sysconfig-network-scripts.html["示例 /etc/sysconfig/network-scripts"]

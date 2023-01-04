@@ -1,0 +1,23 @@
+---
+permalink: sg100-1000/preparing-for-installation-sg100-and-sg1000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, install, installation, preparation, get ready, prepare 
+summary: 准备安装 StorageGRID 设备需要准备站点并获取所有必需的硬件，缆线和工具。您还应收集 IP 地址和网络信息。 
+---
+= 准备安装
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+准备安装 StorageGRID 设备需要准备站点并获取所有必需的硬件，缆线和工具。您还应收集 IP 地址和网络信息。
+
+.步骤
+* link:preparing-site-sg100-and-sg1000.html["准备站点(SG100和SG1000)"]
+* link:unpacking-boxes-sg100-and-sg1000.html["打开包装箱的包装(SG100和SG1000)"]
+* link:obtaining-additional-equipment-and-tools-sg100-and-sg1000.html["获取其他设备和工具(SG100和SG1000)"]
+* link:web-browser-requirements.html["Web 浏览器要求"]
+* link:reviewing-appliance-network-connections-sg100-and-sg1000.html["查看设备网络连接"]
+* link:gathering-installation-information-sg100-and-sg1000.html["收集安装信息(SG100和SG1000)"]
+

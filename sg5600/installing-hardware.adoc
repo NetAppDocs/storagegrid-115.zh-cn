@@ -1,0 +1,23 @@
+---
+permalink: sg5600/installing-hardware.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, hardware, install, installing 
+summary: 硬件安装包括几项主要任务，包括安装硬件组件，为这些组件布线以及配置端口。 
+---
+= 安装硬件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+硬件安装包括几项主要任务，包括安装硬件组件，为这些组件布线以及配置端口。
+
+.步骤
+* link:registering-hardware.html["注册硬件"]
+* link:installing-appliance-in-cabinet-or-rack-sg5600.html["在机柜或机架中安装设备(SG5600)"]
+* link:cabling-appliance-sg5600.html["为设备布线(SG5600)"]
+* link:connecting-ac-power-cords-sg5600.html["连接交流电源线(SG5600)"]
+* link:turning-power-on-sg5600.html["打开电源(SG5600)"]
+* link:viewing-boot-up-status-and-reviewing-error-codes-on-sg5600-controllers.html["查看SG5600控制器上的启动状态并查看错误代码"]
+

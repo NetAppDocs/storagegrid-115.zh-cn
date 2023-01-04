@@ -1,0 +1,43 @@
+---
+permalink: admin/enabling-autosupport-on-demand.html 
+sidebar: sidebar 
+keywords:  
+summary: AutoSupport On Demand 可帮助解决技术支持正在积极处理的问题。启用AutoSupport on Demand后、技术支持可以请求发送AutoSupport 消息、而无需您的干预。 
+---
+= 启用AutoSupport On Demand
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AutoSupport On Demand 可帮助解决技术支持正在积极处理的问题。启用AutoSupport on Demand后、技术支持可以请求发送AutoSupport 消息、而无需您的干预。
+
+.您需要的内容
+* 您必须使用支持的浏览器登录到网格管理器。
+* 您必须具有 " 根访问 " 或 " 其他网格配置 " 权限。
+* 您必须已启用每周AutoSupport 消息。
+* 您必须已将传输协议设置为HTTPS。
+
+
+.关于此任务
+启用此功能后、技术支持可以请求StorageGRID 系统自动发送AutoSupport 消息。技术支持还可以为 AutoSupport On Demand 查询设置轮询时间间隔。
+
+技术支持无法启用或禁用 AutoSupport On Demand 。
+
+.步骤
+. 选择*支持*>*工具*>* AutoSupport *。
++
+此时将显示 AutoSupport 页面，并选择了 * 设置 * 选项卡。
+
+. 在页面的*协议详细信息*部分中选择HTTPS单选按钮。
++
+image::../media/autosupport_on_demand.png[按需ASUP]
+
+. 选中 * 启用每周 AutoSupport * 复选框。
+. 选中 * 启用按需 AutoSupport * 复选框。
+. 选择 * 保存 * 。
++
+已启用 AutoSupport On Demand ，技术支持可以将 AutoSupport On Demand 请求发送到 StorageGRID 。
+
+

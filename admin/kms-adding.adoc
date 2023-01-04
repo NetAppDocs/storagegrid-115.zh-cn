@@ -1,0 +1,32 @@
+---
+permalink: admin/kms-adding.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用 StorageGRID 密钥管理服务器向导添加每个 KMS 或 KMS 集群。 
+---
+= 添加密钥管理服务器(KMS)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 StorageGRID 密钥管理服务器向导添加每个 KMS 或 KMS 集群。
+
+.您需要的内容
+* 您必须已查看 link:kms-considerations-and-requirements.html["使用密钥管理服务器的注意事项和要求"]。
+* 您必须拥有 link:kms-configuring-storagegrid-as-client.html["已在 KMS 中将 StorageGRID 配置为客户端"]和必须具有每个KMS或KMS集群的所需信息
+* 您必须具有 root 访问权限。
+* 您必须使用支持的浏览器登录到网格管理器。
+
+
+.关于此任务
+如果可能，请先配置任何站点特定的密钥管理服务器，然后再配置一个默认 KMS ，以便对所有不受另一个 KMS 管理的站点进行适用场景 。如果首先创建默认 KMS ，则网格中所有节点加密的设备都将使用默认 KMS 进行加密。如果要稍后创建站点专用的 KMS ，则必须先将当前版本的加密密钥从默认 KMS 复制到新的 KMS 。
+
+link:kms-considerations-for-changing-for-site.html["更改站点的 KMS 的注意事项"]
+
+.步骤
+. link:kms-adding-enter-kms-details.html["第 1 步：输入 KMS 详细信息"]
+. link:kms-adding-upload-server-certificate.html["第 2 步：上传服务器证书"]
+. link:kms-adding-upload-client-certificates.html["第 3 步：上传客户端证书"]
+

@@ -1,0 +1,34 @@
+---
+permalink: admin/configuring-stored-object-hashing.html 
+sidebar: sidebar 
+keywords:  
+summary: 存储对象哈希选项指定用于验证对象完整性的哈希算法。 
+---
+= 配置存储的对象哈希
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+存储对象哈希选项指定用于验证对象完整性的哈希算法。
+
+.您需要的内容
+* 您必须使用支持的浏览器登录到网格管理器。
+* 您必须具有特定的访问权限。
+
+
+.关于此任务
+默认情况下、使用SHA‐1算法对对象数据进行哈希。SHA-256 算法需要额外的 CPU 资源，通常不建议用于完整性验证。
+
+
+NOTE: 如果更改此设置，则应用新设置需要大约一分钟的时间。已配置的值将进行缓存以提高性能和扩展能力。
+
+.步骤
+. 选择*配置**系统设置**网格选项*。
+. 在存储的对象选项部分中，将存储的对象哈希更改为 * SHA-1* （默认）或 * SHA-256* 。
++
+image::../media/stored_object_hashing.png[存储对象哈希]
+
+. 单击 * 保存 * 。
+

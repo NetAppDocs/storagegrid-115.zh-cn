@@ -1,0 +1,14 @@
+---
+permalink: sg100-1000/troubleshooting-connection-issues-sg100-and-sg1000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, troubleshoot, troubleshooting, connection 
+summary: 如果您在 StorageGRID 设备安装期间遇到连接问题，应执行列出的更正操作步骤。 
+---
+= 对连接问题进行故障排除
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您在 StorageGRID 设备安装期间遇到连接问题，应执行列出的更正操作步骤。

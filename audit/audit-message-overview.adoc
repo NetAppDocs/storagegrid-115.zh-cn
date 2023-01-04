@@ -1,0 +1,21 @@
+---
+permalink: audit/audit-message-overview.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, message, log, structure, content 
+summary: 这些说明包含有关 StorageGRID 审核消息和审核日志的结构和内容的信息。您可以使用此信息读取和分析系统活动的审核跟踪。 
+---
+= 审核消息概述
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+这些说明包含有关 StorageGRID 审核消息和审核日志的结构和内容的信息。您可以使用此信息读取和分析系统活动的审核跟踪。
+
+这些说明适用于负责生成系统活动和使用情况报告的管理员，这些报告需要分析 StorageGRID 系统的审核消息。
+
+我们假定您已对StorageGRID 系统中已审核活动的性质有了充分的了解。要使用文本日志文件，您必须有权访问管理节点上配置的审核共享。
+
+.相关信息
+link:../admin/index.html["管理 StorageGRID"]

@@ -1,0 +1,22 @@
+---
+permalink: primer/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= 网格入门
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解NetApp StorageGRID 系统的基础知识。
+
+* link:about-storagegrid.html["关于StorageGRID"]
+* link:storagegrid-architecture-and-network-topology.html["StorageGRID 架构和网络拓扑"]
+* link:how-storagegrid-manages-data.html["StorageGRID 如何管理数据"]
+* link:exploring-grid-manager.html["了解网格管理器"]
+* link:exploring-tenant-manager.html["了解租户管理器"]
+* link:using-storagegrid.html["使用StorageGRID"]
+

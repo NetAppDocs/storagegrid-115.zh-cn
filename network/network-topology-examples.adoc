@@ -1,0 +1,23 @@
+---
+permalink: network/network-topology-examples.html 
+sidebar: sidebar 
+keywords: storagegrid, network topology 
+summary: 除了所需的网格网络之外、在为单站点或多站点部署设计网络拓扑时、您还可以选择是配置管理网络接口还是客户端网络接口。 
+---
+= 网络拓扑示例
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+除了所需的网格网络之外、在为单站点或多站点部署设计网络拓扑时、您还可以选择是配置管理网络接口还是客户端网络接口。
+
+内部端口只能通过网格网络访问。可以从所有网络类型访问外部端口。这种灵活性为设计 StorageGRID 部署以及在交换机和防火墙中设置外部 IP 和端口筛选提供了多种选项。有关内部和外部端口的详细信息、请参见网络端口参考。
+
+如果您指定节点的客户端网络接口不可信、请配置负载平衡器端点以接受入站流量。有关配置不可信客户端网络和负载平衡器端点的信息、请参见有关管理StorageGRID 的说明。
+
+.相关信息
+link:../admin/index.html["管理 StorageGRID"]
+
+link:network-port-reference.html["网络端口参考"]

@@ -1,0 +1,60 @@
+---
+permalink: maintain/linux-adding-interfaces-to-existing-node.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, linux, adding interfaces, add interfaces, adding interface to node, add interface to node 
+summary: 如果要向最初未安装的基于Linux的节点添加接口、则必须使用此操作步骤。 
+---
+= Linux：向现有节点添加接口
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果要向最初未安装的基于Linux的节点添加接口、则必须使用此操作步骤。
+
+如果在安装期间未在 Linux 主机上的节点配置文件中配置 admin_network_target 或 client_network_target ，请使用此操作步骤 添加接口。有关节点配置文件的详细信息、请参见适用于Linux操作系统的StorageGRID 安装说明。
+
+link:../rhel/index.html["安装 Red Hat Enterprise Linux 或 CentOS"]
+
+link:../ubuntu/index.html["安装 Ubuntu 或 Debian"]
+
+您可以在托管需要新网络分配的节点的 Linux 服务器上执行此操作步骤 ，而不是在节点内部执行。此操作步骤 仅会将接口添加到节点；如果您尝试指定任何其他网络参数，则会发生验证错误。
+
+要提供地址信息，必须使用更改 IP 工具。请参见有关更改节点网络配置的信息。
+
+link:changing-nodes-network-configuration.html["更改节点的网络配置"]
+
+.步骤
+. 登录到托管需要新网络分配的节点的Linux服务器。
+. 在中编辑节点配置文件 `/etc/storagegrid/nodes/_node-name_.conf`。
++
+
+IMPORTANT: 请勿指定任何其他网络参数，否则将导致验证错误。
+
++
+.. 添加新网络目标。
++
+[listing]
+----
+CLIENT_NETWORK_TARGET = bond0.3206
+----
+.. 可选：添加MAC地址。
++
+[listing]
+----
+CLIENT_NETWORK_MAC = aa:57:61:07:ea:5c
+----
+
+
+. 运行 node validate 命令： `sudo storagegrid node validate _node-name_`
+. 解决所有验证错误。
+. 运行 node reload 命令： `sudo storagegrid node reload _node-name_`
+
+
+.相关信息
+link:../rhel/index.html["安装 Red Hat Enterprise Linux 或 CentOS"]
+
+link:../ubuntu/index.html["安装 Ubuntu 或 Debian"]
+
+link:changing-nodes-network-configuration.html["更改节点的网络配置"]

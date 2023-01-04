@@ -1,0 +1,24 @@
+---
+permalink: primer/using-storagegrid.html 
+sidebar: sidebar 
+keywords:  
+summary: 安装网格节点和StorageGRID 网络后、您可以开始配置和使用StorageGRID。您要执行的部分任务包括控制用户对系统管理功能的访问、设置租户帐户、管理客户端连接、设置配置选项、使用ILM管理对象位置、监控StorageGRID 系统的运行状况和日常活动、以及执行例行和非例行维护活动。 
+---
+= 使用StorageGRID
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+安装网格节点和StorageGRID 网络后、您可以开始配置和使用StorageGRID。您要执行的部分任务包括控制用户对系统管理功能的访问、设置租户帐户、管理客户端连接、设置配置选项、使用ILM管理对象位置、监控StorageGRID 系统的运行状况和日常活动、以及执行例行和非例行维护活动。
+
+* link:controlling-storagegrid-access.html["控制StorageGRID 访问"]
+* link:managing-tenants-and-client-connections.html["管理租户和客户端连接"]
+* link:configuring-network-settings.html["配置网络设置"]
+* link:configuring-system-settings.html["配置系统设置"]
+* link:using-information-lifecycle-management.html["使用信息生命周期管理"]
+* link:monitoring-storagegrid-operations.html["监控StorageGRID 操作"]
+* link:performing-maintenance-procedures.html["执行维护过程"]
+* link:using-storagegrid-support-options.html["使用StorageGRID 支持选项"]
+

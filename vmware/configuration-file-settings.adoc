@@ -1,0 +1,407 @@
+---
+permalink: vmware/configuration-file-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: deploy-vsphere-ovftool.ini配置文件包含部署虚拟网格节点所需的设置。 
+---
+= 配置文件设置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+。 `deploy-vsphere-ovftool.ini` 配置文件包含部署虚拟网格节点所需的设置。
+
+配置文件首先列出全局参数，然后在节点名称定义的部分中列出节点专用参数。使用文件时：
+
+* 全局参数 _ 应用于所有网格节点。
+* _Node-specific parameters_override 全局参数。
+
+
+
+
+== 全局参数
+
+全局参数将应用于所有网格节点，除非它们被各个部分中的设置所覆盖。将应用于多个节点的参数置于全局参数部分中，然后根据需要在各个节点的部分中覆盖这些设置。
+
+* * OVFTOOL_FUFFESESESESES* ：您可以将 OVFTOOL_FUFFICESPORITES* 指定为全局设置，也可以将参数单独应用于特定节点。例如：
++
+[source, subs="specialcharacters,quotes"]
+----
+OVFTOOL_ARGUMENTS = --powerOn --noSSLVerify --diskMode=thin --datastore='_datastore_name_'
+----
++
+您可以使用 `--powerOffTarget` 和 `--overwrite` 用于关闭和更换现有虚拟机的选项。
+
++
+
+IMPORTANT: 您应将节点部署到不同的数据存储库，并为每个节点指定 OVFTOOL_FUFFICESYUESYUESL ，而不是全局参数。
+
+* *源*：StorageGRID 虚拟机模板的路径 (`.vmdk`)文件和 `.ovf` 和 `.mf` 单个网格节点的文件。默认为当前目录。
++
+[source, subs="specialcharacters,quotes"]
+----
+SOURCE = /downloads/StorageGRID-Webscale-_version_/vsphere
+----
+* * 目标 * ：要部署 StorageGRID 的位置的 VMware vSphere 虚拟基础架构（ VI ） URL 。例如：
++
+[listing]
+----
+TARGET = vi://vcenter.example.com/vm/sgws
+----
+* * 网格网络配置 * ：用于获取静态或 DHCP IP 地址的方法。默认值为 static 。如果所有或大多数节点使用相同的方法获取 IP 地址，则可以在此处指定该方法。然后，您可以通过为一个或多个节点指定不同的设置来覆盖全局设置。例如：
++
+[listing]
+----
+GRID_NETWORK_CONFIG = DHCP
+----
+* * 网格网络目标 * ：要用于网格网络的现有 VMware 网络的名称。如果所有或大多数节点使用相同的网络名称，则可以在此处指定。然后，您可以通过为一个或多个节点指定不同的设置来覆盖全局设置。例如：
++
+[listing]
+----
+GRID_NETWORK_TARGET = SG-Admin-Network
+----
+* * 网格网络掩码 * ：网格网络的网络掩码。如果所有或大多数节点使用相同的网络掩码，则可以在此处指定。然后，您可以通过为一个或多个节点指定不同的设置来覆盖全局设置。例如：
++
+[listing]
+----
+GRID_NETWORK_MASK = 255.255.255.0
+----
+* * 网格网络网关 * ：网格网络的网络网关。如果所有或大多数节点使用同一个网络网关，则可以在此处指定此网关。然后，您可以通过为一个或多个节点指定不同的设置来覆盖全局设置。例如：
++
+[listing]
+----
+GRID_NETWORK_GATEWAY = 10.1.0.1
+----
+* * 网格网络 MTU * ：可选。网格网络上的最大传输单元（ MTU ）。如果指定，则此值必须介于 1280 和 9216 之间。例如：
++
+[listing]
+----
+GRID_NETWORK_MTU = 8192
+----
++
+如果省略，则使用 1400 。
+
++
+如果要使用巨型帧，请将 MTU 设置为适合巨型帧的值，例如 9000 。否则，请保留默认值。
+
++
+
+IMPORTANT: 网络的 MTU 值必须与节点所连接的交换机端口上配置的值匹配。否则，可能会发生网络性能问题或数据包丢失。
+
++
+
+IMPORTANT: 为了获得最佳网络性能，应在所有节点的网格网络接口上配置类似的 MTU 值。如果网格网络在各个节点上的 MTU 设置有明显差异，则会触发 * 网格网络 MTU 不匹配 * 警报。并非所有网络类型的 MTU 值都相同。
+
+* * 管理网络配置 * ：用于获取 IP 地址的方法，可以是禁用，静态或 DHCP 。默认值为 disabled 。如果所有或大多数节点使用相同的方法获取 IP 地址，则可以在此处指定该方法。然后，您可以通过为一个或多个节点指定不同的设置来覆盖全局设置。例如：
++
+[listing]
+----
+ADMIN_NETWORK_CONFIG = STATIC
+----
+* * 管理网络目标 * ：用于管理网络的现有 VMware 网络的名称。除非禁用管理网络，否则此设置为必填项。如果所有或大多数节点使用相同的网络名称，则可以在此处指定。然后，您可以通过为一个或多个节点指定不同的设置来覆盖全局设置。例如：
++
+[listing]
+----
+ADMIN_NETWORK_TARGET = SG-Admin-Network
+----
+* * 管理网络掩码 * ：管理网络的网络掩码。如果使用的是静态 IP 寻址，则需要此设置。如果所有或大多数节点使用相同的网络掩码，则可以在此处指定。然后，您可以通过为一个或多个节点指定不同的设置来覆盖全局设置。例如：
++
+[listing]
+----
+ADMIN_NETWORK_MASK = 255.255.255.0
+----
+* * 管理网络网关 * ：管理网络的网络网关。如果您使用的是静态 IP 寻址，并且在 admin_network_esl 设置中指定了外部子网，则需要此设置。（也就是说，如果 admin_network_esl 为空，则不需要执行此操作。） 如果所有或大多数节点使用同一个网络网关，则可以在此处指定此网关。然后，您可以通过为一个或多个节点指定不同的设置来覆盖全局设置。例如：
++
+[listing]
+----
+ADMIN_NETWORK_GATEWAY = 10.3.0.1
+----
+* * 管理网络 _NETWORK_ESL* ：管理网络的外部子网列表（路由），指定为 CIDR 路由目标的逗号分隔列表。如果所有或大多数节点使用相同的外部子网列表，则可以在此处指定。然后，您可以通过为一个或多个节点指定不同的设置来覆盖全局设置。例如：
++
+[listing]
+----
+ADMIN_NETWORK_ESL = 172.16.0.0/21,172.17.0.0/21
+----
+* * 管理网络 MTU * ：可选。管理网络上的最大传输单元（ MTU ）。请勿指定 admin_network_config 是否为 DHCP 。如果指定，则此值必须介于 1280 和 9216 之间。如果省略，则使用 1400 。如果要使用巨型帧，请将 MTU 设置为适合巨型帧的值，例如 9000 。否则，请保留默认值。如果所有或大多数节点对管理网络使用相同的 MTU ，则可以在此处指定。然后，您可以通过为一个或多个节点指定不同的设置来覆盖全局设置。例如：
++
+[listing]
+----
+ADMIN_NETWORK_MTU = 8192
+----
+* * 客户端网络配置 * ：用于获取 IP 地址的方法，可以是禁用，静态或 DHCP 。默认值为 disabled 。如果所有或大多数节点使用相同的方法获取 IP 地址，则可以在此处指定该方法。然后，您可以通过为一个或多个节点指定不同的设置来覆盖全局设置。例如：
++
+[listing]
+----
+CLIENT_NETWORK_CONFIG = STATIC
+----
+* * 客户端网络目标 * ：用于客户端网络的现有 VMware 网络的名称。除非禁用客户端网络，否则此设置为必填项。如果所有或大多数节点使用相同的网络名称，则可以在此处指定。然后，您可以通过为一个或多个节点指定不同的设置来覆盖全局设置。例如：
++
+[listing]
+----
+CLIENT_NETWORK_TARGET = SG-Client-Network
+----
+* * 客户端网络掩码 * ：客户端网络的网络掩码。如果使用的是静态 IP 寻址，则需要此设置。如果所有或大多数节点使用相同的网络掩码，则可以在此处指定。然后，您可以通过为一个或多个节点指定不同的设置来覆盖全局设置。例如：
++
+[listing]
+----
+CLIENT_NETWORK_MASK = 255.255.255.0
+----
+* * 客户端网络网关 * ：客户端网络的网络网关。如果使用的是静态 IP 寻址，则需要此设置。如果所有或大多数节点使用同一个网络网关，则可以在此处指定此网关。然后，您可以通过为一个或多个节点指定不同的设置来覆盖全局设置。例如：
++
+[listing]
+----
+CLIENT_NETWORK_GATEWAY = 10.4.0.1
+----
+* * 客户端网络 MTU * ：可选。客户端网络上的最大传输单元（ MTU ）。请勿指定 client_network_config 是否为 DHCP 。如果指定，则此值必须介于 1280 和 9216 之间。如果省略，则使用 1400 。如果要使用巨型帧，请将 MTU 设置为适合巨型帧的值，例如 9000 。否则，请保留默认值。如果所有或大多数节点对客户端网络使用相同的 MTU ，则可以在此处指定。然后，您可以通过为一个或多个节点指定不同的设置来覆盖全局设置。例如：
++
+[listing]
+----
+CLIENT_NETWORK_MTU = 8192
+----
+* * 端口重新映射 * ：重新映射节点用于内部网格节点通信或外部通信的任何端口。如果企业网络策略限制 StorageGRID 使用的一个或多个端口，则必须重新映射端口。有关 StorageGRID 使用的端口列表，请参见中的内部网格节点通信和外部通信 link:../network/index.html["网络连接准则"]。
++
+
+IMPORTANT: 不要重新映射计划用于配置负载平衡器端点的端口。
+
++
+
+NOTE: 如果仅设置 port_remap ，则您指定的映射将同时用于入站和出站通信。如果同时指定 port_remap_inbound ， port_remap 将仅应用于出站通信。
+
+
+
+使用的格式为： `_network type_/_protocol/_default port used by grid node_/_new port_`、其中网络类型为网格、管理员或客户端、协议为TCP或UDP。
+
+例如：
+
+[listing]
+----
+PORT_REMAP = client/tcp/18082/443
+----
+如果单独使用，则此示例设置会将网格节点的入站和出站通信从端口 18082 对称映射到端口 443 。如果与 port_remap_inbound 结合使用，则此示例设置会将出站通信从端口 18082 映射到端口 443 。
+
+* * 端口重新映射入站 * ：重新映射指定端口的入站通信。如果指定 port_remap_inbound ，但未指定 port_remap 的值，则端口的出站通信将保持不变。
++
+
+IMPORTANT: 不要重新映射计划用于配置负载平衡器端点的端口。
+
+
+
+使用的格式为： `_network type_/_protocol/_default port used by grid node_/_new port_`、其中网络类型为网格、管理员或客户端、协议为TCP或UDP。
+
+例如：
+
+[listing]
+----
+PORT_REMAP_INBOUND = client/tcp/443/18082
+----
+此示例将接收发送到端口 443 以通过内部防火墙的流量，并将其定向到端口 18082 ，网格节点正在侦听 S3 请求。
+
+
+
+== 节点专用参数
+
+每个节点都位于配置文件中各自的部分中。每个节点都需要以下设置：
+
+* 此部分标题定义了将在网格管理器中显示的节点名称。您可以通过为节点指定可选的 node_name 参数来覆盖该值。
+* * 节点类型 * ： VM_Admin_Node ， VM_Storage_Node ， VM_Archive_Node 或 VM_API_Gateway_Node
+* * 网格网络 IP ：网格网络上节点的 IP 地址。
+* * 管理网络 IP ：管理网络上节点的 IP 地址。只有当节点已连接到管理网络且 admin_network_config 设置为 static 时才需要。
+* * 客户端网络 IP* ：客户端网络上节点的 IP 地址。只有当节点已连接到客户端网络且此节点的 client_network_config 设置为 static 时才需要此选项。
+* * 管理 _IP* ：网格网络上主管理节点的 IP 地址。使用指定的值作为主管理节点的 grid_network_IP 。如果省略此参数，则节点将尝试使用 mDNS 发现主管理节点 IP 。有关详细信息，请参见 link:how-grid-nodes-discover-primary-admin-node.html["网格节点如何发现主管理节点"]。
++
+
+NOTE: 对于主管理节点， admin_ip 参数将被忽略。
+
+* 未全局设置的任何参数。例如，如果某个节点已连接到管理网络，而您未全局指定 admin_network 参数，则必须为此节点指定这些参数。
+
+
+
+
+== 主管理节点
+
+主管理节点需要以下附加设置：
+
+* * 节点类型 * ： VM_Admin_Node
+* * 管理角色 * ：主
+
+
+此示例条目适用于所有三个网络上的主管理节点：
+
+[listing]
+----
+[DC1-ADM1]
+  ADMIN_ROLE = Primary
+  NODE_TYPE = VM_Admin_Node
+
+  GRID_NETWORK_IP = 10.1.0.2
+  ADMIN_NETWORK_IP = 10.3.0.2
+  CLIENT_NETWORK_IP = 10.4.0.2
+----
+以下附加设置对于主管理节点是可选的：
+
+* * 磁盘 * ：默认情况下，会为管理节点另外分配两个 200 GB 的硬盘，以供审核和数据库使用。您可以使用 disk 参数增加这些设置。例如：
++
+[listing]
+----
+DISK = INSTANCES=2, CAPACITY=300
+----
+
+
+
+NOTE: 对于管理节点，实例必须始终等于 2 。
+
+
+
+== 存储节点
+
+存储节点需要以下附加设置：
+
+* * 节点类型 * ： VM_Storage_Node
++
+此示例条目适用于网格和管理网络上的存储节点，但不适用于客户端网络。此节点使用 admin_ip 设置指定网格网络上主管理节点的 IP 地址。
+
++
+[listing]
+----
+[DC1-S1]
+  NODE_TYPE = VM_Storage_Node
+
+  GRID_NETWORK_IP = 10.1.0.3
+  ADMIN_NETWORK_IP = 10.3.0.3
+
+  ADMIN_IP = 10.1.0.2
+----
++
+第二个示例条目适用于客户端网络上的存储节点，其中，客户的企业网络策略指出， S3 客户端应用程序仅允许使用端口 80 或 443 访问存储节点。示例配置文件使用 port_remap 使存储节点能够通过端口 443 发送和接收 S3 消息。
+
++
+[listing]
+----
+[DC2-S1]
+  NODE_TYPE = VM_Storage_Node
+
+  GRID_NETWORK_IP = 10.1.1.3
+  CLIENT_NETWORK_IP = 10.4.1.3
+  PORT_REMAP = client/tcp/18082/443
+
+  ADMIN_IP = 10.1.0.2
+----
++
+最后一个示例为从端口 22 到端口 3022 的 ssh 流量创建了对称重新映射，但明确设置了入站和出站流量的值。
+
++
+[listing]
+----
+[DC1-S3]
+  NODE_TYPE = VM_Storage_Node
+
+  GRID_NETWORK_IP = 10.1.1.3
+
+  PORT_REMAP = grid/tcp/22/3022
+  PORT_REMAP_INBOUND = grid/tcp/3022/22
+
+  ADMIN_IP = 10.1.0.2
+----
+
+
+以下附加设置对于存储节点是可选的：
+
+* * 磁盘 * ：默认情况下，为存储节点分配三个 4 TB 磁盘，以供 RangeDB 使用。您可以使用 disk 参数增加这些设置。例如：
++
+[listing]
+----
+DISK = INSTANCES=16, CAPACITY=4096
+----
+
+
+
+
+== 归档节点
+
+归档节点需要以下附加设置：
+
+* * 节点类型 * ： VM_Archive_Node
+
+
+此示例条目适用于网格和管理网络上的归档节点，但不适用于客户端网络。
+
+[listing]
+----
+[DC1-ARC1]
+  NODE_TYPE = VM_Archive_Node
+
+  GRID_NETWORK_IP = 10.1.0.4
+  ADMIN_NETWORK_IP = 10.3.0.4
+
+  ADMIN_IP = 10.1.0.2
+----
+
+
+== 网关节点
+
+网关节点需要以下附加设置：
+
+* * 节点类型 * ： VM_API_Gateway
+
+
+此示例条目适用于所有三个网络上的示例网关节点。在此示例中，未在配置文件的全局部分中指定客户端网络参数，因此必须为节点指定这些参数：
+
+[listing]
+----
+[DC1-G1]
+  NODE_TYPE = VM_API_Gateway
+
+  GRID_NETWORK_IP = 10.1.0.5
+  ADMIN_NETWORK_IP = 10.3.0.5
+
+  CLIENT_NETWORK_CONFIG = STATIC
+  CLIENT_NETWORK_TARGET = SG-Client-Network
+  CLIENT_NETWORK_MASK = 255.255.255.0
+  CLIENT_NETWORK_GATEWAY = 10.4.0.1
+  CLIENT_NETWORK_IP = 10.4.0.5
+
+  ADMIN_IP = 10.1.0.2
+----
+
+
+== 非主管理节点
+
+非主管理节点需要以下附加设置：
+
+* * 节点类型 * ： VM_Admin_Node
+* * 管理角色 * ：非主要
+
+
+此示例条目适用于不在客户端网络上的非主管理节点：
+
+[listing]
+----
+[DC2-ADM1]
+  ADMIN_ROLE = Non-Primary
+  NODE_TYPE = VM_Admin_Node
+
+  GRID_NETWORK_TARGET = SG-Grid-Network
+  GRID_NETWORK_IP = 10.1.0.6
+  ADMIN_NETWORK_IP = 10.3.0.6
+
+  ADMIN_IP = 10.1.0.2
+----
+以下附加设置对于非主管理节点是可选的：
+
+* * 磁盘 * ：默认情况下，会为管理节点另外分配两个 200 GB 的硬盘，以供审核和数据库使用。您可以使用 disk 参数增加这些设置。例如：
++
+[listing]
+----
+DISK = INSTANCES=2, CAPACITY=300
+----
+
+
+
+NOTE: 对于管理节点，实例必须始终等于 2 。
+
+.相关信息
+link:how-grid-nodes-discover-primary-admin-node.html["网格节点如何发现主管理节点"]
+
+link:../network/index.html["网络连接准则"]

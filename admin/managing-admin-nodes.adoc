@@ -1,0 +1,23 @@
+---
+permalink: admin/managing-admin-nodes.html 
+sidebar: sidebar 
+keywords:  
+summary: StorageGRID 部署中的每个站点都可以有一个或多个管理节点。 
+---
+= 管理管理节点
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+StorageGRID 部署中的每个站点都可以有一个或多个管理节点。
+
+* link:what-admin-node-is.html["什么是管理节点"]
+* link:using-multiple-admin-nodes.html["使用多个管理节点"]
+* link:identifying-primary-admin-node.html["确定主管理节点"]
+* link:selecting-preferred-sender.html["选择首选发件人"]
+* link:viewing-notification-status-and-queues.html["查看通知状态和队列"]
+* link:how-admin-nodes-show-acknowledged-alarms.html["管理节点如何显示已确认的警报（旧系统）"]
+* link:configuring-audit-client-access.html["配置审核客户端访问"]
+

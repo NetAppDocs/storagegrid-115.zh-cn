@@ -1,0 +1,24 @@
+---
+permalink: maintain/recovering-from-gateway-node-failures.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, gateway node failure 
+summary:  
+---
+= 从网关节点故障中恢复
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要从网关节点故障中恢复，您必须按确切顺序完成一系列任务。
+
+image::../media/overview_api_gateway_node_recovery.png[网关节点恢复概述流程图]
+
+.相关信息
+link:../sg100-1000/index.html["SG100和AMP；SG1000服务设备"]
+
+.步骤
+* link:replacing-gateway-node.html["更换网关节点"]
+* link:selecting-start-recovery-to-configure-gateway-node.html["选择启动恢复以配置网关节点"]
+

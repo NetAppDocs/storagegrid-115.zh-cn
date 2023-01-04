@@ -1,0 +1,39 @@
+---
+permalink: sg6000/maintaining-sg6000-appliance.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, maintain, maintaining, hardware, procedures, tasks 
+summary: 您可能需要对 SG6000 设备执行维护过程。本节中的过程假定设备已部署为 StorageGRID 系统中的存储节点。 
+---
+= 维护SG6000设备
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可能需要对 SG6000 设备执行维护过程。本节中的过程假定设备已部署为 StorageGRID 系统中的存储节点。
+
+.步骤
+* link:placing-appliance-into-maintenance-mode.html["将设备置于维护模式"]
+* link:upgrading-santricity-os-on-storage-controllers.html["升级存储控制器上的SANtricity 操作系统"]
+* link:upgrading-drive-firmware-using-santricity-system-manager.html["使用SANtricity 系统管理器升级驱动器固件"]
+* link:adding-expansion-shelf-to-deployed-sg6060.html["向已部署的SG6060添加扩展架"]
+* link:turning-controller-identify-led-on-and-off.html["打开和关闭控制器标识LED"]
+* link:locating-controller-in-data-center.html["在数据中心中查找控制器"]
+* link:replacing-storage-controller-sg6000.html["更换存储控制器"]
+* link:replacing-hardware-components-in-storage-controller-shelf.html["更换存储控制器架中的硬件组件"]
+* link:replacing-hardware-components-in-optional-60-drive-expansion-shelf.html["更换可选60驱动器扩展架中的硬件组件"]
+* link:shutting-down-sg6000-cn-controller.html["关闭SG6000-CN控制器"]
+* link:powering-on-sg6000-cn-controller-and-verifying-operation.html["打开SG6000-CN控制器的电源并验证操作"]
+* link:replacing-sg6000-cn-controller.html["更换SG6000-CN控制器"]
+* link:replacing-power-supply-in-sg6000-cn-controller.html["更换SG6000-CN控制器中的电源"]
+* link:removing-sg6000-cn-controller-from-cabinet-or-rack.html["从机柜或机架中删除SG6000-CN控制器"]
+* link:reinstalling-sg6000-cn-controller-into-cabinet-or-rack.html["将SG6000-CN控制器重新安装到机柜或机架中"]
+* link:removing-sg6000-cn-controller-cover.html["卸下SG6000-CN控制器盖板"]
+* link:reinstalling-sg6000-cn-controller-cover.html["重新安装SG6000-CN控制器盖板"]
+* link:replacing-fibre-channel-hba-in-sg6000-cn-controller.html["更换SG6000-CN控制器中的光纤通道HBA"]
+* link:changing-link-configuration-of-sg6000-cn-controller.html["更改SG6000-CN控制器的链路配置"]
+* link:changing-mtu-setting.html["更改MTU设置"]
+* link:checking-dns-server-configuration.html["正在检查DNS服务器配置"]
+* link:monitoring-node-encryption-in-maintenance-mode.html["在维护模式下监控节点加密"]
+

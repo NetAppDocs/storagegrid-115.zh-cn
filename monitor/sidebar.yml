@@ -1,0 +1,181 @@
+---
+section: monitor
+title: 监控StorageGRID 系统
+url: "/monitor/index.html"
+entries:
+- title: 使用网格管理器进行监控
+  url: "/monitor/using-grid-manager-for-monitoring.html"
+  entries:
+  - title: Web 浏览器要求
+    url: "/monitor/web-browser-requirements.html"
+  - title: 查看信息板
+    url: "/monitor/viewing-dashboard.html"
+  - title: 查看节点页面
+    url: "/monitor/viewing-nodes-page.html"
+    entries:
+    - title: 查看概述选项卡
+      url: "/monitor/viewing-overview-tab.html"
+    - title: 查看硬件选项卡
+      url: "/monitor/viewing-hardware-tab.html"
+    - title: 查看网络选项卡
+      url: "/monitor/viewing-network-tab.html"
+    - title: 查看存储选项卡
+      url: "/monitor/viewing-storage-tab.html"
+    - title: 查看事件选项卡
+      url: "/monitor/viewing-events-tab.html"
+    - title: 使用任务选项卡重新启动网格节点
+      url: "/monitor/using-task-tab-to-reboot-grid-node.html"
+    - title: 查看对象选项卡
+      url: "/monitor/viewing-objects-tab.html"
+    - title: 查看ILM选项卡
+      url: "/monitor/viewing-ilm-tab.html"
+    - title: 查看负载平衡器选项卡
+      url: "/monitor/viewing-load-balancer-tab.html"
+    - title: 查看平台服务选项卡
+      url: "/monitor/viewing-platform-services-tab.html"
+    - title: 查看有关设备存储节点的信息
+      url: "/monitor/viewing-information-about-appliance-storage-nodes.html"
+    - title: 查看SANtricity 系统管理器选项卡
+      url: "/monitor/viewing-santricity-system-manager-tab.html"
+    - title: 查看有关设备管理节点和网关节点的信息
+      url: "/monitor/viewing-information-about-appliance-admin-nodes-and-gateway-nodes.html"
+- title: 您应定期监控的信息
+  url: "/monitor/information-you-should-monitor-regularly.html"
+  entries:
+  - title: 监控系统运行状况
+    url: "/monitor/monitoring-system-health.html"
+    entries:
+    - title: 监控节点连接状态
+      url: "/monitor/monitoring-node-connection-states.html"
+    - title: 查看当前警报
+      url: "/monitor/viewing-current-alerts.html"
+    - title: 查看已解决的警报
+      url: "/monitor/viewing-resolved-alerts.html"
+    - title: 查看特定警报
+      url: "/monitor/viewing-specific-alert.html"
+    - title: 查看旧警报
+      url: "/monitor/viewing-legacy-alarms.html"
+  - title: 监控存储容量
+    url: "/monitor/monitoring-storage-capacity.html"
+    entries:
+    - title: 监控整个网格的存储容量
+      url: "/monitor/monitoring-storage-capacity-for-entire-grid.html"
+    - title: 监控每个存储节点的存储容量
+      url: "/monitor/monitoring-storage-capacity-for-each-storage-node.html"
+    - title: 监控每个存储节点的对象元数据容量
+      url: "/monitor/monitoring-object-metadata-capacity-for-each-storage-node.html"
+  - title: 监控信息生命周期管理
+    url: "/monitor/monitoring-information-lifecycle-management.html"
+  - title: 监控性能、网络和系统资源
+    url: "/monitor/monitoring-performance-networking-and-system-resources.html"
+    entries:
+    - title: 监控查询延迟
+      url: "/monitor/monitoring-query-latency.html"
+    - title: 监控网络连接和性能
+      url: "/monitor/monitoring-network-connections-and-performance.html"
+    - title: 监控节点级资源
+      url: "/monitor/monitoring-node-level-resources.html"
+  - title: 监控租户活动
+    url: "/monitor/monitoring-tenant-activity.html"
+  - title: 监控归档容量
+    url: "/monitor/monitoring-archival-capacity.html"
+  - title: 监控负载平衡操作
+    url: "/monitor/monitoring-load-balancing-operations.html"
+  - title: 如有必要、应用修补程序或升级软件
+    url: "/monitor/applying-hotfixes-or-upgrading-software-if-necessary.html"
+- title: 管理警报和警报
+  url: "/monitor/managing-alerts-and-alarms.html"
+  entries:
+  - title: 比较警报和警报
+    url: "/monitor/comparing-alerts-and-alarms.html"
+  - title: 管理警报
+    url: "/monitor/managing-alerts.html"
+  - title: 管理警报(旧系统)
+    url: "/monitor/managing-alarms.html"
+- title: 使用SNMP监控
+  url: "/monitor/using-snmp-monitoring.html"
+  entries:
+  - title: 配置SNMP代理
+    url: "/monitor/configuring-snmp-agent.html"
+  - title: 正在更新SNMP代理
+    url: "/monitor/updating-snmp-agent.html"
+- title: 收集其他StorageGRID 数据
+  url: "/monitor/collecting-additional-storagegrid-data.html"
+  entries:
+  - title: 使用图表和报告
+    url: "/monitor/using-charts-and-reports.html"
+    entries:
+    - title: 图表和图形的类型
+      url: "/monitor/types-of-charts-and-graphs.html"
+      entries:
+      - title: 图表图例
+        url: "/monitor/chart-legend.html"
+    - title: 显示图表和图形
+      url: "/monitor/displaying-charts-and-graphs.html"
+    - title: 生成图表
+      url: "/monitor/generating-charts.html"
+    - title: 文本报告的类型
+      url: "/monitor/types-of-text-reports.html"
+    - title: 正在生成文本报告
+      url: "/monitor/generating-text-reports.html"
+    - title: 导出文本报告
+      url: "/monitor/exporting-text-reports.html"
+  - title: 监控PUT和GET性能
+    url: "/monitor/monitoring-put-and-get-performance.html"
+  - title: 监控对象验证操作
+    url: "/monitor/monitoring-object-verification-operations.html"
+  - title: 监控事件
+    url: "/monitor/monitoring-events.html"
+    entries:
+    - title: 查看以前的事件
+      url: "/monitor/reviewing-previous-events.html"
+    - title: 正在重置事件计数
+      url: "/monitor/resetting-event-counts.html"
+    - title: 创建自定义系统日志事件
+      url: "/monitor/creating-custom-syslog-events.html"
+    - title: 将自定义事件计数重置为零
+      url: "/monitor/resetting-count-of-custom-events-to-zero.html"
+  - title: 查看审核消息
+    url: "/monitor/reviewing-audit-messages.html"
+  - title: 收集日志文件和系统数据
+    url: "/monitor/collecting-log-files-and-system-data.html"
+  - title: 手动触发AutoSupport 消息
+    url: "/monitor/manually-triggering-autosupport-message.html"
+  - title: 查看网格拓扑树
+    url: "/monitor/viewing-grid-topology-tree.html"
+  - title: 查看支持指标
+    url: "/monitor/reviewing-support-metrics.html"
+  - title: 运行诊断
+    url: "/monitor/running-diagnostics.html"
+  - title: 创建自定义监控应用程序
+    url: "/monitor/creating-custom-monitoring-applications.html"
+- title: 警报参考
+  url: "/monitor/alerts-reference.html"
+  entries:
+  - title: 常用的 Prometheus 指标
+    url: "/monitor/commonly-used-prometheus-metrics.html"
+- title: 警报参考（旧系统）
+  url: "/monitor/alarms-reference.html"
+  entries:
+  - title: 生成 SNMP 通知的警报（旧系统）
+    url: "/monitor/alarms-that-generate-snmp-notifications.html"
+- title: 日志文件参考
+  url: "/monitor/logs-files-reference.html"
+  entries:
+  - title: StorageGRID 软件日志
+    url: "/monitor/storagegrid-software-logs.html"
+  - title: 部署和维护日志
+    url: "/monitor/deployment-and-maintenance-logs.html"
+  - title: 第三方软件的日志
+    url: "/monitor/logs-for-third-party-software.html"
+  - title: 关于 bycast.log
+    url: "/monitor/about-bycast-log.html"
+    entries:
+    - title: bycast.log 的文件轮换
+      url: "/monitor/file-rotation-for-bycast-log.html"
+    - title: bycast.log 中的消息
+      url: "/monitor/messages-in-bycast-log.html"
+    - title: bycast.log 中的消息严重性
+      url: "/monitor/message-severities-in-bycast-log.html"
+    - title: bycast.log 中的错误代码
+      url: "/monitor/error-codes-in-bycast-log.html"

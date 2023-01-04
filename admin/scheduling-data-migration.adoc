@@ -1,0 +1,19 @@
+---
+permalink: admin/scheduling-data-migration.html 
+sidebar: sidebar 
+keywords:  
+summary: 避免在核心运行时间迁移数据。将数据迁移限制为晚上，周末以及系统使用率较低的其他时间。 
+---
+= 计划数据迁移
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+避免在核心运行时间迁移数据。将数据迁移限制为晚上，周末以及系统使用率较低的其他时间。
+
+如果可能，请勿在活动频繁期间计划数据迁移。但是，如果完全避免高活动期限不可行，只要您密切监控相关属性并在其超过可接受值时采取措施，就可以安全地继续操作。
+
+.相关信息
+link:monitoring-data-migration.html["监控数据迁移"]
