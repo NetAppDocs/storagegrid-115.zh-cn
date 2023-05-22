@@ -25,7 +25,7 @@ StorageGRID 负载平衡器服务安装在所有管理节点和所有网关节�
 
 虽然建议使用 StorageGRID 负载平衡器服务来平衡负载，但您可能希望集成第三方负载平衡器。有关信息、请联系您的NetApp客户代表或参阅以下技术报告：
 
-https://www.netapp.com/pdf.html?item=/media/17068-tr4626pdf.pdf["StorageGRID 负载平衡器选项"^]
+https://["StorageGRID 负载平衡器选项"^]
 
 
 NOTE: 网关节点上的单独连接负载平衡器（ CLB ）服务已弃用，不再建议用于 FabricPool 。

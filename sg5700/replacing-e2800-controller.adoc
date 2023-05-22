@@ -219,4 +219,4 @@ image::../media/node_rejoin_grid_confirmation.png[设备节点已重新加入网
 
 
 .相关信息
-http://mysupport.netapp.com/info/web/ECMP1658252.html["NetApp E 系列系统文档站点"^]
+http://["NetApp E 系列系统文档站点"^]

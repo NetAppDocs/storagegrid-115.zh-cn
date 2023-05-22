@@ -81,7 +81,7 @@ link:../rhel/index.html["安装 Red Hat Enterprise Linux 或 CentOS"]
 
 link:../ubuntu/index.html["安装 Ubuntu 或 Debian"]
 
-https://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]
+https://["NetApp 互操作性表工具"^]
 
 
 
@@ -146,7 +146,7 @@ Mozilla Firefox
 .步骤
 . 转到 StorageGRID 的 "NetApp 下载 " 页面。
 +
-https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["NetApp 下载： StorageGRID"^]
+https://["NetApp 下载： StorageGRID"^]
 
 . 选择网格上当前运行的 StorageGRID 版本。
 . 使用您的 NetApp 帐户的用户名和密码登录。
@@ -435,6 +435,6 @@ NOTE: 对于设备安装，只有在需要避免网络流量时，才需要这�
 
 * 相关信息 *
 
-https://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]
+https://["NetApp 互操作性表工具"^]
 
 link:updating-subnets-for-grid-network.html["更新网格网络的子网"]

@@ -31,8 +31,8 @@ image::../media/fabricpool_storagegrid_workflow.png[FabricPool StorageGRID 工�
 
 
 .相关信息
-* https://www.netapp.com/pdf.html?item=/media/17239-tr4598pdf.pdf["TR-4598：《适用于ONTAP 9.8的FabricPool 最佳实践》"^]
-* https://docs.netapp.com/ontap-9/index.jsp["ONTAP 9 文档中心"^]
+* https://["TR-4598：《适用于ONTAP 9.8的FabricPool 最佳实践》"^]
+* https://["ONTAP 9 文档中心"^]
 
 
 

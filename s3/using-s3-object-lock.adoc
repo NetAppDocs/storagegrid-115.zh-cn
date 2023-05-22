@@ -112,4 +112,4 @@ link:s3-rest-api-supported-operations-and-limitations.html["启动多部件上�
 
 link:object-versioning.html["对象版本控制"]
 
-https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html["《 Amazon Simple Storage Service 用户指南：使用 S3 对象锁定》"]
+https://["《 Amazon Simple Storage Service 用户指南：使用 S3 对象锁定》"]

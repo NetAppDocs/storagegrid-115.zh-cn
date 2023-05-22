@@ -60,7 +60,7 @@ StorageGRID 安装归档
  a| 
 有关您的平台当前支持的版本、请参见互操作性表工具。
 
-https://mysupport.netapp.com/matrix["NetApp 互操作性表工具"]
+https://["NetApp 互操作性表工具"]
 
 请访问平台供应商的网站以获取相关文档。
 

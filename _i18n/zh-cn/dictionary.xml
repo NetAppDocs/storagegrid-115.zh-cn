@@ -15790,15 +15790,6 @@
   <block id="2deeb489a63b04469632723af129a506" category="list-text">选择*归档节点** ARC/*目标*。</block>
   <block id="5aaeae5a095dc902a0b53a55016cd615" category="list-text">输入不正确的值以编辑 * 访问密钥 * 字段，然后单击 * 应用更改 * 。</block>
   <block id="1fa9f3c478375edcafb8c203b3615730" category="list-text">输入正确的值以编辑 * 访问密钥 * 字段，然后单击 * 应用更改 * 。</block>
-  <block id="120685f9fde6bfeda84539091205a2b9" category="summary">您可以在此处找到先前版本的 NetApp StorageGRID 软件的文档。</block>
-  <block id="942e673061194a11d436576b39bdde22" category="doc">早期版本的 NetApp StorageGRID 文档</block>
-  <block id="bef0de3b189bdc7cef433adb2af474c1" category="paragraph">有关早期版本的 NetApp StorageGRID 软件的文档，请参见：</block>
-  <block id="50c142f8f9e19c4c84cb06dbc431b229" category="inline-link">StorageGRID 11.4 文档中心</block>
-  <block id="71be9d9e0df7c2f5699834ae68011996" category="list-text"><block ref="71be9d9e0df7c2f5699834ae68011996" category="inline-link-rx"></block></block>
-  <block id="bab03a68f7e57fdecf1481852ac62d80" category="inline-link">StorageGRID 11.3 文档中心</block>
-  <block id="d2ca6fb14c69e8ac834f4f43b0f0e9d8" category="list-text"><block ref="d2ca6fb14c69e8ac834f4f43b0f0e9d8" category="inline-link-rx"></block></block>
-  <block id="e58d2e166dc215d59ad9458a7cef9dc8" category="inline-link">StorageGRID 11.2 文档中心</block>
-  <block id="dac584c7df1389d2899102bbaee99832" category="list-text"><block ref="dac584c7df1389d2899102bbaee99832" category="inline-link-rx"></block></block>
   <block id="1d5cc12c9ae98d2776e8267f5da35d2d" category="summary">根据您使用的部署平台、您可能还需要考虑StorageGRID 网络设计的其他注意事项。</block>
   <block id="7488d5949bc586f34652e420a80f7049" category="doc">部署特定的网络注意事项</block>
   <block id="83c6e1d4bce423081b8224825aad6fa4" category="paragraph">网格节点可部署为：</block>
@@ -23219,7 +23210,6 @@
   <block id="9c51b1457c3cb82285d70cf1703e6509" category="sidebar">使用 StorageGRID</block>
   <block id="c92fd6dfa1ebcbb5ce13cfab3f7b0905" category="sidebar">监控和故障排除</block>
   <block id="ade01a5a398372194a42c36e9f5279ac" category="sidebar">维护</block>
-  <block id="93168a8084b3e838d2932c4734bd234e" category="sidebar">早期版本</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
   <block id="4a4dbf02e8eff8088b2776662f9d29f0" category="sidebar">了解StorageGRID</block>
   <block id="01064f33f360eefba819bf9542c0486b" category="sidebar">安装维护硬件</block>
@@ -23259,4 +23249,16 @@
   <block id="d4a4412fd4130eef9caedf4616926255" category="sidebar">删除其他用户的S3访问密钥</block>
   <block id="3cd0c734fa2c2ae0814d57215c59f108" category="paragraph">对于FabricPool 存储分段、建议的存储分段一致性级别为*读取-后-新-写入*、这是新存储分段的默认设置。请勿将FabricPool 分段编辑为使用*可用*或任何其他一致性级别。</block>
   <block id="392d70ca39f31f10bd637936769788df" category="sidebar">StorageGRID</block>
+  <block id="59f62d8c25c967d6150f417081c13d1b" category="summary">您可以在此处找到有关其他版本的NetApp StorageGRID 软件的文档。</block>
+  <block id="d6802b050b61628b78b01c33ead6fac3" category="doc">其他版本的NetApp StorageGRID 文档</block>
+  <block id="d3de02aea811f82ea0ecb014267c4fbc" category="paragraph">您可以在此处找到其他版本的NetApp StorageGRID 软件的文档：</block>
+  <block id="444a66aeef372672e744a05782bffa7c" category="inline-link">StorageGRID 11.7文档</block>
+  <block id="a6b4363f6225727f0507281f9ae58717" category="list-text"><block ref="a6b4363f6225727f0507281f9ae58717" category="inline-link-rx"></block></block>
+  <block id="b6a6856979f644f23831092a77a579ae" category="inline-link">StorageGRID 11.6文档</block>
+  <block id="ebe15b7f3ab23a21b80c2db319837831" category="list-text"><block ref="ebe15b7f3ab23a21b80c2db319837831" category="inline-link-rx"></block></block>
+  <block id="dd9ba676dbf0e9d7d595d21258163985" category="list-text"><block ref="dd9ba676dbf0e9d7d595d21258163985" category="inline-link-rx"></block></block>
+  <block id="a9e85aff22748bbecd5336319ff19ce0" category="list-text"><block ref="a9e85aff22748bbecd5336319ff19ce0" category="inline-link-rx"></block></block>
+  <block id="6944c8247f8c38ca693211d8bafb8a4e" category="inline-link">StorageGRID 11.2 文档</block>
+  <block id="7fae4d8b4d691adb60b2007a41b25eec" category="list-text"><block ref="7fae4d8b4d691adb60b2007a41b25eec" category="inline-link-rx"></block></block>
+  <block id="8ba7e9fc95ff683b40e7c59130ea44da" category="sidebar">其他版本</block>
 </blocks>

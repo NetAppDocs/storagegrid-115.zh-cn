@@ -29,4 +29,4 @@ summary: 您可以使用网格管理 REST API 执行系统管理任务，而不�
 .相关信息
 link:../tenant/index.html["使用租户帐户"]
 
-https://prometheus.io/docs/querying/basics/["Prometheus：查询基础知识"^]
+https://["Prometheus：查询基础知识"^]

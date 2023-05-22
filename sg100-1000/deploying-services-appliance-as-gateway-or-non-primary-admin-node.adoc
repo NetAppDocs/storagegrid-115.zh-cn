@@ -94,7 +94,7 @@ NOTE: 如果您需要一次部署多个设备节点、则可以使用自动执�
 +
 .. 从 StorageGRID 的 "NetApp 下载 " 页面下载安装归档。
 +
-https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["NetApp 下载： StorageGRID"^]
+https://["NetApp 下载： StorageGRID"^]
 
 .. 提取归档。
 .. 从 StorageGRID 设备安装程序中，选择 * 高级 * > * 上传 StorageGRID 软件 * 。

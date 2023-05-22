@@ -39,7 +39,7 @@ IMPORTANT: 如果您使用的是早期版本的StorageGRID 、则必须先升级
 
 . 访问StorageGRID 11.4后、转到StorageGRID 的"NetApp下载"页面、查看是否有适用于您的StorageGRID 11.4_x_版本的修补程序。
 +
-https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["NetApp 下载： StorageGRID"^]
+https://["NetApp 下载： StorageGRID"^]
 
 . 验证您的StorageGRID 11.4_x_版本是否已应用最新的修补程序。
 . 如有必要、请下载并应用适用于您的StorageGRID 11.4._x_版本的最新StorageGRID 11.4._x.y_修补程序。

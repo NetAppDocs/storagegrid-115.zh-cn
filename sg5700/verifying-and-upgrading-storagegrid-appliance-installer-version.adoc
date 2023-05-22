@@ -29,7 +29,7 @@ StorageGRID 设备出厂时预安装了 StorageGRID 设备安装程序。如果�
 
 . 如果设备安装了 StorageGRID 设备安装程序的低级版本，请转到 StorageGRID 的 "NetApp 下载 " 页面。
 +
-https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["NetApp 下载： StorageGRID"^]
+https://["NetApp 下载： StorageGRID"^]
 
 +
 使用您的 NetApp 帐户的用户名和密码登录。
