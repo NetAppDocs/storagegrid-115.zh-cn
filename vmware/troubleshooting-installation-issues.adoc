@@ -32,4 +32,4 @@ link:../sg5700/index.html["SG5700 存储设备"]
 
 link:../sg5600/index.html["SG5600 存储设备"]
 
-https://["NetApp 支持"^]
+https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"^]

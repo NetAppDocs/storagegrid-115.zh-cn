@@ -44,4 +44,4 @@ NOTE: 您可以使用 SANtricity 系统管理器链接在新浏览器窗口中�
 
 要查看存储阵列级别性能和容量使用情况的详细信息，请将光标悬停在每个图形上。
 
-有关查看可从SANtricity 系统管理器选项卡访问的信息的详细信息、请参见中的信息 http://["NetApp E系列系统文档中心"]
+有关查看可从SANtricity 系统管理器选项卡访问的信息的详细信息、请参见中的信息 http://mysupport.netapp.com/info/web/ECMP1658252.html["NetApp E系列系统文档中心"]

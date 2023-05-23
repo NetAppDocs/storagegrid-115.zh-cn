@@ -27,7 +27,7 @@ IMPORTANT: 受限网格管理器或租户管理器端口上不提供单点登录
 ** AD FS 4.0、随Windows Server 2016提供
 +
 
-NOTE: Windows Server 2016 应使用 https://["KB3201845 更新"^]或更高版本。
+NOTE: Windows Server 2016 应使用 https://support.microsoft.com/en-us/help/3201845/cumulative-update-for-windows-10-version-1607-and-windows-server-2016["KB3201845 更新"^]或更高版本。
 
 ** AD FS 3.0 ，随 Windows Server 2012 R2 更新或更高版本提供。
 

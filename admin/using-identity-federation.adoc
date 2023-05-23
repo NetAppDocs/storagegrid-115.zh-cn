@@ -171,7 +171,7 @@ link:../tenant/index.html["使用租户帐户"]
 请参见OpenLDAP管理员指南中有关反向组成员资格维护的信息。
 
 .相关信息
-http://["OpenLDAP 文档：版本 2.4 管理员指南"^]
+http://www.openldap.org/doc/admin24/index.html["OpenLDAP 文档：版本 2.4 管理员指南"^]
 
 
 

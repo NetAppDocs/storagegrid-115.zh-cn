@@ -118,7 +118,7 @@ image::../media/software_upgrade_done.png[软件升级已完成]
 
 . 查看StorageGRID 的"NetApp下载"页面、了解是否为您刚刚安装的StorageGRID 版本提供了任何修补程序。
 +
-https://["NetApp 下载： StorageGRID"^]
+https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["NetApp 下载： StorageGRID"^]
 
 +
 在 StorageGRID 11.5. _x.y_ 版本号中：

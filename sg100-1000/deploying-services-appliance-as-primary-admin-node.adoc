@@ -51,7 +51,7 @@ NOTE: CLB 服务已弃用。
 +
 .. 从 StorageGRID 的 "NetApp 下载 " 页面下载安装归档。
 +
-https://["NetApp 下载： StorageGRID"^]
+https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["NetApp 下载： StorageGRID"^]
 
 .. 提取归档。
 .. 从 StorageGRID 设备安装程序中，选择 * 高级 * > * 上传 StorageGRID 软件 * 。

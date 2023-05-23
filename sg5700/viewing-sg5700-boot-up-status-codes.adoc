@@ -82,4 +82,4 @@ link:status-indicators-on-e5700sg-controller.html["E5700SG 控制器上的状态
 
 link:troubleshooting-hardware-installation.html["对硬件安装进行故障排除"]
 
-https://["《 E5700 和 E2800 系统监控指南》"^]
+https://library.netapp.com/ecmdocs/ECMLP2588751/html/frameset.html["《 E5700 和 E2800 系统监控指南》"^]

@@ -15,7 +15,7 @@ summary: 对于每个 S3 租户帐户， StorageGRID 系统最多支持 1 ， 00
 
 存储分段名称限制遵循 AWS US 标准区域限制，但您应进一步将其限制为 DNS 命名约定，以便支持 S3 虚拟托管模式请求。
 
-https://["Amazon Web Services （ AWS ）文档：存储分段限制"]
+https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html["Amazon Web Services （ AWS ）文档：存储分段限制"]
 
 link:configuring-tenant-accounts-and-connections.html["S3请求的端点域名"]
 
@@ -342,7 +342,7 @@ PUT 存储分版本
 
 |===
 .相关信息
-http://["Amazon Web Services (AWS)文档：跨区域复制"]
+http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html["Amazon Web Services (AWS)文档：跨区域复制"]
 
 link:consistency-controls.html["一致性控制"]
 
@@ -366,7 +366,7 @@ link:../tenant/index.html["使用租户帐户"]
 
 本节中的简单示例说明了 S3 生命周期配置如何控制从特定 S3 存储分段中删除（过期）某些对象的时间。本节中的示例仅供说明。有关创建S3生命周期配置的完整详细信息、请参见_Amazon Simple Storage Service开发人员指南_中有关对象生命周期管理的章节。请注意， StorageGRID 仅支持到期操作，不支持过渡操作。
 
-https://["《 Amazon Simple Storage Service 开发人员指南：对象生命周期管理》"]
+https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html["《 Amazon Simple Storage Service 开发人员指南：对象生命周期管理》"]
 
 
 

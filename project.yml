@@ -20,7 +20,7 @@ settings:
   - name: StorageGRID
     url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61023&archive=true
     version-number: '11.3'
-  langs: zh-cn,us-en,ja-jp,ko-kr,zh-tw,de-de,es-es,fr-fr
+  langs: zh-cn,us-en,ja-jp,ko-kr,zh-tw,de-de,es-es,fr-fr,it-it
 sidebar:
   entries:
   - title: StorageGRID 11.5文档

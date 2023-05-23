@@ -268,7 +268,7 @@ link:configuring-security-for-rest-api.html["为REST API配置安全性"]
 您可以使用 Amazon Web Services 命令行界面（ AWS 命令行界面）测试与系统的连接，并验证是否可以向系统读取和写入对象。
 
 .您需要的内容
-* 您必须已从下载并安装AWS命令行界面 https://["aws.amazon.com/cli"]。
+* 您必须已从下载并安装AWS命令行界面 https://aws.amazon.com/cli["aws.amazon.com/cli"]。
 * 您必须已在StorageGRID 系统中创建S3租户帐户。
 
 

@@ -223,7 +223,7 @@ link:../admin/index.html["管理 StorageGRID"]
 
 link:commonly-used-prometheus-metrics.html["常用的 Prometheus 指标"]
 
-https://["Prometheus：查询基础知识"]
+https://prometheus.io/docs/querying/basics/["Prometheus：查询基础知识"]
 
 
 
@@ -352,7 +352,7 @@ link:../admin/index.html["管理 StorageGRID"]
 
 link:commonly-used-prometheus-metrics.html["常用的 Prometheus 指标"]
 
-https://["Prometheus：查询基础知识"]
+https://prometheus.io/docs/querying/basics/["Prometheus：查询基础知识"]
 
 
 

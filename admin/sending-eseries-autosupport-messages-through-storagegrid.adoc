@@ -34,7 +34,7 @@ link:configuring-admin-proxy-settings.html["配置管理员代理设置"]
 ====
 此操作步骤 仅用于为 E 系列 AutoSupport 消息配置 StorageGRID 代理服务器。有关E系列AutoSupport 配置信息的更多详细信息、请参见E系列文档中心。
 
-http://["NetApp E系列系统文档中心"^]
+http://mysupport.netapp.com/info/web/ECMP1658252.html["NetApp E系列系统文档中心"^]
 
 ====
 .步骤

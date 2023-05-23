@@ -42,7 +42,7 @@ StorageGRID 11.5中的S3对象锁定功能取代了先前StorageGRID 版本中�
 
 在租户管理器中、显示一个屏蔽图标 image:../media/icon_shield.png["屏蔽图标"] 表示旧版合规存储分段。旧版合规存储分段可能还具有保留标志 image:../media/hold_badge.png["持有证卡"] 表示存储分段处于合法保留状态。
 
-https://["知识库文章：How to manage legacy Compliant bac桶in StorageGRID 11.5"^]
+https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/StorageGRID/How_to_manage_legacy_Compliant_buckets_in_StorageGRID_11.5["知识库文章：How to manage legacy Compliant bac桶in StorageGRID 11.5"^]
 
 link:../ilm/index.html["使用 ILM 管理对象"]
 

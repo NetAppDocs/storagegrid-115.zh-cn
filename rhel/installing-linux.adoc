@@ -36,4 +36,4 @@ IMPORTANT: 如果未完全禁用交换，则会严重降低性能。
 
 
 .相关信息
-https://["NetApp 互操作性表工具"^]
+https://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]

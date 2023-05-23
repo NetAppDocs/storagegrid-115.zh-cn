@@ -33,7 +33,7 @@ link:creating-ilm-policy.html["创建ILM策略"]
 ====
 如果您使用先前版本的StorageGRID 启用了全局合规性设置、则在升级到StorageGRID 11.5版时、新的S3对象锁定设置将自动启用。您可以继续使用StorageGRID 管理现有合规存储分段的设置；但是、您无法再创建新的合规存储分段。
 
-https://["NetApp 知识库：如何在 StorageGRID 11.5 中管理原有的合规存储分段"^]
+https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/StorageGRID/How_to_manage_legacy_Compliant_buckets_in_StorageGRID_11.5["NetApp 知识库：如何在 StorageGRID 11.5 中管理原有的合规存储分段"^]
 
 ====
 .步骤
