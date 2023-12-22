@@ -23,7 +23,7 @@ image::../media/kms_step_2_upload_server_certificate.png[Kms 步骤 2 上传服�
 此时将显示服务器证书元数据。
 
 +
-image::../media/kms_step_2_server_certificate_metadata.png[kms 步骤 2 服务器证书元数据]
+image::../media/kms_step_2_server_certificate_metadata.png[服务器证书元数据]
 
 +
 

@@ -18,7 +18,7 @@ NOTE: 如果在系统范围内禁止发送电子邮件通知，则会禁止显�
 
 如果 AutoSupport 消息无法发送，则 "`failed` " 将显示在 * AutoSupport * 页面的 * 结果 * 选项卡上。
 
-image::../media/autosupport_results_tab.png[AutoSupport Results 选项卡]
+image::../media/autosupport_results_tab.png[AutoSupport结果选项卡]
 
 
 

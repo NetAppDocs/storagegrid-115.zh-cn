@@ -44,7 +44,7 @@ AutoSupport 消息包含如下信息：
 
 image::../media/autosupport_disabled_message.png[AutoSupport 已禁用消息]
 
-您可以选择"`x`"符号 image:../media/autosupport_close_message.png[""] 以关闭消息。清除浏览器缓存后、即使AutoSupport 仍处于禁用状态、此消息也不会再次显示。
+您可以选择"`x`"符号 image:../media/autosupport_close_message.png["X符号"] 以关闭消息。清除浏览器缓存后、即使AutoSupport 仍处于禁用状态、此消息也不会再次显示。
 
 
 

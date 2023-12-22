@@ -21,7 +21,7 @@ StorageGRID 管理网络是一个可选网络，用于系统管理和维护。�
 
 * SG100 RJ-45 端口 *
 
-image::../media/sg100_rj_45_ports_circled.png[圈出的 sg100 RJ 45 端口]
+image::../media/sg100_rj_45_ports_circled.png[SG100 RJ-45端口]
 
 * SG1000 RJ-45 端口 *
 

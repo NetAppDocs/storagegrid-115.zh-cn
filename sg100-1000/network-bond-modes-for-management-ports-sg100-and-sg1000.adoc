@@ -15,7 +15,7 @@ summary: 对于服务设备上的两个 1-GbE 管理端口，您可以选择独�
 
 * SG100 网络管理端口 *
 
-image::../media/sg100_bonded_management_ports.png[sg100 绑定管理端口]
+image::../media/sg100_bonded_management_ports.png[SG100绑定管理端口]
 
 * SG1000 网络管理端口 *
 

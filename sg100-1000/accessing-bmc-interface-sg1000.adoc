@@ -20,7 +20,7 @@ summary: 您可以使用 BMC 管理端口的 DHCP 或静态 IP 地址访问服�
 * SG100 BMC 管理端口 *
 
 +
-image::../media/sg100_bmc_management_port.png[sg100 bmc 管理端口]
+image::../media/sg100_bmc_management_port.png[SG100 管理端口]
 
 +
 * SG1000 BMC 管理端口 *

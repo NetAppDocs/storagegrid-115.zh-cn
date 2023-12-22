@@ -55,7 +55,7 @@ image::../media/dds_object_counts_queries.png[DDS 概述页面]
 
 您还可以查看因一致性失败而失败的查询总数。通过特定 DDS 服务执行查询时，可用元数据存储数量不足，导致一致性级别失败。
 
-您可以使用 " 诊断 " 页面获取网格当前状态的追加信息 。请参见 link:../monitor/running-diagnostics.html.html["运行诊断"]。
+您可以使用 " 诊断 " 页面获取网格当前状态的追加信息 。请参见 link:../monitor/running-diagnostics.html["运行诊断"]。
 
 
 
@@ -92,7 +92,7 @@ LDR 查询包括在检索和归档操作期间查询对象位置。您可以确�
 
 您还可以查看因一致性失败而失败的查询总数。通过特定 LDR 服务执行查询时，可用元数据存储数量不足会导致一致性级别失败。
 
-您可以使用 " 诊断 " 页面获取网格当前状态的追加信息 。请参见 link:../monitor/running-diagnostics.html.html["运行诊断"]。
+您可以使用 " 诊断 " 页面获取网格当前状态的追加信息 。请参见 link:../monitor/running-diagnostics.html["运行诊断"]。
 
 
 

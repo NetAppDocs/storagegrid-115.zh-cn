@@ -38,7 +38,7 @@ CAUTION: 将新配置密码短语存储在安全位置。安装，扩展和维�
 配置密码短语更改完成后，系统将显示一个绿色的成功横幅。此更改所需时间应少于一分钟。
 
 +
-image::../media/change_provisioning_passphrase_success.png[更改配置密码短语成功]
+image::../media/change_provisioning_passphrase_success.png[更改配置密码短语—成功消息]
 
 . 选择成功横幅中的*恢复软件包页面*链接。
 . 从网格管理器下载新的恢复软件包。选择*维护*>*恢复包*并输入新的配置密码短语。
