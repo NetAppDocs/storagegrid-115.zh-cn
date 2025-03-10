@@ -9366,7 +9366,6 @@
   <block id="d5db6ba99ab0efffe356662c3fc55f4c" category="list-text">如果您有扩展架，请重复上述步骤，在每个扩展架的每个抽盒中安装 12 个 HDD 驱动器。</block>
   <block id="9cdf68498d339fb0d7d4e4972e1695ce" category="list-text">按照说明将 SG6000-CN 安装到机柜或机架中。</block>
   <block id="a1224e8e1d42e54574d1b861a3df5f2f" category="summary">NetApp StorageGRID 是一款软件定义的对象存储套件，支持公有 ，私有云和混合多云环境中的各种用例。StorageGRID 利用自动化生命周期管理等行业领先的创新技术来存储，保护，保护和保留非结构化数据，以便在很长时间内用于多种用途。</block>
-  <block id="ef8ebd9c8e41512fe42c43b00a78fac2" category="doc">StorageGRID 11.5文档</block>
   <block id="d5943f975a4380ab4bd8610f307e4a30" category="summary">您可以执行各种维护过程来使 StorageGRID 系统保持最新并确保其高效运行。网格管理器提供了一些工具和选项，可帮助您加快执行维护任务的过程。</block>
   <block id="38d198e4547941fde8bc00b61922bfb6" category="doc">执行维护过程</block>
   <block id="5009e1070e5138d1308165bc75e5706b" category="section-title">软件更新</block>
@@ -23189,7 +23188,6 @@
   <block id="c66e97e084f90c6df43604b07596da39" category="list-text">选择 * 测试并保存更改 * 。</block>
   <block id="cd8685af15984f419c9889a200868531" category="list-text">如果可以使用指定凭据访问端点，则会显示一条成功消息。系统会从每个站点的一个节点验证与端点的连接。</block>
   <block id="bf60bec136bb49c62d80dd4d8abc430c" category="list-text">如果端点验证失败，则会显示一条错误消息。修改端点以更正错误，然后选择 * 测试并保存更改 * 。</block>
-  <block id="e1d816b4c3f1119c3e552028f44966b7" category="sidebar">StorageGRID 11.5文档</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">入门</block>
   <block id="aafdc9161d2cf7611b7ed428e4ce182f" category="sidebar">安装和升级软件</block>
   <block id="9a5c24e49275e19df4aa5c32fa6d9134" category="sidebar">安装和维护硬件</block>
@@ -23235,14 +23233,7 @@
   <block id="5b2a79adecc8d3cc03324c0ff8c3e657" category="sidebar">查看其他用户的S3访问密钥</block>
   <block id="d4a4412fd4130eef9caedf4616926255" category="sidebar">删除其他用户的S3访问密钥</block>
   <block id="3cd0c734fa2c2ae0814d57215c59f108" category="paragraph">对于FabricPool 存储分段、建议的存储分段一致性级别为*读取-后-新-写入*、这是新存储分段的默认设置。请勿将FabricPool 分段编辑为使用*可用*或任何其他一致性级别。</block>
-  <block id="59f62d8c25c967d6150f417081c13d1b" category="summary">您可以在此处找到有关其他版本的NetApp StorageGRID 软件的文档。</block>
-  <block id="d3de02aea811f82ea0ecb014267c4fbc" category="paragraph">您可以在此处找到其他版本的NetApp StorageGRID 软件的文档：</block>
-  <block id="444a66aeef372672e744a05782bffa7c" category="inline-link">StorageGRID 11.7文档</block>
-  <block id="a6b4363f6225727f0507281f9ae58717" category="list-text"><block ref="a6b4363f6225727f0507281f9ae58717" category="inline-link-rx"></block></block>
-  <block id="b6a6856979f644f23831092a77a579ae" category="inline-link">StorageGRID 11.6文档</block>
-  <block id="ebe15b7f3ab23a21b80c2db319837831" category="list-text"><block ref="ebe15b7f3ab23a21b80c2db319837831" category="inline-link-rx"></block></block>
   <block id="6944c8247f8c38ca693211d8bafb8a4e" category="inline-link">StorageGRID 11.2 文档</block>
-  <block id="8ba7e9fc95ff683b40e7c59130ea44da" category="sidebar">其他版本</block>
   <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
   <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
   <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
@@ -23260,15 +23251,7 @@
   <block id="c3c1dd6b244e3eeb3a7833fd2f0187e3" category="image-alt">更改配置密码短语—成功消息</block>
   <block id="b329ef070be82f9c48080334a904126b" category="paragraph">您可以使用 " 诊断 " 页面获取网格当前状态的追加信息 。请参见 <block ref="154af4ab34c8b59ed2ab34f505b93e37" category="inline-link-macro-rx"></block>。</block>
   <block id="df4b54a470e600d5b404fb8ac094b268" category="image-alt">AutoSupport结果选项卡</block>
-  <block id="7bb5d1e21ca0bacc168d63d7155d3755" category="sidebar">StorageGRID 1.18文档</block>
-  <block id="0e1728af0ce10bca8f3d35ec07fe7f75" category="doc">其他版本的NetApp StorageGRID文档</block>
-  <block id="a875f4e3e98d1c995967b1dfb394ca2e" category="inline-link">StorageGRID 11.9文档</block>
-  <block id="6c2cd681861e61d16c43836be81d3df7" category="list-text"><block ref="6c2cd681861e61d16c43836be81d3df7" category="inline-link-rx"></block></block>
-  <block id="d9419a01ee4fdcd160bf1446e5a481f5" category="list-text"><block ref="d9419a01ee4fdcd160bf1446e5a481f5" category="inline-link-rx"></block></block>
-  <block id="50c142f8f9e19c4c84cb06dbc431b229" category="inline-link">StorageGRID 11.4 文档中心</block>
-  <block id="71be9d9e0df7c2f5699834ae68011996" category="list-text"><block ref="71be9d9e0df7c2f5699834ae68011996" category="inline-link-rx"></block></block>
-  <block id="bab03a68f7e57fdecf1481852ac62d80" category="inline-link">StorageGRID 11.3 文档中心</block>
-  <block id="d2ca6fb14c69e8ac834f4f43b0f0e9d8" category="list-text"><block ref="d2ca6fb14c69e8ac834f4f43b0f0e9d8" category="inline-link-rx"></block></block>
-  <block id="e58d2e166dc215d59ad9458a7cef9dc8" category="inline-link">StorageGRID 11.2 文档中心</block>
-  <block id="dac584c7df1389d2899102bbaee99832" category="list-text"><block ref="dac584c7df1389d2899102bbaee99832" category="inline-link-rx"></block></block>
+  <block id="6d307701f8a2621afa3c68f86b66b9f7" category="doc">StorageGRID 11.5文档</block>
+  <block id="27a5fc98d432133572f8dd4b135b3de1" category="sidebar">原有版本</block>
+  <block id="ab398ea621033d0dc867640f4114bddd" category="sidebar">StorageGRID 11.5文档</block>
 </blocks>
